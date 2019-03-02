@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+ #sign:hover{
+    color: #ffffff;
+    background-color: #004053;
+ }
+ #sign{
+    color: #ffffff;
+    background-color: #83db77;
+ }
+ nav.a:hover{
+    color: #004053;
+ }
