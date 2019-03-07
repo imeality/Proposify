@@ -1,32 +1,35 @@
+
 <template>
-  <div>
-    <h2>User Page</h2>
-    <form>
-      <div>
-          <label>Name</label>
-          <input  type="text" v-model= "name">
-      </div><br>
-      <div>
-          <label>Email</label>
-          <input  type="email" v-model= "email">
-      </div><br>
-      <div>
-          <label>Password</label>
-          <input  type="password" v-model= "password">
-      </div><br>
-      <div>
-          <label>Mobile No.</label>
-          <input  type="tel" v-model= "mob">
-      </div><br>
-      <div>
-          <button type="submit" v-on:click= "saveUser">Login</button>
-      </div>
-    </form>
-  </div>
+  <v-form column>
+    <v-flex xs6 offset-xs3>
+      <panel title="Login">
+        <br>
+        <h1>Admin Login </h1>
+        <br>
+        <v-text-field label="Name" type="text" v-model= "name"></v-text-field>
+        <br>
+        <v-text-field label="Email" type="text" v-model= "email"></v-text-field>
+        <br>
+        <v-text-field label="Password" type="password" v-model= "password"></v-text-field>
+        <br>
+        <v-text-field label="Mobile No." type="text" v-model= "mob"></v-text-field>
+        <br>
+        <div class="danger-alert" v-html= "error" />
+        <br>
+        <v-btn
+          dark
+          class="cyan"
+          @click= "saveUser">
+          Login
+        </v-btn>
+      </panel>
+    </v-flex>
+  </v-form>
+  
 </template>
 
 <script>
-import http from '../httpa'
+import http from '@/api'
 export default {
   data () {
     return {
@@ -48,13 +51,11 @@ export default {
       http
         .post('/user', data)
         .then(response => {
-          this.id = response.data.id
-          console.log(response.data)
+          console.log("done")
         })
         .catch(e => {
           console.log(e)
         })
-      this.submitted = true
     }
   }
 }

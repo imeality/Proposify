@@ -1,24 +1,53 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-link to="/login">Login</router-link> |
-    <router-view/>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span class="font-weight-light">ADMIN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <router-link class="home" tag="span" :to="{ name: 'login' }">
+      <v-btn flat>
+        Login
+      </v-btn>
+      </router-link>
+
+      <router-link class="home" tag="span" :to="{ name: 'user' }">
+      <v-btn flat>
+        User
+      </v-btn>
+      </router-link>
+
+      <router-link class="home" tag="span" :to="{ name: 'about' }">
+      <v-btn flat>
+        About
+      </v-btn>
+      </router-link>
+      
+    </v-toolbar>
+
+
+    <v-content>
+       <router-view/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld'
+import login from './views/Login'
+import user from './views/User'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HelloWorld,
+    login,
+    user
+  },
+  data () {
+    return {
+      //
+    }
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
