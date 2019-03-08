@@ -1,28 +1,22 @@
 
 <template>
-  <v-form column>
+  <v-form column >
     <v-flex xs6 offset-xs3>
-      <panel title="Login">
+
         <br>
-        <h1>Admin Login </h1>
+        <h1>User Form </h1>
         <br>
         <v-text-field label="Name" type="text" v-model= "name"></v-text-field>
         <br>
-        <v-text-field label="Email" type="text" v-model= "email"></v-text-field>
+        <v-text-field label="Email" type="email" v-model= "email"></v-text-field>
         <br>
         <v-text-field label="Password" type="password" v-model= "password"></v-text-field>
         <br>
-        <v-text-field label="Mobile No." type="text" v-model= "mob"></v-text-field>
+        <div class="danger-alert" />
         <br>
-        <div class="danger-alert" v-html= "error" />
-        <br>
-        <v-btn
-          dark
-          class="cyan"
-          @click= "saveUser">
+        <v-btn dark class="cyan" @click= "saveUser">
           Login
         </v-btn>
-      </panel>
     </v-flex>
   </v-form>
   
@@ -30,6 +24,7 @@
 
 <script>
 import http from '@/api'
+
 export default {
   data () {
     return {

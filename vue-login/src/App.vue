@@ -36,6 +36,7 @@
 import HelloWorld from './components/HelloWorld'
 import login from './views/Login'
 import user from './views/User'
+import { mapActions } from 'vuex';
 
 export default {
   name: 'App',
@@ -44,10 +45,13 @@ export default {
     login,
     user
   },
-  data () {
-    return {
-      //
-    }
+   methods: {
+    ...mapActions([
+      'fetchAccessToken'
+    ]),
+  },
+  created() {
+    this.fetchAccessToken();
   }
 }
 </script>
