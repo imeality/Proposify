@@ -5,12 +5,14 @@
         <span class="font-weight-light">ADMIN</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <router-link class="home" tag="span" :to="{ name: 'login' }">
+      <span v-if="isLoggedIn">  <v-btn flat><a @click="logout">Logout</a></v-btn></span>
+      <span v-else> 
+        <router-link class="home" tag="span" :to="{ name: 'login' }">
       <v-btn flat>
         Login
       </v-btn>
       </router-link>
-
+        </span>
       <router-link class="home" tag="span" :to="{ name: 'user' }">
       <v-btn flat>
         User
@@ -36,7 +38,6 @@
 import HelloWorld from './components/HelloWorld'
 import login from './views/Login'
 import user from './views/User'
-import { mapActions } from 'vuex';
 
 export default {
   name: 'App',
@@ -45,13 +46,18 @@ export default {
     login,
     user
   },
-   methods: {
-    ...mapActions([
-      'fetchAccessToken'
-    ]),
+  computed: {
+    isLoggedIn: function() {
+      return this.$store.getters.isLoggedIn;
+    }
   },
-  created() {
-    this.fetchAccessToken();
+  methods: {
+    logout: function() {
+      this.$store.dispatch("logout").then(() => {
+        this.$router.push("/login");
+      });
+    }
   }
 }
+
 </script>
