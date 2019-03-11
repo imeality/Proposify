@@ -36,70 +36,59 @@ var server = app.listen(3000,  "127.0.0.1", function () {
 });
 
 //rest api to get all users
-app.get('/signup', function (req, res) {
-   connection.query('select * from Signup', function (error, results, fields) {
+app.get('/payment', function (req, res) {
+   connection.query('select * from Payment', function (error, results, fields) {
 	  //if (error) throw error;
 	  res.end(JSON.stringify(results));
 	});
 });
 
 //rest api to get a single user data
-app.get('/signup/:id', function (req, res) {
-   connection.query('select * from Signup where User_ID=?', [req.params.id], function (error, results, fields) {
+app.get('/payment/:id', function (req, res) {
+   connection.query('select * from Payment where User_ID=?', [req.params.id], function (error, results, fields) {
 	  //if (error) throw error;
     res.end(JSON.stringify(results));
 	});
 });
 
 //rest api to create a new user record into mysql database
-app.post('/signup', function (req, res) {
+app.post('/payment', function (req, res) {
    var params = {
-     "Fname" : req.body.Fname,
-     "Lname" : req.body.Lname,
+     "Bank_name" : req.body.Bank_name,
+     "Date" : req.body.Date,
      "Email" : req.body.Email, 
-     "Mobile_no" : req.body.Mobile_no,
-     "Password" : req.body.Password,
+     "Amount" : req.body.Amount,
+     "Payment_status" : req.body.Payment_status,
+     "Payment_methord" : req.body.Payment_methord,
    }
-   console.log(params);
-   connection.query('select * from Signup', function (error, results, fields){
-    if(results.Email !=0 ){
-     console.log('Email already exist');
-    }else if(results.Mobile_no !=0){
-      console.log('Mobile Number already exist');
-    }else{
-     console.log(params);
-     connection.query('INSERT INTO Signup SET ?', params, function (error, results) {
-      //if (error) throw error;
-      res.end(JSON.stringify(results));
-      console.log('Record has been Inserted!');
-    });
-    }
-  })
+   connection.query('select * from Payment', function (error, results, fields){
+     if(results.Email !=0){
+      console.log('Email already exist');
+     }else{
+      console.log(params);
+      connection.query('INSERT INTO Payment SET ?', params, function (error, results) {
+       //if (error) throw error;
+       res.end(JSON.stringify(results));
+       console.log('Record has been Inserted!');
+     });
+     }
+   })
 });
 
 //rest api to update record into mysql database using put
-app.put('/signup' , function (req, res) {   
-  let Fname = req.body.Fname;
-  let Lname = req.body.Lname;
+app.put('/payment' , function (req, res) {   
+  let Bank_name = req.body.Bank_name;
+  let Date = req.body.Date;
   let Email = req.body.Email; 
-  let Mobile_no = req.body.Mobile_no;
-  let Password = req.body.Password;
-  connection.query('UPDATE `Signup` SET `Fname`=?,`Lname`=?,`Mobile_no`=?,`Password`=? where `Email`=?', [Fname,Lname,Mobile_no,Password,Email], function (error, results, fields) {
+  let Amount = req.body.Amount;
+  let Payment_status = req.body.Payment_status;
+  let Payment_methord = req.body.Payment_methord;
+  connection.query('UPDATE `Payment` SET `Bank_name`=?,`Date`=?,`Amount`=?,`Payment_status`=?,`Payment_methord`=? where `Email`=?', [Bank_name,Date,Amount,Payment_status,Payment_methord,Email], function (error, results, fields) {
 	  //if (error) throw error;
     res.end(JSON.stringify(results));
     console.log('Record has been Updated!');
 	});
 });
-
-/*//rest api to delete record from mysql database
-app.delete('/signup', function (req, res) {
-   console.log(req.body);
-   connection.query('DELETE FROM `Signup` WHERE `User_ID`=?', [req.body.ID], function (error, results, fields) {
-    //if (error) throw error;
-    res.end(JSON.stringify(results));
-	  res.end('Record has been deleted!');
-	});
-});*/
 
 // all other requests redirect to 404
 app.all("*", function (req, res, next) {
