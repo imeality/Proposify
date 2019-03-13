@@ -1,0 +1,21 @@
+#maindiv{
+    margin-left:550px;
+}
+
+#google{
+    background: #df4b33;
+    color: white;
+    padding: 4px;
+}
+
+#linkedin{
+    background: #0065a0;
+    color: white;
+    padding: 4px;
+}
+
+#facebook{
+    background: #3b5998;
+    color: white;
+    padding: 4px;
+}

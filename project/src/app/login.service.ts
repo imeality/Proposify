@@ -17,8 +17,20 @@ export class LoginService {
   getUser(){
     return this.http.get(this.url);
   }
-}
 
+
+addUser(Fname, Lname, Email ,Mobile_no ,Password) {
+  const obj = {
+    Fname: Fname,
+    Lname: Lname,
+    Email: Email,
+    Mobile_no:Mobile_no,
+    Password:Password
+    };
+ return this.http.post(this.url, obj)
+      .subscribe(res => console.log('Done'));
+  }
+}
 
 
 

@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { HttpClientModule} from '@angular/common/http';
+import { SignupComponent } from './signup/signup.component';
+import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule    
+    HttpClientModule,  
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

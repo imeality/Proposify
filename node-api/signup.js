@@ -3,6 +3,8 @@ var express = require('express');
 var app = express();
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+var cors = require('cors');
+app.use(cors());
 
 //start mysql connection
 var connection = mysql.createConnection({
@@ -60,11 +62,10 @@ app.post('/signup', function (req, res) {
      "Mobile_no" : req.body.Mobile_no,
      "Password" : req.body.Password,
    }
-   console.log(params);
    connection.query('select * from Signup', function (error, results, fields){
-    if(results.Email !=0 ){
+    if(req.body.Email == results.Email){
      console.log('Email already exist');
-    }else if(results.Mobile_no !=0){
+    }else if(req.body.Mobile_no == results.Mobile_no){
       console.log('Mobile Number already exist');
     }else{
      console.log(params);

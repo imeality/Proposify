@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Sign up</title>
+  </head>
+  <body><br><br>
+  <div class="card" id="maindiv" style="width: 37rem;">
+      <div class="card-body">
+        <form [formGroup]="angForm" >
+            <h1 style="text-align: center">Get Started Absolutely <span style="color:#00c0d4">FREE</span>. </h1>
+            <p style="text-align: center">No credit card needed. Free for 14 days.</p>
+            <div class="form-group">
+            <small class="form-text text-muted" ><label>First name</label></small> 
+            <input type="text" class="form-control"  #Fname >
+          </div>
+          <div class="form-group">
+            <small class="form-text text-muted" ><label>Last name </label></small>
+            <input type="text" class="form-control"  #Lname >
+          </div>
+          <div class="form-group">
+            <small class="form-text text-muted" ><label>Your Email</label></small>
+            <input type="email" class="form-control"  #Email>
+          </div>
+          <div class="form-group">
+            <small class="form-text text-muted" ><label> Your Mobile Number</label></small>
+            <input type="tel" class="form-control"  #Mobile_no>
+          </div>
+          <div class="form-group">
+            <small class="form-text text-muted" ><label> Your Password </label></small>
+            <input type="password" class="form-control"  #Password >
+          </div><br>
+            <div class="form-group">
+               <button type="submit" class="btn btn-primary btn-block" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value ,Password.value)">Create my account</button>
+            </div> 
+            <small class="form-text text-muted" ><p style="text-align: center">We will use your personal data in accordance with our <a href="">privacy policy</a><br>By clicking the button you agree to the <a href="">Terms of Service.</a></p></small>
+            <small class="form-text text-muted" ><p style="text-align: center">Already have an account? <a href="">Click here</a></p></small>
+        </form>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>
