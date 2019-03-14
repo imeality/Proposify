@@ -1,0 +1,20 @@
+
+ #sign:hover{
+    color: #ffffff;
+    background-color: #004053;
+ }
+ #sign{
+    color: #ffffff;
+    background-color: #80c676;
+    border-radius: 5px;
+    height: 37px;
+ }
+ nav.a:hover{
+    color: #004053;
+ }
+ #contact{
+   color: #ffffff;
+   background-color: #80c676;
+   margin-left:25px;
+   margin-right:25px
+}

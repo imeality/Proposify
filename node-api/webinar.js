@@ -36,7 +36,7 @@ var server = app.listen(3000,  "127.0.0.1", function () {
 });
 
 //rest api to get all webinar
-app.get('/webinar', function (req, res) {
+app.get(' ', function (req, res) {
    connection.query('select * from Webinar', function (error, results, fields) {
 	  //if (error) throw error;
 	  res.end(JSON.stringify(results));

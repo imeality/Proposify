@@ -6,16 +6,27 @@
     background: #df4b33;
     color: white;
     padding: 4px;
+    width: 120px;
+    height: 35px;
 }
 
 #linkedin{
     background: #0065a0;
     color: white;
     padding: 4px;
+    width: 120px;
+    height: 35px;
 }
 
 #facebook{
     background: #3b5998;
     color: white;
     padding: 4px;
+    width: 120px;
+    height: 35px;
 }
+
+#sign{
+    color: #ffffff;
+    background-color: #80c676;
+ }

@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "8c50d5e0-9575-4236-a8ee-938c8dec59f9",
+		"name": "webinar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/webinar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/webinar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"webinar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/webinar/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/webinar/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"webinar",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/webinar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Topic",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Discription",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "First_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Last_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/webinar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"webinar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/webinar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Topic",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Discription",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "First_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Last_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/webinar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"webinar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

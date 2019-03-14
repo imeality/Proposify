@@ -63,9 +63,9 @@ app.post('/signup', function (req, res) {
      "Password" : req.body.Password,
    }
    connection.query('select * from Signup', function (error, results, fields){
-    if(req.body.Email == results.Email){
+    if(results.Email == req.body.Email ){
      console.log('Email already exist');
-    }else if(req.body.Mobile_no == results.Mobile_no){
+    }else if(results.Mobile_no == req.body.Mobile_no ){
       console.log('Mobile Number already exist');
     }else{
      console.log(params);

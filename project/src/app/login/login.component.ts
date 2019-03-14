@@ -15,26 +15,33 @@ export class LoginComponent implements OnInit {
   login:Login[];
 
   constructor(private logn:LoginService , private router:Router) { }
-
+  
   ngOnInit() {
    this.logn.getUser().subscribe((data:Login[])=>{
     console.log(data);
     this.login=data;
     console.log(this.login);
-    console.log(this.login["0"].Email);
-    console.log(this.login["0"].Password);
-     
+    for( var i=0;i<this.login.length;i++){
+    console.log(this.login[i].Email);
+    console.log(this.login[i].Password);
+
+      }
     });
+    
   }
+  
   onClick(){
-    if(this.login["0"].Email == this.email.nativeElement.value && this.login["0"].Password == this.password.nativeElement.value) {
+   for( var i=0;i<this.login.length;i++){
+    if(this.login[i].Email == this.email.nativeElement.value && this.login[i].Password == this.password.nativeElement.value) {
       console.log(this.email.nativeElement.value);
       console.log(this.password.nativeElement.value);
-      console.log('valid email or password');
+      console.log('valid');
       this.router.navigate(['/home']);
+      break
     }else{
-      console.log('invalid email or password');
+      console.log('invalid email or password'); 
       this.router.navigate(['/login']);
     }
   }
+}
 }

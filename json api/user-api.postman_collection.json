@@ -1,0 +1,752 @@
+{
+	"info": {
+		"_postman_id": "10d0fa10-edb8-4ffa-bd46-13864c3a8310",
+		"name": "user-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "/user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/user/:User_ID",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								":User_ID"
+							],
+							"variable": [
+								{
+									"key": "User_ID",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DOB",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Age",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Mobile_no",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Country",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "State",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "City",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "User_ID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DOB",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Age",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Mobile_no",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Country",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "State",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "City",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Education",
+			"item": [
+				{
+					"name": "/education",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/education",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/education/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/education/:Ue_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"education",
+								":Ue_id"
+							],
+							"variable": [
+								{
+									"key": "Ue_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/education",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "User_ID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tenth_school",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tenth_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tenth_Passingyear",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twelth_school",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twelth_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twelth_Passingyear",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_Collage",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_Stream",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_Passingyear",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_collage",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_Stream",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_Passingyear",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/education",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/education",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "User_ID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tenth_school",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tenth_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tenth_Passingyear",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twelth_school",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twelth_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twelth_Passingyear",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_Collage",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_Stream",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Graduation_Passingyear",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_collage",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_Stream",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_per",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PG_Passingyear",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/education",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"education"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job Details ",
+			"item": [
+				{
+					"name": "/job/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/job/:Ujob_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								":Ujob_id"
+							],
+							"variable": [
+								{
+									"key": "Ujob_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/job",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "User_ID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Experience",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Job_profile",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Company_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Start_date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "End_date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Skills",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Achivement",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Languages",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Hobbies",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/job",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/job/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Experience",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Job_profile",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Company_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Start_date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "End_date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Skills",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Achivement",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Languages",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Hobbies",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/job/:Ujob_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								":Ujob_id"
+							],
+							"variable": [
+								{
+									"key": "Ujob_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

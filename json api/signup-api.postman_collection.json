@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "1c7b130f-1032-4da8-b4e0-c7f397d059b2",
+		"name": "signup-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Fname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Lname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Mobile_no",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/signup",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Fname",
+							"value": "vaibhav",
+							"type": "text"
+						},
+						{
+							"key": "Lname",
+							"value": "patel",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "vaibhav@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Mobile_no",
+							"value": "7000302512",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "vaibhav1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/signup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/signup/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/signup/:User_ID",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"signup",
+						":User_ID"
+					],
+					"variable": [
+						{
+							"key": "User_ID",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

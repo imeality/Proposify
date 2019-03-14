@@ -152,7 +152,7 @@ app.get('/company/:id', function (req, res) {
       "Company_address" : req.body.Company_address,
       "Company_country" : req.body.Company_country,
       "Company_state" : req.body.Company_state,
-      "Company_city" :req.body.Company_city,
+      " " :req.body.Company_city,
     }
     console.log(params);
       connection.query('INSERT INTO Company SET ?', params, function (error, results) {

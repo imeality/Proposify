@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,  FormBuilder } from '@angular/forms';
+import { FormGroup,  FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 
@@ -17,18 +17,19 @@ export class SignupComponent implements OnInit {
 
    createForm() {
     this.angForm = this.fb.group({
-      Fname: [''],
-      Lname: [''],
-      Email: [''],
-      Mobile_no: [''],
-      Password: ['']
+      Fname: ['', Validators.required],
+      Lname: ['', Validators.required],
+      Email: ['', [Validators.required, Validators.email]],
+      Mobile_no: ['', [Validators.required, Validators.minLength(8)]],
+      Password: ['', Validators.required]
     });
   }
 
   onClick(Fname, Lname, Email ,Mobile_no ,Password) {
     console.log(Fname, Lname, Email ,Mobile_no ,Password);
     this.signup.addUser(Fname, Lname, Email ,Mobile_no ,Password);
-    //this.router.navigate(['/login']);
+    this.router.navigate(['/login']);
+
   }
 
   ngOnInit() {

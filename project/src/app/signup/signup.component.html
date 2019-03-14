@@ -5,31 +5,63 @@
   <body><br><br>
   <div class="card" id="maindiv" style="width: 37rem;">
       <div class="card-body">
-        <form [formGroup]="angForm" >
+        <form [formGroup]="angForm" novalidate>
             <h1 style="text-align: center">Get Started Absolutely <span style="color:#00c0d4">FREE</span>. </h1>
             <p style="text-align: center">No credit card needed. Free for 14 days.</p>
             <div class="form-group">
             <small class="form-text text-muted" ><label>First name</label></small> 
-            <input type="text" class="form-control"  #Fname >
+            <input type="text" class="form-control" formControlName="Fname" required #Fname >
           </div>
+          <small><div *ngIf="angForm.controls['Fname'].invalid && (angForm.controls['Fname'].dirty || angForm.controls['Fname'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Fname'].errors.required">
+              First Name is required.
+            </div>
+          </div></small>
+
           <div class="form-group">
             <small class="form-text text-muted" ><label>Last name </label></small>
-            <input type="text" class="form-control"  #Lname >
+            <input type="text" class="form-control" formControlName="Lname" required #Lname >
           </div>
+          <small><div *ngIf="angForm.controls['Lname'].invalid && (angForm.controls['Lname'].dirty || angForm.controls['Lname'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Lname'].errors.required">
+              Last Name is required.
+            </div>
+          </div></small>
+
           <div class="form-group">
             <small class="form-text text-muted" ><label>Your Email</label></small>
-            <input type="email" class="form-control"  #Email>
+            <input type="email" class="form-control" formControlName="Email" required #Email>
           </div>
+          <small><div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty || angForm.controls['Email'].touched)" class="alert-danger">
+            <div *ngIf="angForm.controls['Email'].errors.required">
+              Email is required.
+            </div>
+            <div *ngIf="angForm.controls['Email'].errors.email">Email must be a valid email address</div>
+          </div></small>
+
           <div class="form-group">
             <small class="form-text text-muted" ><label> Your Mobile Number</label></small>
-            <input type="tel" class="form-control"  #Mobile_no>
+            <input type="tel" class="form-control" formControlName="Mobile_no" required #Mobile_no>
           </div>
+          <small><div *ngIf="angForm.controls['Mobile_no'].invalid && (angForm.controls['Mobile_no'].dirty || angForm.controls['Mobile_no'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Mobile_no'].errors.required">
+              Mobile Number is required.
+            </div>
+          </div></small>
+
           <div class="form-group">
             <small class="form-text text-muted" ><label> Your Password </label></small>
-            <input type="password" class="form-control"  #Password >
-          </div><br>
+            <input type="password" class="form-control" formControlName="Password" required #Password >
+          </div>
+          <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Password'].errors.required">
+              Password is required.
+            </div>
+            <div *ngIf="angForm.controls['Password'].errors.minLength">Password must be at least 8 characters</div>
+          </div></small><br>
+
             <div class="form-group">
-               <button type="submit" class="btn btn-primary btn-block" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value ,Password.value)">Create my account</button>
+               <button type="submit" class="btn btn-block" id="sign" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value ,Password.value)"  [disabled]="angForm.pristine || angForm.invalid">Create my account</button>
             </div> 
             <small class="form-text text-muted" ><p style="text-align: center">We will use your personal data in accordance with our <a href="">privacy policy</a><br>By clicking the button you agree to the <a href="">Terms of Service.</a></p></small>
             <small class="form-text text-muted" ><p style="text-align: center">Already have an account? <a href="">Click here</a></p></small>
