@@ -41,6 +41,10 @@ var server = app.listen(3000,  "127.0.0.1", function () {
 app.get('/signup', function (req, res) {
    connection.query('select * from Signup', function (error, results, fields) {
 	  //if (error) throw error;
+	var email = req.query.email;
+console.log(email);
+	var password = req.query.password;
+console.log(password);
 	  res.end(JSON.stringify(results));
 	});
 });
