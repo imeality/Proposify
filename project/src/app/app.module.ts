@@ -7,12 +7,14 @@ import { LoginService } from './login.service';
 import { HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

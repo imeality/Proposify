@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class LoginService {
 
   url='http://localhost:3000/signup';
+  username : string;
+  logged : boolean;
 
   constructor(private http:HttpClient) { }
 
@@ -31,25 +33,4 @@ addUser(Fname, Lname, Email ,Mobile_no ,Password) {
       .subscribe(res => console.log('Done'));
   }
 }
-
-
-
-/*
-  getAlllogins(): Observable<login[]> {
-    return this.http.get<login[]>('http://localhost:3000/signup');
-  }
-
-  getlogin(name: string): Observable<login> {
-    return this.http.get<login>('http://localhost:3000/signup/' + name);
-  }
-
-  insertlogin(login: login): Observable<login> {
-    return this.http.post<login>('http://localhost:3000/signup', login);
-  }
-
-  updatelogin(login: login): Observable<void> {
-    return this.http.put<void>('http://localhost:3000/signup' + login.Email, login);
-  }
-
-*/
 

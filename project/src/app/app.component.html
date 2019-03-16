@@ -2,8 +2,7 @@
 <head>
     <title>Jquery highlight search text in div</title>
 </head>
-<body >
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light">
+<body >  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
     <div class="container">
     <a class="navbar-brand" href="#"><img src="./assets/proposifylogo.png" height="70px" width="100px"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,61 +12,68 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown  ">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>Product </b></a>
+            <b style="color:#004053">Product </b></a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#"> Feature Tour</a>
-            <a class="dropdown-item" href="#"> Integrations</a>
+            <a class="dropdown-item" href="#" style="color:#004053"> Feature Tour</a>
+            <a class="dropdown-item" href="#" style="color:#004053"> Integrations</a>
           </div>
         </li>
         <li class="nav-item dropdown  ">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>Industries </b></a>
+            <b style="color:#004053">Industries </b></a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Construction</a>
-            <a class="dropdown-item" href="#">Event & Hospitality</a>
-            <a class="dropdown-item" href="#">Financial Services</a>
-            <a class="dropdown-item" href="#">Professional Services</a>
-            <a class="dropdown-item" href="#">Marketing</a>
-            <a class="dropdown-item" href="#">SaaS</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Construction</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Event & Hospitality</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Financial Services</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Professional Services</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Marketing</a>
+            <a class="dropdown-item" href="#" style="color:#004053">SaaS</a>
           </div>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#"><b>Pricing</b></a>
+          <a class="nav-link" href="#"><b style="color:#004053">Pricing</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="#" style="color:#004053" >Blog</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#004053">
             Resources</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Template Gallery </a>
-            <a class="dropdown-item" href="#">Case Studies</a>
-            <a class="dropdown-item" href="#">Find a Partner</a>
-            <a class="dropdown-item" href="#">Knowledge Base</a>
-            <a class="dropdown-item" href="#">Books & Guides</a>
-            <a class="dropdown-item" href="#">Webinars</a>
-            <a class="dropdown-item" href="#">Podcast</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Template Gallery </a>
+            <a class="dropdown-item" href="#" style="color:#004053">Case Studies</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Find a Partner</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Knowledge Base</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Books & Guides</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Webinars</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Podcast</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#004053">
             Contact Us</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Book a Demo</a>
-            <a class="dropdown-item" href="#">Email Support</a>
-            <a class="dropdown-item" href="#">Chat</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Book a Demo</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Email Support</a>
+            <a class="dropdown-item" href="#" style="color:#004053">Chat</a>
             <div id="contact">Sales Phone Numbers</div>
-            <a class="dropdown-item" href="#">US/CAN: +1-866-255-4036</a>
-            <a class="dropdown-item" href="#">UK: +44-20-3514-5557</a>
-            <a class="dropdown-item" href="#">AUS: +61-2-8520-1024</a>
+            <a class="dropdown-item" href="#" style="color:#004053">US/CAN: +1-866-255-4036</a>
+            <a class="dropdown-item" href="#" style="color:#004053">UK: +44-20-3514-5557</a>
+            <a class="dropdown-item" href="#" style="color:#004053">AUS: +61-2-8520-1024</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">Login</a>
-        </li>
+        <li class="nav-item ">
+          <a class="nav-link" *ngIf="!logn.logged" routerLink="/login" style="color:#004053"> Login </a>
+          <a class="nav-link dropdown" *ngIf="logn.logged" routerLink="/posts" (click) = "logout()" style="color:#004053">{{name}}</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#" style="color:#004053">US/CAN: +1-866-255-4036</a>
+            <a class="dropdown-item" href="#" style="color:#004053">UK: +44-20-3514-5557</a>
+            <a class="dropdown-item" href="#" style="color:#004053">AUS: +61-2-8520-1024</a>
+          </div>
+        </li> 
         <li class="nav-item">
           <a class="nav-link " id ="sign" routerLink="/signup"><b>SIGN UP FREE</b></a>
+          <a class="nav-link" *ngIf="logn.logged" routerLink="/home" (click) = "logout()" style="color:#004053"></a>
         </li>
       </ul>
     </div>
@@ -75,9 +81,16 @@
   </nav>
   <br><br><br><br>
 
-  
 </body>
+<script>
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+</script>
+
 </html>
 
 
+
 <router-outlet></router-outlet>
+

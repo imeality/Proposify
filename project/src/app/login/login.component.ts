@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Login} from '../login'
 import { LoginService } from '../login.service';
 import { ViewChild, ElementRef } from '@angular/core';
-import { browserRefresh } from '../signup/signup.component';
 
 @Component({
   selector: 'app-login',
@@ -14,24 +13,22 @@ export class LoginComponent implements OnInit {
   @ViewChild('email') email: ElementRef;
   @ViewChild('password') password: ElementRef;
   login:Login[];
-  public browserRefresh: boolean;
 
   constructor(private logn:LoginService , private router:Router) { }
 
   
   ngOnInit() {
-   this.logn.getUser().subscribe((data:Login[])=>{
+    this.logn.getUser().subscribe((data:Login[])=>{
     console.log(data);
     this.login=data;
     console.log(this.login);
     for( var i=0;i<this.login.length;i++){
-    console.log(this.login[i].Email);
+    console.log(this.login[i].Email); 
     console.log(this.login[i].Password);
-    this.browserRefresh = browserRefresh;
+    console.log(this.login[i].Fname);
       } 
     });
   }
-
   
     onClick(){
    for( var i=0;i<this.login.length;i++){
@@ -39,6 +36,10 @@ export class LoginComponent implements OnInit {
       console.log(this.email.nativeElement.value);
       console.log(this.password.nativeElement.value);
       console.log('valid');
+      localStorage.setItem('key',this.login[i].Fname); 
+      var nn =localStorage.getItem('key');
+      console.log(nn);
+      this.logn.logged = true;
       this.router.navigate(['/home']);
       break
     }else{
