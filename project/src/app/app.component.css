@@ -5,7 +5,7 @@
  }
  #sign{
     color: #ffffff;
-    background-color: #80c676;
+    background-color: #83db77;
     border-radius: 5px;
     height: 37px;
  }
@@ -26,3 +26,23 @@
    /*Without this, clicking will make it sticky*/
      pointer-events: none;
  }
+
+ #home {
+   background: #fff;
+}
+
+main, menu, nav, section, summary {
+   display: block;
+}
+
+#btn{
+   color: #ffffff;
+    background-color: #83db77;
+    border-radius: 5px;
+    height: 50px;
+}
+#btn:hover{
+   color: #ffffff;
+   background-color: #004053;
+}
+

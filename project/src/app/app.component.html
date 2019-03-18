@@ -2,7 +2,9 @@
 <head>
     <title>Jquery highlight search text in div</title>
 </head>
-<body >  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
+<body >
+  <main role="main" id="home">  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
     <div class="container">
     <a class="navbar-brand" href="#"><img src="./assets/proposifylogo.png" height="70px" width="100px"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,18 +64,17 @@
             <a class="dropdown-item" href="#" style="color:#004053">AUS: +61-2-8520-1024</a>
           </div>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item dropdown">
           <a class="nav-link" *ngIf="!logn.logged" routerLink="/login" style="color:#004053"> Login </a>
-          <a class="nav-link dropdown" *ngIf="logn.logged" routerLink="/posts" (click) = "logout()" style="color:#004053">{{name}}</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#" style="color:#004053">US/CAN: +1-866-255-4036</a>
-            <a class="dropdown-item" href="#" style="color:#004053">UK: +44-20-3514-5557</a>
-            <a class="dropdown-item" href="#" style="color:#004053">AUS: +61-2-8520-1024</a>
-          </div>
+          <a class="nav-link dropdown" id ="sign" *ngIf="logn.logged">{{name}} 
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()" style="color:#004053">Logout</a>
+            </div>
+          </a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link " id ="sign" routerLink="/signup"><b>SIGN UP FREE</b></a>
-          <a class="nav-link" *ngIf="logn.logged" routerLink="/home" (click) = "logout()" style="color:#004053"></a>
+          <a class="nav-link" *ngIf="!logn.logged" id ="sign" routerLink="/signup"><b>SIGN UP FREE</b></a>
+          <a class="nav-link" *ngIf="logn.logged" routerLink="/login" (click) = "logout()" style="color:#004053"> </a>
         </li>
       </ul>
     </div>
@@ -81,13 +82,73 @@
   </nav>
   <br><br><br><br>
 
+<span class="border-0"></span>
+  <div class="row" style="text-align:justify">
+    <div class="card-group container">
+        <div class="card col-md-5 border-0">
+          <div class="card-body" >
+            <br><br>
+            <h1 class="card-text "> <b> <font size="7" color="#004053"> Transform your <br> sales team into a <br> closing machine.</font></b></h1>
+            <br>
+            <p class="p-lg" style="line-height: 200%"> <font size="4" color="#004053"> Get the business proposal software <br> that streamlines the creation of quotes, <br> contracts, and other sales documents.</font></p> 
+            <br>
+            <button type="submit" class="btn " id="btn"> <b>CONTACT SALES</b></button> &nbsp; &nbsp;<a href="" style="color: #00b8d1;"> <b>TAKE THE TOUR</b></a>
+          </div>  
+        </div>  
+         <div class="card col-md-7 border-0">
+          <div class="card-block">
+              <img class="card-img-top" src="./assets/frontimg.png" alt="Card image cap" width="100%"> 
+          </div>
+        </div>
+      </div>
+    </div>
+<br><br><br><br>
+<div class="container" style=" text-align:center">
+    <h1 class="card-text "> <b> <font size="7" color="#004053"> The rocket fuel your sales team <br> needs to close more deals</font></b></h1>
+      <br>
+    <p class="p-lg" style="line-height: 200%"> <font size="5" color="#004053"> As a sales leader you know firsthand that proposals can be a tedious, painful, chore.</font></p>
+      <br>
+    <p class="p-lg" style="line-height: 200% ; color: #00b8d1"> <font size="5" > Proposify changes all that.</font></p>
+      <br>
+    <p class="p-lg" style="line-height: 200% "> <font size="5" color="#004053"> We’re revolutionizing the entire process, from creation to <br> close and every deal-making moment in between. Watch <br> your sales take off with the business proposal software that <br> gives your team the competitive edge. The sky’s the limit.</font></p>
+</div>
+<br><br><br>
+
+<div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="./assets/card1.png" alt="Card image cap" width="5px" height="10%">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./assets/card2.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./assets/card3.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+
+  </main>
 </body>
 <script>
 $('.popover-dismiss').popover({
   trigger: 'focus'
 })
 </script>
-
 </html>
 
 

@@ -15,8 +15,9 @@ export class AppComponent {
   
   logout(){
     this.logn.logged = false;
+    this.logn.logged = false;
     this.logn.username ='';
-
+    localStorage.removeItem('key');
   }
 
 }

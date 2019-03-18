@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   angForm:FormGroup;
-  constructor(private fb:FormBuilder, private signup:LoginService,private router:Router) {
+  constructor(private fb:FormBuilder, private logn:LoginService,private router:Router) {
     this.createForm();
    }
 
@@ -26,7 +26,8 @@ export class SignupComponent implements OnInit {
 
   onClick(Fname, Lname, Email ,Mobile_no ,Password) {
     console.log(Fname, Lname, Email ,Mobile_no ,Password);
-    this.signup.addUser(Fname, Lname, Email ,Mobile_no ,Password);
+    this.logn.addUser(Fname, Lname, Email ,Mobile_no ,Password);
+    this.logn.logged = true;
     localStorage.setItem('key',Fname);
     this.router.navigate(['/welcome'])
 
