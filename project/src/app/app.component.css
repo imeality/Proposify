@@ -46,3 +46,32 @@ main, menu, nav, section, summary {
    background-color: #004053;
 }
 
+#btn1{
+   color: #ffffff;
+    background-color: #83db77;
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+}
+#btn1:hover{
+   color: #ffffff;
+   background-color: #004053;
+}
+
+.checked {
+   color: orange;
+ }
+
+ #btn2{
+   color: #ffffff;
+    background-color: #00b8d1;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+}
+#btn2:hover{
+   color: #ffffff;
+   background-color: #004053;
+   border-color:  #00b8d1;
+   border-width: 2px;
+}

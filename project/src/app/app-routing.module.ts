@@ -8,7 +8,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 
 const routes: Routes = [
   { path:'home',component:AppComponent},
-  { path:'login',component:LoginComponent},
+  { path:'',component:LoginComponent},
   { path:'signup',component:SignupComponent},
   { path:'welcome',component:WelcomeComponent},
   { path:'forgot',component:ForgotComponent}
