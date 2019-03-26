@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +8,8 @@ import { LoginService } from './login.service';
 
 export class AppComponent {
   title = 'project';
-  name =localStorage.getItem('key');
   
-  constructor(public logn:LoginService){}
-  
-  logout(){
-    this.logn.logged = false;
-    this.logn.logged = false;
-    this.logn.username ='';
-    localStorage.removeItem('key');
-  }
+  constructor(){} 
 
 }
 

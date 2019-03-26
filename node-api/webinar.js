@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 //start mysql connection
 var connection = mysql.createConnection({
   host     : 'localhost', //mysql database host name
-  user     : 'root', //mysql database user name
-  password : '', //mysql database password
-  database : 'Resume' //mysql database name
+  user     : 'phpmyadmin', //mysql database user name
+  password : '12345', //mysql database password
+  database : 'resume' //mysql database name
 });
 
 connection.connect(function(error) {
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //end body-parser configuration
 
 //create app server
-var server = app.listen(3000,  "127.0.0.1", function () {
+var server = app.listen(3000,  "0.0.0.0", function () {
 
   var host = server.address().address
   var port = server.address().port

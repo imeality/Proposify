@@ -43,9 +43,12 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home']);
       break
     }else{
-      console.log('invalid email or password'); 
+      console.log('invalid email or password');
       this.router.navigate(['/login']);
+      alert('invalid email or password');
+      break 
       }
     }
+    
   }
 }

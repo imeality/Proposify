@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-/*export interface login {
-  Email: string;
-  Password: string;
-}*/
 
 @Injectable({
   providedIn: 'root'

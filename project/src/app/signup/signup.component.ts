@@ -36,7 +36,6 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     var nn =localStorage.getItem('key');
     console.log(nn);
-    //localStorage.removeItem('key');
     
   }
 

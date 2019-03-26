@@ -1,0 +1,118 @@
+
+ #sign:hover{
+    color: #ffffff;
+    background-color: #004053;
+ }
+ #sign{
+    color: #ffffff;
+    background-color: #83db77;
+    border-radius: 5px;
+    height: 37px;
+ }
+ nav.a:hover{
+    color: #004053;
+ }
+ #contact{
+   color: #ffffff;
+   background-color: #80c676;
+   margin-left:25px;
+   margin-right:25px
+}
+.dropdown:hover>.dropdown-menu {
+   display: block;
+ }
+ 
+ .dropdown>.dropdown-toggle:active {
+   /*Without this, clicking will make it sticky*/
+     pointer-events: none;
+ }
+
+ #home {
+   background: #fff;
+}
+
+main, menu, nav, section, summary {
+   display: block;
+}
+
+#btn{
+   color: #ffffff;
+    background-color: #83db77;
+    border-radius: 5px;
+    height: 50px;
+}
+#btn:hover{
+   color: #ffffff;
+   background-color: #004053;
+}
+
+#btn1{
+   color: #ffffff;
+    background-color: #83db77;
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+}
+#btn1:hover{
+   color: #ffffff;
+   background-color: #004053;
+}
+
+.checked {
+   color: orange;
+ }
+
+ #btn2{
+   color: #ffffff;
+    background-color: #00b8d1;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+}
+#btn2:hover{
+   color: #ffffff;
+   background-color: #004053;
+   border-color:  #00b8d1;
+   border-width: 2px;
+}
+
+#btn3{
+   color: #ffffff;
+    background-color: #83db77;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}
+
+#btn3:hover{
+   color: #ffffff;
+   background-color: #004053;
+}
+
+.bottomDiv{
+   position:relative;
+   top:2px;  
+}
+
+.bottom{
+   position:relative;
+
+}
+
+td,th{
+   border: none;
+}
+
+
+ .dot {
+   height: 30px;
+   width: 30px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+ }
+
+ #icon{
+   color: #004053;
+   padding: 8px;
+ }
