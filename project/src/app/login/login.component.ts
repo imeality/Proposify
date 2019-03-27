@@ -37,10 +37,11 @@ export class LoginComponent implements OnInit {
       console.log(this.password.nativeElement.value);
       console.log('valid');
       localStorage.setItem('key',this.login[i].Fname); 
+      localStorage.setItem('key1',this.login[i].Lname); 
       var nn =localStorage.getItem('key');
       console.log(nn);
       this.logn.logged = true;
-      this.router.navigate(['/home']);
+      this.router.navigate(['/dashboard']);
       break
     }else{
       console.log('invalid email or password');

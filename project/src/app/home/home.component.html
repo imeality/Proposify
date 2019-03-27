@@ -67,7 +67,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" *ngIf="!logn.logged" routerLink="/login" style="color:#004053"> Login </a>
-          <a class="nav-link dropdown" id ="sign" *ngIf="logn.logged">{{name}} 
+          <a class="nav-link dropdown" id ="sign" *ngIf="logn.logged">{{name}}
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()" style="color:#004053">Logout</a>
             </div>

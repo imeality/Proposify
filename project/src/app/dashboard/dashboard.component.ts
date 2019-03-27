@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  name =localStorage.getItem('key');
+  
+  constructor( public logn:LoginService) { }
 
   ngOnInit() {
   }
 
+  logout(){
+    this.logn.logged = false;
+    this.logn.logged = false;
+    this.logn.username ='';
+    localStorage.removeItem('key');
+  }
 }

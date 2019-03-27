@@ -1,38 +1,141 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-top navbar-light bg-light" >
         <div class="container">
-          <div>  <a class="navbar-brand" href="#"><img src="./assets/proposifylogo.png" height="50px" width="90px"></a>
-            <span class="text-muted"> 7 day(s) left in trial </span>
-            <button type="submit" class="btn btn-sm" id="sign" (click)="onClick()"> <small> Upgrade</small></button>  
-          </div> 
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <div>  <a class="navbar-brand" href="#"><img src="./assets/proposifylogo.png" height="80px" width="110px"></a>
+          </div>
+          <div class="btn-group">
+              <button type="button" id ="sign1" class="btn  dropdown-toggle" data-toggle="dropdown" *ngIf="logn.logged">
+                  {{name}}
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"> <small class="text-muted">Profile</small></a>
+                <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()"> <small class="text-muted">Logout</small></a>
+            </div>
+          </div>
       </div>
       </nav>  
   
 
-<div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
+      <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa fa-product-hunt fa-3x"></i>
+                    <span class="nav-text">
+                        Pipeline
+                    </span>
+                </a>
+              
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-archive fa-2x"></i>
+                    <span class="nav-text">
+                        Content Library
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-file-text-o fa-2x"></i>
+                    <span class="nav-text">
+                        Templates
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-bullseye fa-2x"></i>
+                    <span class="nav-text">
+                        Metrics
+                    </span>
+                </a>
+               
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users fa-2x"></i>
+                    <span class="nav-text">
+                        Users
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-address-book-o fa-2x"></i>
+                    <span class="nav-text">
+                       Clients
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#">
+                   <i class="fa fa-plug fa-2x"></i>
+                    <span class="nav-text">
+                        Integrations
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#">
+                    <i class="fa fa-cog fa-2x"></i>
+                    <span class="nav-text">
+                        Setting
+                    </span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+<br><br>
+<div class="container">
+<div class="row">
+    <div class="col-2.5"> 
+      <div class="search">
+        <span class="fa fa-search"></span>
+        <input placeholder="Search Proposals" class="form-control">
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="input-group">
+        <button class="btn  dropdown-toggle"  data-toggle="dropdown">All users</button>
+        <div class="dropdown-menu" >
+          <a class="dropdown-item" href="#">All users</a>
+          <a class="dropdown-item" href="#">No Workspace</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-user" style=" display: inline; padding-right:10px "></i>{{name}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-5">
+      <button type="submit" class="btn btn-block" id="btn2" ><i class="fa fa-star" style=" display: inline; padding-right:10px " ></i> </button>
+    </div>
+  <div class="col-2">
+      <button type="submit" class="btn btn-block" id="btn"><i class="fa fa-plus" style=" display: inline; padding-right:10px " ></i> Proposal / <br> &nbsp; &nbsp; Resume</button>
+    </div>
+  </div>
 </div>
+<br><br><br>
 
-<div class="main">
-  <h2>Sidebar</h2>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<div class="container">
+  <table class="table">
+      <thead >
+          <tr>
+            <td> <b> PROPOSALS </b></td><hr />
+            <td><b>SOLUTIONS </b></td>
+            <td><b>VIEW ARCHIVES </b></td>
+          </tr>
+        </thead>
+  </table>
 </div>
    
 </body>
+<script>
+
+</script>
 </html> 
