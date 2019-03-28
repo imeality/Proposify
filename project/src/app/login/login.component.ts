@@ -21,11 +21,10 @@ export class LoginComponent implements OnInit {
     this.logn.getUser().subscribe((data:Login[])=>{
     console.log(data);
     this.login=data;
-    console.log(this.login);
+    console.log(this.login.length);
     for( var i=0;i<this.login.length;i++){
     console.log(this.login[i].Email); 
     console.log(this.login[i].Password);
-    console.log(this.login[i].Fname);
       } 
     });
   }
@@ -46,8 +45,8 @@ export class LoginComponent implements OnInit {
     }else{
       console.log('invalid email or password');
       this.router.navigate(['/login']);
-      alert('invalid email or password');
-      break 
+      document.getElementById("demo").innerHTML = "Invalid Email address or Password";
+      document.getElementById("demo").style.color = "red";
       }
     }
     

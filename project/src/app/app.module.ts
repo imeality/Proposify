@@ -11,7 +11,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TemplateComponent } from './template/template.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { TemplateComponent } from './template/template.component';
     ForgotComponent,
     HomeComponent,
     DashboardComponent,
-    TemplateComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

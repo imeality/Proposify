@@ -13,14 +13,14 @@
                   {{name}}
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="/profile"> <small class="text-muted">Profile</small></a>
+                <a class="dropdown-item" href="#"> <small class="text-muted">Profile</small></a>
                 <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()"> <small class="text-muted">Logout</small></a>
             </div>
           </div>
       </div>
       </nav>  
   
-      
+
       <nav class="main-menu">
         <ul>
             <li>
@@ -94,46 +94,13 @@
         </ul>
     </nav>
 <br><br>
-<div class="container">
-<div class="row">
-    <div class="col-2.5"> 
-      <div class="search">
-        <span class="fa fa-search"></span>
-        <input placeholder="Search Proposals" class="form-control">
-      </div>
-    </div>
-    <div class="col-2">
-      <div class="input-group">
-        <button class="btn  dropdown-toggle"  data-toggle="dropdown">All users</button>
-        <div class="dropdown-menu" >
-          <a class="dropdown-item" href="#">All users</a>
-          <a class="dropdown-item" href="#">No Workspace</a>
-          <a class="dropdown-item" href="#"><i class="fa fa-user" style=" display: inline; padding-right:10px "></i>{{name}}</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-5">
-      <button type="submit" class="btn btn-block" id="btn2" ><i class="fa fa-star" style=" display: inline; padding-right:10px " ></i> </button>
-    </div>
-  <div class="col-2">
-      <button type="submit" class="btn btn-block" id="btn"><i class="fa fa-plus" style=" display: inline; padding-right:10px " ></i> Proposal / <br> &nbsp; &nbsp; Resume</button>
-    </div>
-  </div>
-</div>
-<br><br><br>
+<div class="container" >
+    <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
+    <br><br>
+    <h1 style="color: #004053"> <a href=""> Update Information </a></h1>
 
-<div class="container">
-  <table class="table">
-      <thead >
-          <tr>
-            <td> <b> PROPOSALS </b></td><hr />
-            <td><b>SOLUTIONS </b></td>
-            <td><b>VIEW ARCHIVES </b></td>
-          </tr>
-        </thead>
-  </table>
+
 </div>
-   
 </body>
 <script>
 
