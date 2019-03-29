@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -7,6 +7,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TemplateComponent } from './template/template.component';
 
 const routes: Routes = [
   { path:'',redirectTo:'/home',pathMatch:'full'},
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path:'welcome',component:WelcomeComponent},
   { path:'forgot',component:ForgotComponent},
   { path:'dashboard',component:DashboardComponent},
-  { path:'profile',component:ProfileComponent}
+  { path:'profile',component:ProfileComponent},
+  { path:'template',component:TemplateComponent},
+
 ];
 
 @NgModule({

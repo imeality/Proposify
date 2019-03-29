@@ -12,6 +12,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TemplateComponent } from './template/template.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     ForgotComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    TemplateComponent,
   ],
   imports: [
     BrowserModule,

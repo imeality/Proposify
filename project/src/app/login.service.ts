@@ -28,5 +28,22 @@ addUser(Fname, Lname, Email ,Mobile_no ,Password) {
  return this.http.post(this.url, obj)
       .subscribe(res => console.log('Done'));
   }
+
+
+  editUser() {
+    return this.http.get(this.url);
+    }
+
+  updateUser(Fname, Lname, Email ,Mobile_no ,Password) {
+    const obj = {
+      Fname: Fname,
+      Lname: Lname,
+      Email: Email,
+      Mobile_no:Mobile_no,
+      Password:Password
+      };
+    return this.http.put(this.url, obj)
+      .subscribe(res => console.log('Done'));
+  }
 }
 

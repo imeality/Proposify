@@ -10,7 +10,7 @@
           </div>
           <div class="btn-group">
               <button type="button" id ="sign1" class="btn  dropdown-toggle" data-toggle="dropdown" *ngIf="logn.logged">
-                  {{name}}
+                  {{fname}}
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#"> <small class="text-muted">Profile</small></a>
@@ -94,15 +94,131 @@
         </ul>
     </nav>
 <br><br>
-<div class="container" >
-    <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
-    <br><br>
-    <h1 style="color: #004053"> <a href=""> Update Information </a></h1>
-
-
+<div class="container">
+    <table align="center">
+            <tr>
+                <th><button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button></th>
+            </tr>
+            <br>
+            <tr>
+                <td><h1 style="color: #004053"> Update Information </h1></td>
+            </tr>
+    </table>
 </div>
-</body>
-<script>
+<hr>
+<div class="container">
+<div class="card" id="maindiv" style="width: 37rem;">
+    <div class="card-body">
+        <form [formGroup]="angForm" novalidate>
+            <h5 style="color: #004053">Basic Information </h5> <br><br>
+            <div class="form-row">
+                <div class="col">
+                    <small class="form-text text-muted" ><label>First name</label></small> 
+                    <input type="text" class="form-control" formControlName="Fname" required #Fname value="{{fname}}">
+                    <br>
+                <small><div *ngIf="angForm.controls['Fname'].invalid && (angForm.controls['Fname'].dirty)" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Fname'].errors.required">
+                            First Name is required.
+                        </div>
+                        </div></small>
+                    </div>
+                <div class="col">
+                    <small class="form-text text-muted" ><label>Last name </label></small>
+                    <input type="text" class="form-control" formControlName="Lname" required #Lname value="{{lname}}">
+                    <br>
+                <small><div *ngIf="angForm.controls['Lname'].invalid && (angForm.controls['Lname'].dirty )" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Lname'].errors.required">
+                            Last Name is required.
+                        </div>
+                        </div></small>
+                    </div>
+                </div>
+        <div class="form-group">
+            <small class="form-text text-muted" ><label>Your Email</label></small>
+            <input type="email" class="form-control" formControlName="Email" required #Email value="{{emal}}">
+        </div>
+        <small><div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty )" class="alert-danger">
+            <div *ngIf="angForm.controls['Email'].errors.required">
+            Email is required.
+            </div>
+            <div *ngIf="angForm.controls['Email'].errors.email">Email must be a valid email address</div>
+        </div></small>
 
-</script>
+        <div class="form-group">
+            <small class="form-text text-muted" ><label> Your Mobile Number</label></small>
+            <input type="tel" class="form-control" formControlName="Mobile_no" required #Mobile_no value="{{mob}}">
+        </div>
+        <small><div *ngIf="angForm.controls['Mobile_no'].invalid && (angForm.controls['Mobile_no'].dirty )" class=" alert-danger">
+            <div *ngIf="angForm.controls['Mobile_no'].errors.required">
+            Mobile Number is required.
+            </div>
+        </div></small>
+
+
+
+        <label for="chkPassport">
+                <input type="checkbox" id="chkPassport" (click)="ShowHideDiv(this.value)" />
+                Do you have Passport?
+            </label>
+            <hr />
+            <div id="dvPassport" style="display: none">
+                Passport Number:
+                <input type="text" id="txtPassportNumber" />
+            </div>
+
+
+
+
+
+        <div class="form-group">
+            <small class="form-text text-muted" ><label> Your Password </label></small>
+            <input type="password" class="form-control" formControlName="Password" required #Password >
+        </div>
+        <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Password'].errors.required">
+            Password is required.
+            </div>
+            <div *ngIf="angForm.controls['Password'].errors.minLength">Password must be at least 8 characters</div>
+        </div></small><br>
+
+            <div class="form-group">
+
+                <div class="form-row">
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-block" id="sign" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value ,Password.value)"  [disabled]="angForm.pristine || angForm.invalid">Update  User</button>                                  
+                        </div>
+                        <div class="col-sm" style="margin-top: 13px">
+                            <a href="#" style="color: #668c98"> Cancel</a>  
+                        </div>
+                </div>
+            </div> <br>
+            <hr>
+            <div class="form-group">
+                <h5 style="color: #004053">Email Subscriptions</h5> <br>
+            <div class="form-row" style="margin-left:15px">
+                <div class="col">
+                    <input type="checkbox" class="form-check-input" >
+                    <small class="form-text text-muted" ><label  for="exampleCheck1">Proposify Sales blog</label></small>
+
+                    <input type="checkbox" class="form-check-input"  checked>
+                    <small class="form-text text-muted" ><label  for="exampleCheck1">Weekly Account Summary</label></small>
+
+                    <input type="checkbox" class="form-check-input" >
+                    <small class="form-text text-muted" ><label  for="exampleCheck1">Product updates & announcements</label></small>                                   
+                    </div>
+                <div class="col">
+                    <input type="checkbox" class="form-check-input"  checked>
+                    <small class="form-text text-muted" ><label  for="exampleCheck1">Getting Started Emails</label></small>
+
+                    <input type="checkbox" class="form-check-input" >
+                    <small class="form-text text-muted" ><label  for="exampleCheck1">Proposify Biz Chat</label></small>
+                </div>
+            </div>      
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+</body>
 </html> 

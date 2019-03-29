@@ -1,4 +1,6 @@
-
+body{
+  background-color: #EDEDED
+}
 #sign1{
     color: #ffffff;
     background-color: #00b8d1;
@@ -8,8 +10,8 @@
  #sign{
   color: #ffffff;
   background-color: #6ec962;
-  width: 80px;
-  height: 35px;
+  width: 140px;
+  height: 50px;
 }
  body {
     font-family: "Lato", sans-serif;
@@ -126,5 +128,11 @@ background-color:#009DB2;
 width: 200px;
 }
 
+#maindiv{
+  margin-left:300px;
+  background-color: #EDEDED;
+  border: none;  
+  outline: none;
+}
 
 

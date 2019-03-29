@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     for( var i=0;i<this.login.length;i++){
     console.log(this.login[i].Email); 
     console.log(this.login[i].Password);
+    
       } 
     });
   }
@@ -36,7 +37,9 @@ export class LoginComponent implements OnInit {
       console.log(this.password.nativeElement.value);
       console.log('valid');
       localStorage.setItem('key',this.login[i].Fname); 
-      localStorage.setItem('key1',this.login[i].Lname); 
+      localStorage.setItem('key1',this.login[i].Lname);
+      localStorage.setItem('key2',this.login[i].Email);
+      localStorage.setItem('key3',this.login[i].Mobile_no); 
       var nn =localStorage.getItem('key');
       console.log(nn);
       this.logn.logged = true;
