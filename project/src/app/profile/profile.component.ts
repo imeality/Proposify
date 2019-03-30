@@ -9,12 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  //isShow=false;
   fname =localStorage.getItem('key');
   lname =localStorage.getItem('key1');
   emal =localStorage.getItem('key2');
   mob =localStorage.getItem('key3');
-  marked = false;
-  theCheckbox = false;
   angForm:FormGroup;
   Login: any = {};
 
@@ -27,8 +26,9 @@ export class ProfileComponent implements OnInit {
       Fname: ['', Validators.required],
       Lname: ['', Validators.required],
       Email: ['', [Validators.required, Validators.email]],
-      Mobile_no: ['', [Validators.required, Validators.minLength(8)]],
-      Password: ['', Validators.required]
+      Mobile_no: ['', Validators.required],
+      Password: ['', Validators.required],
+      conPassword: ['', Validators.required],
     });
   }
 
@@ -54,9 +54,9 @@ export class ProfileComponent implements OnInit {
     this.logn.logged = false;
     this.logn.username ='';
     localStorage.removeItem('key');
+    localStorage.removeItem('key1');
+    localStorage.removeItem('key2');
+    localStorage.removeItem('key3');
   }
 
-  toggleVisibility(e){
-    this.marked= e.target.checked;
-  }
 }

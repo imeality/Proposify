@@ -1,3 +1,8 @@
+body{
+  background-color: #EDEDED;
+  font-family: "Lato", sans-serif
+}
+
 #sign1{
     color: #ffffff;
     background-color: #00b8d1;
@@ -10,10 +15,7 @@
   width: 80px;
   height: 35px;
 }
- body {
-    font-family: "Lato", sans-serif;
-  }
-  
+
   .sidenav {
     height: 100%;
     width: 7  0px;
@@ -141,7 +143,7 @@ input,button {
     height: 50px;
 }
 
-#btn{
+#btn0{
   color: #ffffff;
   background-color: #6ec962;
   width: 150px;

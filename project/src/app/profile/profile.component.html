@@ -154,41 +154,24 @@
             </div>
         </div></small>
 
-
-
-        <label for="chkPassport">
-                <input type="checkbox" id="chkPassport" (click)="ShowHideDiv(this.value)" />
-                Do you have Passport?
-            </label>
-            <hr />
-            <div id="dvPassport" style="display: none">
-                Passport Number:
-                <input type="text" id="txtPassportNumber" />
-            </div>
-
-
-
-
-
-        <div class="form-group">
-            <small class="form-text text-muted" ><label> Your Password </label></small>
+        <div class="form-group" >
+            <small class="form-text text-muted" ><label> Your Current Password </label></small>
             <input type="password" class="form-control" formControlName="Password" required #Password >
-        </div>
-        <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
+            </div>
+            <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
             <div *ngIf="angForm.controls['Password'].errors.required">
-            Password is required.
+                Password is required.
             </div>
             <div *ngIf="angForm.controls['Password'].errors.minLength">Password must be at least 8 characters</div>
         </div></small><br>
 
             <div class="form-group">
-
                 <div class="form-row">
                         <div class="col-sm-4">
-                            <button type="submit" class="btn btn-block" id="sign" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value ,Password.value)"  [disabled]="angForm.pristine || angForm.invalid">Update  User</button>                                  
+                            <button type="submit" class="btn btn-block" id="sign" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value,Password.value)" >Update  User</button>                                  
                         </div>
                         <div class="col-sm" style="margin-top: 13px">
-                            <a href="#" style="color: #668c98"> Cancel</a>  
+                            <a routerLink="/dashboard" style="color: #668c98"> Cancel</a>  
                         </div>
                 </div>
             </div> <br>
@@ -222,3 +205,30 @@
 
 </body>
 </html> 
+
+
+ <!-- Password reset checkbox (hide/show) code 
+     
+    <label class="form-group">
+                <input type="checkbox" class="form-check-input" (click)="isShow=!isShow" style="margin-left:1px"/>
+                <small class="text-muted" style="margin-left:19px">Reset Password </small> 
+        </label><br><br>
+             <div class="form-row " *ngIf=" isShow">
+                <div class="col">
+                    <small class="form-text text-muted" ><label>New Password</label></small> 
+                    <input type="password" class="form-control" formControlName="Password" required #Password >
+                    <br>
+                    <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Password'].errors.required">
+                          Password is required.
+                        </div>
+                        <div *ngIf="angForm.controls['Password'].errors.minLength">Password must be at least 8 characters</div>
+                      </div></small>
+                    </div>
+                     <div class="col">
+                        <small class="form-text text-muted" ><label>Confirm Password</label></small> 
+                        <input type="password" class="form-control" formControlName="conPassword" required #conPassword>
+                        <br>
+                        </div> 
+                </div> 
+                <br> -->

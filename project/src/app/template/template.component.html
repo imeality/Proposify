@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/template.js"></script>
 </head>
 <body>
 
@@ -94,15 +95,72 @@
         </ul>
     </nav>
 <br><br>
-<div class="container"><h4>Step 1: Choose a template</h4>
+<div class="container"><h4 style="color:#004053">Step 1: Choose a template</h4>
   <p class="text-muted">A template is a pre-made proposal you can use to get started right away.</p>
   <br>
   <div style="background-color:white;padding: 15px">
     <p  class="text-muted" style="text-align:center;margin-top: 10px"> To start, choose any template so we can show you how Proposify works. You can pick a new template later.
     </p>
   </div>
-  <br><br>  
-</div>
+  <br>
+<div id="myBtnContainer">
+                    <a class="btn btn1 active" onclick="filterSelection('all')" style="color: #668c98;">ALL</a>
+                    <a class="btn btn1 " onclick="filterSelection('RESUME')" style="color: #668c98;">RESUME</a>
+                    <a class="btn btn1 " onclick="filterSelection('PROPOSAL')" style="color: #668c98;">PROPOSAL</a>  
+      </div>
+      
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column RESUME">
+          <div class="content">
+            <img src="./assets/resume1.png" alt="RESUME" style="width:100%;height:300px">
+            <br><br>
+            <h3 style="color:#004053;">Resume</h3>
+          </div>
+        </div>
+        <div class="column RESUME">
+          <div class="content">
+          <img src="./assets/resume2.png" alt="RESUME" style="width:100%;height:300px">
+          <br><br>
+          <h3 style="color:#004053;">Resume</h3>
+        </div>
+        </div>
+        <div class="column RESUME">
+          <div class="content">
+          <img src="./assets/resume3.png" alt="RESUME" style="width:100%;height:300px">
+          <br><br>
+          <h3 style="color:#004053;">Resume</h3>
+        </div>
+        </div> 
+        <div class="column RESUME">
+            <div class="content">
+            <img src="./assets/resume4.png" alt="RESUME" style="width:100%;height:300px">
+            <br><br>
+            <h3 style="color:#004053;">Resume</h3>
+        </div>
+        </div>
+
+        <div class="column PROPOSAL">
+          <div class="content">
+            <img src="/w3images/cars1.jpg" alt="PROPOSAL" style="width:100%">
+            <h4>Retro</h4>
+          </div>
+        </div>
+        <div class="column PROPOSAL">
+          <div class="content">
+          <img src="/w3images/cars2.jpg" alt="PROPOSAL" style="width:100%">
+            <h4>Fast</h4>
+          </div>
+        </div>
+        <div class="column PROPOSAL">
+          <div class="content">
+          <img src="/w3images/cars3.jpg" alt="PROPOSAL" style="width:100%">
+            <h4>Classic</h4>
+          </div>
+        </div>
+      <!-- END GRID -->
+      </div>
+    </div>
 
 </body>
 </html> 

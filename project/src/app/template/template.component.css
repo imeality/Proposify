@@ -134,6 +134,57 @@ body{
     border: none;  
     outline: none;
   }
-  
-  
-  
+
+  h3 {
+    font-family:'proxima-nova',sans-serif;
+    font-size: 14px;
+  }
+
+    .btn1 {
+      cursor: pointer;  
+      font-family:'proxima-nova',sans-serif;
+      font-size: 14px;
+    }
+    
+    .btn1.active {
+      background-color: #00b8d1;
+
+    }
+    
+    .row {
+      margin: 10px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+      display: none; /* Hide all elements by default */
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+    }
+    
+    /* The "show" class is added to the filtered elements */
+    .show {
+      display: block;
+    }
+    
+
+    
