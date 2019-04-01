@@ -1,0 +1,63 @@
+body{
+    background-color: #EDEDED;
+}
+nav {
+    border-bottom: thin solid darkgrey;
+  }
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EDEDED;
+    overflow-x: hidden;  
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  
+  .main {
+    margin-top: 55px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+
+  #table-scroll {
+    height:802px;
+  }
+
+/* arrow button style */
+  .btn-arrow-right{
+    position: relative;
+}
+
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    width: 22px; /* same as height */
+    height: 22px; /* button_outer_height / sqrt(2) */
+    background: #83db77 ; /* use parent background */
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    transform: rotate(45deg); 
+}
+
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+    right: -12px;
+}
+
+#sign{
+    color: #ffffff;
+    background-color: #83db77;
+    width:100px;
+    height: 35px;
+    left: 1300px
+ }

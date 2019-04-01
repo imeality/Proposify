@@ -186,5 +186,56 @@ body{
       display: block;
     }
     
+    /* image button hover  */
+    div.show-image {
+      position: relative;
+      float:left;
+      margin:5px;
+  }
+  div.show-image:hover img{
+      opacity:0.15;
+  }
+  div.show-image:hover button {
+      cursor: pointer; 
+      display: block;
+  }
+  div.show-image button {
+      position:absolute;
+      display:none;
+  }
+  div.show-image button.update {
+      top:210px;
+      left:30px;
+      width: 195px;
+      height: 40px;
+      font-size: 15px;
+      color: #668c98;
+      margin-bottom: 12px;
+  }
 
+  div.show-image:hover span  {
+    cursor: pointer; 
+    display: block;
+}
+
+div.show-image span {
+  position:absolute;
+  display:none;
+}
+
+div.show-image span.update {
+  top:90px;
+  left:65px;
+  width: 195px;
+  height: 40px;
+  font-size: 18px;
+  color: #668c98;
+  margin-bottom: 12px;
+}
+
+.fa-3x {
+  font-size: 2em;
+  padding-left: 40px;
+  padding-bottom:15px;
+  }
     
