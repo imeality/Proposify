@@ -149,6 +149,7 @@ app.get('/company/:id', function (req, res) {
     var params = { 
       "Proposal_ID" : req.body.Proposal_ID,
       "Company_name" : req.body.Company_name,
+      "Company_email" : req.body.Company_email,
       "Company_address" : req.body.Company_address,
       "Company_country" : req.body.Company_country,
       "Company_state" : req.body.Company_state,
@@ -166,11 +167,12 @@ app.get('/company/:id', function (req, res) {
  //rest api to update record into mysql database using put
  app.put('/company/:id' , function (req, res) {   
    let Company_name = req.body.Company_name;
+   let Company_email = req.body.Company_email;
    let Company_address = req.body.Company_address;
    let Company_country = req.body.Company_country;
    let Company_state = req.body.Company_state;
    let Company_city = req.body.Company_city;
-   connection.query('UPDATE `Company` SET `Company_name`=?,`Company_address`=?,`Company_country`=?,`Company_state`=?,`Company_city`=? where `Company_Id`=?', [Company_name,Company_address,Company_country,Company_state,Company_city,req.params.id], function (error, results, fields) {
+   connection.query('UPDATE `Company` SET `Company_name`=?,`Company_email`=?,`Company_address`=?,`Company_country`=?,`Company_state`=?,`Company_city`=? where `Company_Id`=?', [Company_name,Company_address,Company_country,Company_state,Company_city,req.params.id], function (error, results, fields) {
        //if (error) throw error;
      res.end(JSON.stringify(results));
      console.log('Record has been Updated!');

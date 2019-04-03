@@ -28,7 +28,7 @@ nav {
   }
 
   #table-scroll {
-    height:802px;
+    height:1000px;
   }
 
 /* arrow button style */
@@ -84,4 +84,8 @@ h3 {
   font-size: 14px;
 }
 
-
+h4 {
+  font-family:'proxima-nova',sans-serif;
+  font-size: 22px;
+  
+}

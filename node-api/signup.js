@@ -9,9 +9,9 @@ app.use(cors());
 //start mysql connection
 var connection = mysql.createConnection({
   host     : 'localhost', //mysql database host name
-  user     : 'phpmyadmin', //mysql database user name
-  password : '12345', //mysql database password
-  database : 'resume' //mysql database name
+  user     : 'root', //mysql database user name
+  password : '', //mysql database password
+  database : 'Resume' //mysql database name
 });
 
 connection.connect(function(error) {

@@ -9,6 +9,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TemplateComponent } from './template/template.component';
 import { Preview1Component } from './preview1/preview1.component';
+import { Preview2Component } from './preview2/preview2.component';
+import { Preview3Component } from './preview3/preview3.component';
+import { Preview4Component } from './preview4/preview4.component';
+import { Preview5Component } from './preview5/preview5.component';
+import { Preview6Component } from './preview6/preview6.component';
+import { Preview7Component } from './preview7/preview7.component';
 
 const routes: Routes = [
     { path:'',redirectTo:'/home',pathMatch:'full'},
@@ -21,6 +27,12 @@ const routes: Routes = [
     { path:'profile',component:ProfileComponent},
     { path:'template',component:TemplateComponent},
     { path:'previewresume1',component:Preview1Component},
+    { path:'previewresume2',component:Preview2Component},
+    { path:'previewresume3',component:Preview3Component},
+    { path:'previewresume4',component:Preview4Component},
+    { path:'previewresume5',component:Preview5Component},
+    { path:'previewresume6',component:Preview6Component},
+    { path:'previewresume7',component:Preview7Component},
 
 ];
 
