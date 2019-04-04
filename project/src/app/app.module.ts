@@ -20,6 +20,7 @@ import { Preview4Component } from './preview4/preview4.component';
 import { Preview5Component } from './preview5/preview5.component';
 import { Preview6Component } from './preview6/preview6.component';
 import { Preview7Component } from './preview7/preview7.component';
+import { ResformComponent } from './resform/resform.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { Preview7Component } from './preview7/preview7.component';
     Preview5Component,
     Preview6Component,
     Preview7Component,
+    ResformComponent,
   ],
   imports: [
     BrowserModule,
