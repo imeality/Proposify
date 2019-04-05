@@ -204,11 +204,11 @@
                         </div>
                     </div> 
 
-                    <hr>
+                    <hr style="margin:8px">
                                                 <!-- Educational Details -->
-
-                    <h6 style="color: #004053"> <b>Educational Details</b></h6>
-                
+                    
+                    <button type="button" id="formButton">Educational Details</button> <br><br>
+                <div id="form1">
                     <div class="form-row">
                             <div class="col-md-8 ">
                                     <small class="form-text text-muted" ><label>10<sup>th</sup> School Name</label></small> 
@@ -331,154 +331,115 @@
                                     <div class="col-md-3 ">
                                             <small class="form-text text-muted" ><label>PG %</label></small> 
                                     <input type="text" class="form-control" >
+                                    <br>
                                     </div>
                                     <div class="col-md-3 ">
                                     <small class="form-text text-muted" ><label>Passing year</label></small> 
                                     <input type="text" class="form-control">
                                     </div>
                                 </div>
-                        <hr>
-
+                                
+                        <hr style="margin:8px">
+                   
                                                 <!-- experience details -->
 
-                        <h6 style="color: #004053"> <b>Experience Details</b></h6>
+                            <button type="button" id="formButton2">Experience Details</button> <br><br>
+                    <div id="form2">
+                        <div class="form-group">
+                            <small class="form-text text-muted" ><label>Company Name</label></small>
+                            <input type="text" class="form-control" formControlName="company" >
+                        </div>
                 
                     <div class="form-row">
                             <div class="col-md-8 ">
-                                    <small class="form-text text-muted" ><label>10<sup>th</sup> School Name</label></small> 
-                            <input type="text" class="form-control" formControlName="tschool" required #Tschool >
-                            <br>
-                        <small><div *ngIf="angForm.controls['Tschool'].invalid && (angForm.controls['Tschool'].dirty)" class=" alert-danger">
-                                <div *ngIf="angForm.controls['Tschool'].errors.required">
-                                    10<sup>th</sup> School Name is required.
-                                </div>
-                                </div></small>
+                                    <small class="form-text text-muted" ><label>Job Profile</label></small> 
+                            <input type="text" class="form-control" formControlName="Profile" >
                             </div>
-                            <div class="col-md-2 ">
-                                    <small class="form-text text-muted" ><label>10<sup>th</sup> %</label></small> 
-                            <input type="text" class="form-control" formControlName="tpercentage" required #Tpercentage >
-                            <br>
-                        <small><div *ngIf="angForm.controls['Tpercentage'].invalid && (angForm.controls['Tpercentage'].dirty)" class=" alert-danger">
-                                <div *ngIf="angForm.controls['Tpercentage'].errors.required">
-                                    10<sup>th</sup> Percentage is required.
-                                </div>
-                                </div></small>
-                            </div>
-                            <div class="col-md-2 ">
-                            <small class="form-text text-muted" ><label>Passing Year</label></small> 
-                            <input type="text" class="form-control" formControlName="tyear" required #Tyear >
-                            <br>
-                        <small><div *ngIf="angForm.controls['Tyear'].invalid && (angForm.controls['Tyear'].dirty)" class=" alert-danger">
-                                <div *ngIf="angForm.controls['Tyear'].errors.required">
-                                    10<sup>th</sup> Passing Year is required.
-                                </div>
-                                </div></small>
+                            <div class="col-md-4 ">
+                                    <small class="form-text text-muted" ><label>Experience Year</label></small> 
+                            <input type="number" class="form-control" formControlName="Experience" >
                             </div>
                         </div> 
-                    
+                            <br>
                         <div class="form-row">
-                                <div class="col-md-8">
-                                        <small class="form-text text-muted" ><label>12<sup>th</sup> School Name</label></small> 
-                                <input type="text" class="form-control" formControlName="twschool" required #Twschool >
-                                <br>
-                            <small><div *ngIf="angForm.controls['Twschool'].invalid && (angForm.controls['Twschool'].dirty)" class=" alert-danger">
-                                    <div *ngIf="angForm.controls['Twschool'].errors.required">
-                                        12<sup>th</sup> School Name is required.
-                                    </div>
-                                    </div></small>
+                                <div class="col-md-6">
+                                        <small class="form-text text-muted" ><label>Start Date</label></small> 
+                                <input type="text" class="form-control" formControlName="Start" >
                                 </div>
-                                <div class="col-md-2">
-                                        <small class="form-text text-muted" ><label>12<sup>th</sup> %</label></small> 
-                                <input type="text" class="form-control" formControlName="twpercentage" required #Twpercentage >
-                                <br>
-                            <small><div *ngIf="angForm.controls['Twpercentage'].invalid && (angForm.controls['Twpercentage'].dirty)" class=" alert-danger">
-                                    <div *ngIf="angForm.controls['Twpercentage'].errors.required">
-                                        12<sup>th</sup> Percentage is required.
-                                    </div>
-                                    </div></small>
-                                </div>
-                                <div class="col-md-2">
-                                <small class="form-text text-muted" ><label> Passing Year</label></small> 
-                                <input type="text" class="form-control" formControlName="twyear" required #Twyear >
-                                <br>
-                            <small><div *ngIf="angForm.controls['Twyear'].invalid && (angForm.controls['Twyear'].dirty)" class=" alert-danger">
-                                    <div *ngIf="angForm.controls['Twyear'].errors.required">
-                                        12<sup>th</sup> Passing Year is required.
-                                    </div>
-                                    </div></small>
+                                <div class="col-md-6">
+                                <small class="form-text text-muted" ><label> End Date</label></small> 
+                                <input type="text" class="form-control" formControlName="End" >
                                 </div>
                             </div> 
-                        
-                        <div class="form-group">
-                                <small class="form-text text-muted" ><label>Graduation Collage Name</label></small>
-                                <input type="text" class="form-control" formControlName="gcollage" required #Gcollage >
+                            <br>
+                            <div class="form-group">
+                                <small class="form-text text-muted" ><label>Achivement</label></small>
+                                  <div class="multi-field-wrapper">
+                                    <div class="multi-fields">
+                                      <div class="multi-field ">
+                                        <input  type="text" name="Achivement[]" class="form-control" formControlName="Achivement" style="width:440px;display:inline"> <span style="padding-left :10px"></span>
+                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
+                                      </div>
+                                    </div> <span class="margin-top:10px"></span>
+                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
+                                </div>
                             </div>
-                            <small><div *ngIf="angForm.controls['Gcollage'].invalid && (angForm.controls['Gcollage'].dirty )" class=" alert-danger">
-                                <div *ngIf="angForm.controls['Gcollage'].errors.required">
-                                    Graduation Collage Name is required.
-                                </div>
-                            </div></small>
-                    
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                        <small class="form-text text-muted" ><label>Graduation Stream</label></small> 
-                                <input type="text" class="form-control" formControlName="gscollage" required #Gscollage >
-                                <br>
-                            <small><div *ngIf="angForm.controls['Gscollage'].invalid && (angForm.controls['Gscollage'].dirty)" class=" alert-danger">
-                                    <div *ngIf="angForm.controls['Gscollage'].errors.required">
-                                        Graduation Stream is required.
-                                    </div>
-                                    </div></small>
-                                </div>
-                                <div class="col-md-3 ">
-                                        <small class="form-text text-muted" ><label>Graduation %</label></small> 
-                                <input type="text" class="form-control" formControlName="gpcollage" required #Gpcollage >
-                                <br>
-                            <small><div *ngIf="angForm.controls['Gpcollage'].invalid && (angForm.controls['Gpcollage'].dirty)" class=" alert-danger">
-                                    <div *ngIf="angForm.controls['Gpcollage'].errors.required">
-                                        Graduation percentage is required.
-                                    </div>
-                                    </div></small>
-                                </div>
-                                <div class="col-md-3 ">
-                                <small class="form-text text-muted" ><label>Passing year</label></small> 
-                                <input type="text" class="form-control" formControlName="gyear" required #Gyear >
-                                <br>
-                            <small><div *ngIf="angForm.controls['Gyear'].invalid && (angForm.controls['Gyear'].dirty)" class=" alert-danger">
-                                    <div *ngIf="angForm.controls['Gyear'].errors.required">
-                                        Graduation Passing year is required.
-                                    </div>
-                                    </div></small>
+                            
+                            <div class="form-group">
+                                <small class="form-text text-muted" ><label>Skills</label></small>
+                                  <div class="multi-field-wrapper">
+                                    <div class="multi-fields">
+                                      <div class="multi-field ">
+                                        <input  type="text" name="Skills[]" class="form-control" formControlName="Skills" style="width:440px;display:inline"> <span style="padding-left :10px"></span>
+                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
+                                      </div>
+                                    </div> <span class="margin-top:10px"></span>
+                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
                                 </div>
                             </div>
 
+                              
+
                             <div class="form-group">
-                                    <small class="form-text text-muted" ><label>Post Collage Name</label></small>
-                                    <input type="text" class="form-control" >
+                                <small class="form-text text-muted" ><label>Languages</label></small>
+                                  <div class="multi-field-wrapper">
+                                    <div class="multi-fields">
+                                      <div class="multi-field ">
+                                        <input  type="text" name="Languages[]" class="form-control" formControlName="Languages" style="width:440px;display:inline"> <span style="padding-left :10px"></span>
+                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
+                                      </div>
+                                    </div> <span class="margin-top:10px"></span>
+                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
                                 </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 ">
-                                            <small class="form-text text-muted" ><label> PG Stream</label></small> 
-                                    <input type="text" class="form-control">
-                                    <br>
-                                    </div>
-                                    <div class="col-md-3 ">
-                                            <small class="form-text text-muted" ><label>PG %</label></small> 
-                                    <input type="text" class="form-control" >
-                                    </div>
-                                    <div class="col-md-3 ">
-                                    <small class="form-text text-muted" ><label>Passing year</label></small> 
-                                    <input type="text" class="form-control">
-                                    </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <small class="form-text text-muted" ><label>Hobbies</label></small>
+                                  <div class="multi-field-wrapper">
+                                    <div class="multi-fields">
+                                      <div class="multi-field ">
+                                        <input  type="text" name="Hobbies[]" class="form-control" formControlName="Hobbies" style="width:440px;display:inline"> <span style="padding-left :10px"></span>
+                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
+                                      </div>
+                                    </div> <span class="margin-top:10px"></span>
+                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
                                 </div>
+                            </div>
+                            <br>
                 <div class="form-group">
-                        <button type="submit" class="btn btn-block" id="sign" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value,Password.value)" >Update  User</button>                                  
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Fname.value, Lname.value, Email.value ,Mobile_no.value,Password.value)" style="margin-left: 200px"> Next Step</button>                               
                 </div> <br>
                 <hr>
+             </div>
+            </div>
             </form>
         </div>
       </div>
     </div>
 </div>
 </body>
+<script type="text/javascript">
+
+    </script>
+
 </html> 

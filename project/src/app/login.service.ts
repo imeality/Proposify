@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
-  url='http://localhost:3000/signup';
+  url='http://0.0.0.0:3000/signup';
   username : string;
   logged : boolean;
 
