@@ -1,0 +1,34 @@
+export class Resume {
+    Name:string;
+    DOB:string;
+    Age:number;
+    Mobile_no:string;
+    Email:string;
+    Address:string;
+    Country:string;
+    State:string;
+    City:string;
+    tenth_school:string;
+    tenth_per:string;
+    tenth_Passingyear:string;
+    twelth_school :string;
+    twelth_per:string;
+    twelth_Passingyear:string;
+    Graduation_Collage:string;
+    Graduation_Stream:string;
+    Graduation_per:string;
+    Graduation_Passingyear:string;
+    PG_collage:string;
+    PG_Stream:string;
+    PG_per:string;
+    PG_Passingyear:string;
+    Company_name:string;
+    Job_profile:string;
+    Experience:string;
+    Start_date:string;
+    End_date:string;
+    Achivement:string;
+    Skills:string;
+    Languages:string;
+    Hobbies:string
+}
