@@ -24,6 +24,11 @@ import { ResumeService} from './resume.service';
 import { Resform2Component } from './resform2/resform2.component';
 import { Resform3Component } from './resform3/resform3.component';
 import { Resform1Component } from './resform1/resform1.component';
+import { Resume1Component } from './resume1/resume1.component';
+import { Propform1Component } from './propform1/propform1.component';
+import { Propform2Component } from './propform2/propform2.component';
+import { ProposalService} from './proposal.service';
+import { Proposal1Component } from './proposal1/proposal1.component'
 
 @NgModule({
   declarations: [
@@ -46,6 +51,10 @@ import { Resform1Component } from './resform1/resform1.component';
     Resform2Component,
     Resform3Component,
     Resform1Component,
+    Resume1Component,
+    Propform1Component,
+    Propform2Component,
+    Proposal1Component,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +63,7 @@ import { Resform1Component } from './resform1/resform1.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [LoginService,ResumeService],
+  providers: [LoginService,ResumeService,ProposalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

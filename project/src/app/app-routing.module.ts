@@ -18,6 +18,9 @@ import { Preview7Component } from './preview7/preview7.component';
 import { Resform2Component } from './resform2/resform2.component';
 import { Resform3Component } from './resform3/resform3.component';
 import { Resform1Component } from './resform1/resform1.component';
+import { Propform1Component } from './propform1/propform1.component';
+import { Propform2Component } from './propform2/propform2.component';
+import { Proposal1Component } from './proposal1/proposal1.component';
 
 const routes: Routes = [
     { path:'',redirectTo:'/home',pathMatch:'full'},
@@ -39,6 +42,9 @@ const routes: Routes = [
     { path:'resumeuserdetail',component:Resform1Component},
     { path:'resumeeducationaldetail',component:Resform2Component},
     { path:'resumejobdetail',component:Resform3Component},
+    { path:'proposalclientdetail',component:Propform1Component},
+    { path:'proposalcompanydetail',component:Propform2Component},
+    { path:'proposal1',component:Proposal1Component },
 
 ];
 

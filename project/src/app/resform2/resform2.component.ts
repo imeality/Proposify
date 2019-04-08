@@ -12,6 +12,7 @@ import { LoginService } from '../login.service';
 export class Resform2Component implements OnInit {
 
   angForm:FormGroup;
+  name =localStorage.getItem('key');
   email=localStorage.getItem('id');
   constructor(private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
     this.createForm();

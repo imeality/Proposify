@@ -1,0 +1,191 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-top navbar-light bg-light" >
+        <div class="container">
+          <div>  <a class="navbar-brand" href="#"><img src="./assets/proposifylogo.png" height="80px" width="110px"></a>
+          </div>
+          <div class="btn-group">
+              <button type="button" id ="sign1" class="btn  dropdown-toggle" data-toggle="dropdown" *ngIf="logn.logged">
+                  {{name}}
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" routerLink="/profile"> <small class="text-muted">Profile</small></a>
+                <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()"> <small class="text-muted">Logout</small></a>
+            </div>
+          </div>
+      </div>
+      </nav>  
+  
+      
+      <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa fa-product-hunt fa-3x"></i>
+                    <span class="nav-text">
+                        Pipeline
+                    </span>
+                </a>
+              
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-archive fa-2x"></i>
+                    <span class="nav-text">
+                        Content Library
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-file-text-o fa-2x"></i>
+                    <span class="nav-text">
+                        Templates
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-bullseye fa-2x"></i>
+                    <span class="nav-text">
+                        Metrics
+                    </span>
+                </a>
+               
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users fa-2x"></i>
+                    <span class="nav-text">
+                        Users
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-address-book-o fa-2x"></i>
+                    <span class="nav-text">
+                       Clients
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#">
+                   <i class="fa fa-plug fa-2x"></i>
+                    <span class="nav-text">
+                        Integrations
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#">
+                    <i class="fa fa-cog fa-2x"></i>
+                    <span class="nav-text">
+                        Setting
+                    </span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+<br><br>
+<div class="container">
+    <button routerLink="/template" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px;height: 30px;margin-left:320px;" >&#9666; Back</button>
+</div>
+<hr>
+<div class="container">
+    <div class="card" id="maindiv" style="width: 37rem;">
+        <div class="card-body">
+            <form [formGroup]="angForm" novalidate>
+                <h3 style="color: #004053">Enter the Proposal Details</h3> <br>
+                <div class="alert alert-success" role="alert" style="font-family: 'proxima-nova',sans-serif;font-size: 16px"><i class="fa fa-check-circle" style="display:inline;"> </i> You have selected the "Proposal" template</div>
+                <h6 style="color: #004053"> <b>Client Details</b></h6>
+
+                <div class="form-group">
+                  <small class="form-text text-muted" ><label>Client name </label></small>
+                  <input type="text" class="form-control" formControlName="Client_name" required #Client_name >
+                </div>
+                <small><div *ngIf="angForm.controls['Client_name'].invalid && (angForm.controls['Client_name'].dirty )" class=" alert-danger">
+                  <div *ngIf="angForm.controls['Client_name'].errors.required">
+                    Client Name is required.
+                  </div>
+                </div></small>
+
+                <div class="form-group">
+                  <small class="form-text text-muted" ><label>Client Address </label></small>
+                  <input type="text" class="form-control" formControlName="Client_address" required #Client_address >
+                </div>
+                <small><div *ngIf="angForm.controls['Client_address'].invalid && (angForm.controls['Client_address'].dirty )" class=" alert-danger">
+                  <div *ngIf="angForm.controls['Client_address'].errors.required">
+                    Client address is required.
+                  </div>
+                </div></small>
+                
+                <div class="form-row">
+                        <div class="col-md-4 ">
+                                <small class="form-text text-muted" ><label>Client Country</label></small> 
+                        <input type="text" class="form-control" formControlName="Client_country" required #Client_country >
+                        <br>
+                    <small><div *ngIf="angForm.controls['Client_country'].invalid && (angForm.controls['Client_country'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Client_country'].errors.required">
+                              Client Country is required.
+                            </div>
+                            </div></small>
+                        </div>
+                        <div class="col-md-4 ">
+                                <small class="form-text text-muted" ><label>Client State</label></small> 
+                        <input type="text" class="form-control" formControlName="Client_state" required #Client_state >
+                        <br>
+                    <small><div *ngIf="angForm.controls['Client_state'].invalid && (angForm.controls['Client_state'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Client_state'].errors.required">
+                              Client State is required.
+                            </div>
+                            </div></small>
+                        </div>
+                        <div class="col-md-4 ">
+                        <small class="form-text text-muted" ><label>Client City</label></small> 
+                        <input type="text" class="form-control" formControlName="Client_city" required #Client_city >
+                        <br>
+                    <small><div *ngIf="angForm.controls['Client_city'].invalid && (angForm.controls['Client_city'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Client_city'].errors.required">
+                              Client City is required.
+                            </div>
+                            </div></small>
+                        </div>
+                    </div> 
+                
+                    <div class="form-row">
+                            <div class="col-md-6">
+                                    <small class="form-text text-muted" ><label>Client Mobile No.1</label></small> 
+                            <input type="text" class="form-control" formControlName="Client_mob1" required #Client_mob1  >
+                            <br>
+                        <small><div *ngIf="angForm.controls['Client_mob1'].invalid && (angForm.controls['Client_mob1'].dirty)" class=" alert-danger">
+                                <div *ngIf="angForm.controls['Client_mob1'].errors.required">
+                                  Client Mobile No. is required.
+                                </div>
+                                </div></small>
+                            </div>
+                            <div class="col-md-6">
+                                    <small class="form-text text-muted" ><label>Client Mobile No.2</label></small> 
+                            <input type="text" class="form-control" formControlName="Client_mob2"  #Client_mob2 >
+                            <br>
+                            </div>
+                        </div> 
+                            <br>
+                <div class="form-group">
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Client_name.value,Client_address.value,Client_country.value,Client_state.value,Client_city .value,Client_mob1.value,Client_mob2.value)" style="margin-left: 200px"> Next Step</button>                               
+                </div> <br>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+<script type="text/javascript">
+</script>
+</html> 
