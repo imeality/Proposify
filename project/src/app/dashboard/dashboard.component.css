@@ -128,7 +128,8 @@ width: 200px;
 }
 
 .search { 
-  position: relative; 
+  position: relative;
+  margin-left: 20px 
 }
 .search input { 
   text-indent: 35px;

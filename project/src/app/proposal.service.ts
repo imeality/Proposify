@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProposalService {
 
-  url1='http://0.0.0.0:3000/client';
-  url2='http://0.0.0.0:3000/company';
+  url1='http://35.154.233.162:3000/client';
+  url2='http://35.154.233.162:3000/company';
 
   constructor(private http:HttpClient) { }
 

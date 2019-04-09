@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResumeService {
 
-  url1='http://0.0.0.0:3000/user';
-  url2='http://0.0.0.0:3000/education';
-  url3='http://0.0.0.0:3000/job';
+  url1='http://35.154.233.162:3000/user';
+  url2='http://35.154.233.162:3000/education';
+  url3='http://35.154.233.162:3000/job';
 
   constructor(private http:HttpClient) { }
 

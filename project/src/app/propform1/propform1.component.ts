@@ -31,7 +31,6 @@ export class Propform1Component implements OnInit {
   }
 
   onClick(Client_name,Client_address,Client_country,Client_state,Client_city ,Client_mob1,Client_mob2) {
-    console.log(Client_name,Client_address,Client_country,Client_state,Client_city ,Client_mob1,Client_mob2);
     this.prop.addUser1(Client_name,Client_address,Client_country,Client_state,Client_city ,Client_mob1,Client_mob2);
     this.router.navigate(['/proposalcompanydetail'])
     localStorage.setItem('cname',Client_name);

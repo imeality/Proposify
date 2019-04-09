@@ -33,7 +33,6 @@ export class ProfileComponent implements OnInit {
   }
 
   onClick(Fname, Lname, Email ,Mobile_no ,Password) {
-    console.log(Fname, Lname, Email ,Mobile_no ,Password);
     this.logn.updateUser(Fname, Lname, Email ,Mobile_no ,Password);
     this.logn.logged = true;
     localStorage.setItem('key',Fname);

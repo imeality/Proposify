@@ -19,13 +19,8 @@ export class LoginComponent implements OnInit {
   
   ngOnInit() {
     this.logn.getUser().subscribe((data:Login[])=>{
-    console.log(data);
     this.login=data;
-    console.log(this.login.length);
-    for( var i=0;i<this.login.length;i++){
-    console.log(this.login[i].Email); 
-    console.log(this.login[i].Password);
-    
+    for( var i=0;i<this.login.length;i++){    
       } 
     });
   }
@@ -33,15 +28,12 @@ export class LoginComponent implements OnInit {
     onClick(){
    for( var i=0;i<this.login.length;i++){
     if(this.login[i].Email == this.email.nativeElement.value && this.login[i].Password == this.password.nativeElement.value) {
-      console.log(this.email.nativeElement.value);
-      console.log(this.password.nativeElement.value);
       console.log('valid');
       localStorage.setItem('key',this.login[i].Fname); 
       localStorage.setItem('key1',this.login[i].Lname);
       localStorage.setItem('key2',this.login[i].Email);
       localStorage.setItem('key3',this.login[i].Mobile_no); 
       var nn =localStorage.getItem('key');
-      console.log(nn);
       this.logn.logged = true;
       this.router.navigate(['/dashboard']);
       break

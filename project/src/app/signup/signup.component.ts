@@ -16,16 +16,15 @@ export class SignupComponent implements OnInit {
 
    createForm() {
     this.angForm = this.fb.group({
-      Fname: ['', Validators.required],
-      Lname: ['', Validators.required],
-      Email: ['', [Validators.required, Validators.email]],
-      Mobile_no: ['', Validators.required],
+      Fname: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      Lname: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      Email: ['', [Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}')]],
+      Mobile_no: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
       Password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
   onClick(Fname, Lname, Email ,Mobile_no ,Password) {
-    console.log(Fname, Lname, Email ,Mobile_no ,Password);
     this.logn.addUser(Fname, Lname, Email ,Mobile_no ,Password);
     this.logn.logged = true;
     localStorage.setItem('key',Fname);
@@ -34,9 +33,7 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit() {
-    var nn =localStorage.getItem('key');
-    console.log(nn);
-    
+    var nn =localStorage.getItem('key');    
   }
 
 }

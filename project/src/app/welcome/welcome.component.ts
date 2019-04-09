@@ -13,8 +13,6 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     var nn =localStorage.getItem('key');
     this.name=nn;
-    console.log(nn);
-
   }
   onClick() {
     this.router.navigate(['/login'])

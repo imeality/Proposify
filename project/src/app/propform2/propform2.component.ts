@@ -31,9 +31,8 @@ export class Propform2Component implements OnInit {
   }
 
   onClick(Company_name,Company_email,Company_address,Company_country,Company_state ,Company_city,Date) {
-    console.log(Company_name,Company_email,Company_address,Company_country,Company_state ,Company_city,Date);
     this.prop.addUser2(Company_name,Company_email,Company_address,Company_country,Company_state ,Company_city,Date);
-    this.router.navigate(['/home'])
+    this.router.navigate(['/proposal1'])
     localStorage.setItem('comname',Company_name);
     localStorage.setItem('comemail',Company_email);
     localStorage.setItem('comadd',Company_address);

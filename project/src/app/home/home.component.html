@@ -70,6 +70,7 @@
           <a class="nav-link dropdown" id ="sign" *ngIf="logn.logged">{{name}}
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()" style="color:#004053">Logout</a>
+            <a class="dropdown-item"  routerLink="/dashboard" style="color:#004053">Dashboard</a>
             </div>
           </a>
         </li> 

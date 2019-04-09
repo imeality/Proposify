@@ -17,6 +17,8 @@
             <div *ngIf="angForm.controls['Fname'].errors.required">
               First Name is required.
             </div>
+            <div *ngIf="angForm.controls['Fname'].errors.pattern">First Name has only alphabets </div>
+
           </div></small>
 
           <div class="form-group">
@@ -27,6 +29,7 @@
             <div *ngIf="angForm.controls['Lname'].errors.required">
               Last Name is required.
             </div>
+            <div *ngIf="angForm.controls['Lname'].errors.pattern">Last Name has only alphabets</div>
           </div></small>
 
           <div class="form-group">
@@ -37,7 +40,7 @@
             <div *ngIf="angForm.controls['Email'].errors.required">
               Email is required.
             </div>
-            <div *ngIf="angForm.controls['Email'].errors.email">Email must be a valid email address</div>
+            <div *ngIf="angForm.controls['Email'].errors.pattern">Email must be a valid email address</div>
           </div></small>
 
           <div class="form-group">
@@ -49,16 +52,23 @@
               Mobile Number is required.
             </div>
           </div></small>
+          <small><div *ngIf="angForm.controls['Mobile_no'].invalid && (angForm.controls['Mobile_no'].dirty || angForm.controls['Mobile_no'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Mobile_no'].errors.pattern">
+              Enter valid Mobile Number.
+            </div>
+          </div></small>
 
           <div class="form-group">
-            <small class="form-text text-muted" ><label> Your Password </label></small>
+            <small class="form-text text-muted" ><label> Your Password</label></small>
             <input type="password" class="form-control" formControlName="Password" required #Password >
           </div>
           <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
             <div *ngIf="angForm.controls['Password'].errors.required">
               Password is required.
             </div>
-            <div *ngIf="angForm.controls['Password'].errors.minLength">Password must be at least 8 characters</div>
+          </div></small>
+          <small><div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class=" alert-danger">
+            <div *ngIf="angForm.controls['Password'].errors.minlength">Password must be at least 8 characters</div>
           </div></small><br>
 
             <div class="form-group">
