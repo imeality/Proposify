@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('password') password: ElementRef;
   login:Login[];
 
-  constructor(private logn:LoginService , private router:Router) { }
+  constructor(private logn:LoginService , private router:Router ) { }
 
   
   ngOnInit() {

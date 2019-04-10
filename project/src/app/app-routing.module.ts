@@ -21,6 +21,7 @@ import { Resform1Component } from './resform1/resform1.component';
 import { Propform1Component } from './propform1/propform1.component';
 import { Propform2Component } from './propform2/propform2.component';
 import { Proposal1Component } from './proposal1/proposal1.component';
+import { Proposal2Component } from './proposal2/proposal2.component';
 
 const routes: Routes = [
     { path:'',redirectTo:'/home',pathMatch:'full'},
@@ -45,6 +46,7 @@ const routes: Routes = [
     { path:'proposalclientdetail',component:Propform1Component},
     { path:'proposalcompanydetail',component:Propform2Component},
     { path:'proposal1',component:Proposal1Component },
+    { path:'proposal2',component:Proposal2Component },
 
 ];
 

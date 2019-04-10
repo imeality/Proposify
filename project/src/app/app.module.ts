@@ -28,7 +28,8 @@ import { Resume1Component } from './resume1/resume1.component';
 import { Propform1Component } from './propform1/propform1.component';
 import { Propform2Component } from './propform2/propform2.component';
 import { ProposalService} from './proposal.service';
-import { Proposal1Component } from './proposal1/proposal1.component'
+import { Proposal1Component } from './proposal1/proposal1.component';
+import { Proposal2Component } from './proposal2/proposal2.component'
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { Proposal1Component } from './proposal1/proposal1.component'
     Propform1Component,
     Propform2Component,
     Proposal1Component,
+    Proposal2Component,
   ],
   imports: [
     BrowserModule,

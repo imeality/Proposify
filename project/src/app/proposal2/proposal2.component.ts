@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-proposal1',
-  templateUrl: './proposal1.component.html',
-  styleUrls: ['./proposal1.component.css']
+  selector: 'app-proposal2',
+  templateUrl: './proposal2.component.html',
+  styleUrls: ['./proposal2.component.css']
 })
-export class Proposal1Component implements OnInit {
+export class Proposal2Component implements OnInit {
 
   cname=localStorage.getItem('cname');
   cadd =localStorage.getItem('cadd');
@@ -22,7 +22,6 @@ export class Proposal1Component implements OnInit {
   comstat =localStorage.getItem('comstat');
   comcity =localStorage.getItem('comcity');
   comdate =localStorage.getItem('comdate');
-
 
   constructor() { }
 

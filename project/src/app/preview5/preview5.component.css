@@ -28,7 +28,7 @@ nav {
   }
 
   #table-scroll {
-    height:1000px;
+    height:805px;
   }
 
 /* arrow button style */
@@ -90,20 +90,6 @@ h4 {
   
 }
 
-
-
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-img.active {
-  border-color: black;
-}
-a {
-  color: black;
-  text-decoration: none;
+.tr2,.tr3,.tr4,.tr5,.tr6,.tr7,.tr8,.tr9{
+  display: none;
 }
