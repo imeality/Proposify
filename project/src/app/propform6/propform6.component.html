@@ -95,7 +95,7 @@
     </nav>
 <br><br>
 <div class="container">
-    <button routerLink="/template" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px;height: 30px;margin-left:320px;" >&#9666; Back</button>
+    <button routerLink="/proposalClientDetail" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px;height: 30px;margin-left:320px;" >&#9666; Back</button>
 </div>
 <hr>
 <div class="container">
@@ -104,86 +104,84 @@
             <form [formGroup]="angForm" novalidate>
                 <h3 style="color: #004053">Enter the Proposal Details</h3> <br>
                 <div class="alert alert-success" role="alert" style="font-family: 'proxima-nova',sans-serif;font-size: 16px"><i class="fa fa-check-circle" style="display:inline;"> </i> You have selected the "Proposal" template</div>
-                <h6 style="color: #004053"> <b>Client Details</b></h6>
+                <h6 style="color: #004053"> <b>Company Details</b></h6>
 
                 <div class="form-group">
-                  <small class="form-text text-muted" ><label>Client name </label></small>
-                  <input type="text" class="form-control" formControlName="Client_name" required #Client_name >
+                  <small class="form-text text-muted" ><label>Company name </label></small>
+                  <input type="text" class="form-control" formControlName="Company_name" required #Company_name >
                 </div>
-                <small><div *ngIf="angForm.controls['Client_name'].invalid && (angForm.controls['Client_name'].dirty )" class=" alert-danger">
-                  <div *ngIf="angForm.controls['Client_name'].errors.required">
-                    Client Name is required.
+                <small><div *ngIf="angForm.controls['Company_name'].invalid && (angForm.controls['Company_name'].dirty )" class=" alert-danger">
+                  <div *ngIf="angForm.controls['Company_name'].errors.required">
+                    Company Name is required.
                   </div>
                 </div></small>
 
                 <div class="form-group">
-                  <small class="form-text text-muted" ><label>Client Address </label></small>
-                  <input type="text" class="form-control" formControlName="Client_address" required #Client_address >
+                  <small class="form-text text-muted" ><label>Company Email</label></small>
+                  <input type="email" class="form-control" formControlName="Company_email" required #Company_email >
                 </div>
-                <small><div *ngIf="angForm.controls['Client_address'].invalid && (angForm.controls['Client_address'].dirty )" class=" alert-danger">
-                  <div *ngIf="angForm.controls['Client_address'].errors.required">
-                    Client address is required.
+                <small><div *ngIf="angForm.controls['Company_email'].invalid && (angForm.controls['Company_email'].dirty )" class=" alert-danger">
+                  <div *ngIf="angForm.controls['Company_email'].errors.required">
+                    Company Email is required.
                   </div>
                 </div></small>
                 
+                <div class="form-group">
+                  <small class="form-text text-muted" ><label>Company Address</label></small>
+                  <input type="text" class="form-control" formControlName="Company_address" required #Company_address >
+                </div>
+                <small><div *ngIf="angForm.controls['Company_address'].invalid && (angForm.controls['Company_address'].dirty )" class=" alert-danger">
+                  <div *ngIf="angForm.controls['Company_address'].errors.required">
+                    Company Address is required.
+                  </div>
+                </div></small>
+
                 <div class="form-row">
                         <div class="col-md-4 ">
-                                <small class="form-text text-muted" ><label>Client Country</label></small> 
-                        <input type="text" class="form-control" formControlName="Client_country" required #Client_country >
+                                <small class="form-text text-muted" ><label>Company Country</label></small> 
+                        <input type="text" class="form-control" formControlName="Company_country" required #Company_country >
                         <br>
-                    <small><div *ngIf="angForm.controls['Client_country'].invalid && (angForm.controls['Client_country'].dirty)" class=" alert-danger">
-                            <div *ngIf="angForm.controls['Client_country'].errors.required">
-                              Client Country is required.
+                    <small><div *ngIf="angForm.controls['Company_country'].invalid && (angForm.controls['Company_country'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Company_country'].errors.required">
+                              Company Country is required.
                             </div>
                             </div></small>
                         </div>
                         <div class="col-md-4 ">
-                                <small class="form-text text-muted" ><label>Client State</label></small> 
-                        <input type="text" class="form-control" formControlName="Client_state" required #Client_state >
+                                <small class="form-text text-muted" ><label>Company State</label></small> 
+                        <input type="text" class="form-control" formControlName="Company_state" required #Company_state >
                         <br>
-                    <small><div *ngIf="angForm.controls['Client_state'].invalid && (angForm.controls['Client_state'].dirty)" class=" alert-danger">
-                            <div *ngIf="angForm.controls['Client_state'].errors.required">
-                              Client State is required.
+                    <small><div *ngIf="angForm.controls['Company_state'].invalid && (angForm.controls['Company_state'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Company_state'].errors.required">
+                              Company State is required.
                             </div>
                             </div></small>
                         </div>
                         <div class="col-md-4 ">
-                        <small class="form-text text-muted" ><label>Client City</label></small> 
-                        <input type="text" class="form-control" formControlName="Client_city" required #Client_city >
+                        <small class="form-text text-muted" ><label>Company City</label></small> 
+                        <input type="text" class="form-control" formControlName="Company_city" required #Company_city >
                         <br>
-                    <small><div *ngIf="angForm.controls['Client_city'].invalid && (angForm.controls['Client_city'].dirty)" class=" alert-danger">
-                            <div *ngIf="angForm.controls['Client_city'].errors.required">
-                              Client City is required.
+                    <small><div *ngIf="angForm.controls['Company_city'].invalid && (angForm.controls['Company_city'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Company_city'].errors.required">
+                              Company City is required.
                             </div>
                             </div></small>
                         </div>
                     </div> 
-                
-                    <div class="form-row">
-                            <div class="col-md-6">
-                                    <small class="form-text text-muted" ><label>Client Mobile No.1</label></small> 
-                            <input type="text" class="form-control" formControlName="Client_mob1" required #Client_mob1  >
-                            <br>
-                        <small><div *ngIf="angForm.controls['Client_mob1'].invalid && (angForm.controls['Client_mob1'].dirty)" class=" alert-danger">
-                                <div *ngIf="angForm.controls['Client_mob1'].errors.required">
-                                  Client Mobile No. is required.
-                                </div>
-                                </div></small>
-                            </div>
-                            <div class="col-md-6">
-                                    <small class="form-text text-muted" ><label>Client Mobile No.2</label></small> 
-                            <input type="text" class="form-control" formControlName="Client_mob2"  #Client_mob2 >
-                            <br>
-                            <small><div *ngIf="angForm.controls['Client_mob2'].invalid && (angForm.controls['Client_mob2'].dirty)" class=" alert-danger">
-                                <div *ngIf="angForm.controls['Client_mob2'].errors.required">
-                                  Client Mobile No. is required.
-                                </div>
-                                </div></small>
-                            </div>
-                        </div> 
+
+                    <div class="form-group">
+                      <small class="form-text text-muted" ><label>Proposal Date</label></small>
+                      <input type="date" class="form-control" formControlName="Date" required #Date >
+                    </div>
+                    <small><div *ngIf="angForm.controls['Date'].invalid && (angForm.controls['Date'].dirty )" class=" alert-danger">
+                      <div *ngIf="angForm.controls['Date'].errors.required">
+                        Proposal Date is required.
+                      </div>
+                    </div></small>
+
                             <br>
                 <div class="form-group">
-                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Client_name.value,Client_address.value,Client_country.value,Client_state.value,Client_city .value,Client_mob1.value,Client_mob2.value)" style="margin-left: 200px"> Next Step</button>                               
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Company_name.value,Company_email.value,Company_address.value,Company_country.value,Company_state .value,Company_city.value,Date.value)" style="margin-left: 200px"> Next Step</button>                               
                 </div> <br>
              
             </form>
@@ -193,4 +191,4 @@
 </body>
 <script type="text/javascript">
 </script>
-</html> 
+</html>

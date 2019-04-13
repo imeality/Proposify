@@ -61,14 +61,13 @@ nav {
 
  .sidenav-r {
     height: 100%;
-    width: 220px;
+    width: 200px;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color:#EDEDED;
-    overflow-x: hidden;
-    border-left: 10px; 
+    background-color:white;
+    overflow-x: hidden;  
 }
 
 .sidenav-r a {
@@ -78,6 +77,6 @@ nav {
   display: block;
 } 
 
-.tr2,.tr3,.tr4,.tr5,.tr6,.tr7,.tr8,.tr9{
+.tr2,.tr3,.tr4,.tr5,.tr6,.tr7,.tr8,.tr9,.tr10{
   display: none;
 }

@@ -1,5 +1,6 @@
 <html>
 <head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.7.0/fabric.js"></script>
 <style type="text/css">
 <!--
 span.cls_002{font-family:Arial,serif;font-size:67.5px;color:rgb(255,255,255);font-weight:bold;font-style:normal;text-decoration: none}
@@ -31,19 +32,24 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
 <script type="text/javascript" src="proposalAccounnting/wz_jsgraphics.js"></script>
 </head>
 <body>
+
 <div style="position:absolute;left:50%;margin-left:-297px;top:0px;width:595px;height:841px;border-style:outset;overflow:hidden">
 <div style="position:absolute;left:0px;top:0px">
-<img src="proposalAccounnting/background01.jpg" width=595 height=841></div>
-<div style="position:absolute;left:105.75px;top:250.18px" class="cls_002"><span class="cls_002">ACCOUNTING</span></div>
-<div style="position:absolute;left:105.75px;top:304.18px" class="cls_002"><span class="cls_002">PROPOSAL</span></div>
-<div style="position:absolute;left:105.75px;top:599.30px" class="cls_003"><span class="cls_003">For {client name}</span></div>
-<div style="position:absolute;left:105.75px;top:641.04px" class="cls_004"><span class="cls_004">Prepared by {company name}</span></div>
+<div  class="box" >
+    <canvas id="c" width=590 height=835	style="border-style: ridge"></canvas>
+</div></div>
+<div style="position:absolute;left:105.75px;top:250.18px" class="cls_002"><span class="cls_002" contenteditable="true" >ACCOUNTING</span></div>
+<div style="position:absolute;left:105.75px;top:324.18px" class="cls_002"><span class="cls_002" contenteditable="true" >PROPOSAL</span></div>
+<div style="position:absolute;left:105.75px;top:599.30px" class="cls_003"><span class="cls_003" contenteditable="true" >For {client name}</span></div>
+<div style="position:absolute;left:105.75px;top:641.04px" class="cls_004"><span class="cls_004" contenteditable="true">Prepared by {company name}</span></div>
 <div style="position:absolute;left:105.75px;top:664.87px" class="cls_005"><span class="cls_005">{company name}</span></div>
 <div style="position:absolute;left:108.67px;top:682.12px" class="cls_006"><span class="cls_006">| {company email}</span></div>
 </div>
 <div style="position:absolute;left:50%;margin-left:-297px;top:851px;width:595px;height:841px;border-style:outset;overflow:hidden">
 <div style="position:absolute;left:0px;top:0px">
-<img src="proposalAccounnting/background02.jpg" width=595 height=841></div>
+<div  class="box1" >
+    <canvas id="c1" width=590 height=835 style="border-style: ridge"></canvas>
+</div></div>
 <div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008">COVER LETTER</span></div>
 <div style="position:absolute;left:51.75px;top:171.71px" class="cls_009"><span class="cls_009">{client name}</span></div>
 <div style="position:absolute;left:51.75px;top:183.71px" class="cls_009"><span class="cls_009">{Client_address}</span></div>
@@ -284,5 +290,101 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
 <div style="position:absolute;left:572.87px;top:805.46px" class="cls_007"><span class="cls_007">10</span></div>
 </div>
 
+
+
+
+<div id="text-wrapper" style="margin-top: 10px" >
+
+    <div id="text-controls">
+  <p>
+    <label><span>Left:</span> <input type="number" id="left-control" value="24" min="0" max="300"></label>
+  </p>
+  <p>
+    <label><span>Top:</span> <input type="number" id="top-control" value="10" min="-70" max="300"></label>
+  </p>
+  <p>
+    <label><span>Scale:</span> <input type="number" id="scale-control" value="0.7" min="0.1" max="3" step="0.1"></label>
+  </p>
+</div>
+</div>
+</div>
 </body>
+<script>
+  var canvas = this.__canvas = new fabric.Canvas('c');
+  fabric.Object.prototype.transparentCorners = false;
+
+ var $ = function(id){return document.getElementById(id)};
+
+fabric.Image.fromURL('proposalAccounnting/background01.jpg', function(img) {
+
+var scaleControl = $('scale-control');
+  scaleControl.oninput = function() {
+    img.scale(parseFloat(this.value)).setCoords();
+    canvas.requestRenderAll();
+  };
+
+  var topControl = $('top-control');
+  topControl.oninput = function() {
+    img.set('top', parseInt(this.value, 10)).setCoords();
+    canvas.requestRenderAll();
+  };
+
+  var leftControl = $('left-control');
+  leftControl.oninput = function() {
+    img.set('left', parseInt(this.value, 10)).setCoords();
+    canvas.requestRenderAll();sss
+  };
+
+function updateControls() {
+    scaleControl.value = img.scaleX;
+    leftControl.value = img.left;
+    topControl.value = img.top;
+  }
+  canvas.on({
+    'object:moving': updateControls,
+    'object:scaling': updateControls,
+    'object:resizing': updateControls,
+  });
+  canvas.add(img);
+});
+
+
+var canvas1 = this.__canvas = new fabric.Canvas('c1');
+  fabric.Object.prototype.transparentCorners = false;
+
+ var $ = function(id){return document.getElementById(id)};
+
+fabric.Image.fromURL('proposalAccounnting/background02.jpg', function(img) {
+
+var scaleControl = $('scale-control');
+  scaleControl.oninput = function() {
+    img.scale(parseFloat(this.value)).setCoords();
+    canvas1.requestRenderAll();
+  };
+
+  var topControl = $('top-control');
+  topControl.oninput = function() {
+    img.set('top', parseInt(this.value, 10)).setCoords();
+    canvas1.requestRenderAll();
+  };
+
+  var leftControl = $('left-control');
+  leftControl.oninput = function() {
+    img.set('left', parseInt(this.value, 10)).setCoords();
+    canvas1.requestRenderAll();
+  };
+
+function updateControls() {
+    scaleControl.value = img.scaleX;
+    leftControl.value = img.left;
+    topControl.value = img.top;
+  }
+  canvas1.on({
+    'object:moving': updateControls,
+    'object:scaling': updateControls,
+    'object:resizing': updateControls,
+  });
+  canvas1.add(img);
+});
+</script>
 </html>

@@ -22,6 +22,12 @@ import { Propform1Component } from './propform1/propform1.component';
 import { Propform2Component } from './propform2/propform2.component';
 import { Proposal1Component } from './proposal1/proposal1.component';
 import { Proposal2Component } from './proposal2/proposal2.component';
+import { Propform3Component } from './propform3/propform3.component';
+import { Propform4Component } from './propform4/propform4.component';
+import { Proposal3Component } from './proposal3/proposal3.component';
+import { Propform5Component } from './propform5/propform5.component';
+import { Propform6Component } from './propform6/propform6.component';
+
 
 const routes: Routes = [
     { path:'',redirectTo:'/home',pathMatch:'full'},
@@ -30,23 +36,35 @@ const routes: Routes = [
     { path:'signup',component:SignupComponent},
     { path:'welcome',component:WelcomeComponent},
     { path:'forgot',component:ForgotComponent},
+
     { path:'dashboard',component:DashboardComponent},
     { path:'profile',component:ProfileComponent},
     { path:'template',component:TemplateComponent},
+
     { path:'previewresume1',component:Preview1Component},
     { path:'previewresume2',component:Preview2Component},
     { path:'previewresume3',component:Preview3Component},
     { path:'previewresume4',component:Preview4Component},
+
     { path:'previewresume5',component:Preview5Component},
     { path:'previewresume6',component:Preview6Component},
     { path:'previewresume7',component:Preview7Component},
+
     { path:'resumeuserdetail',component:Resform1Component},
     { path:'resumeeducationaldetail',component:Resform2Component},
     { path:'resumejobdetail',component:Resform3Component},
+
+    { path:'proposal1',component:Proposal1Component },
     { path:'proposalclientdetail',component:Propform1Component},
     { path:'proposalcompanydetail',component:Propform2Component},
-    { path:'proposal1',component:Proposal1Component },
+
     { path:'proposal2',component:Proposal2Component },
+    { path:'proposalClientdetail',component:Propform3Component},
+    { path:'proposalCompanydetail',component:Propform4Component},
+
+    { path:'proposal3',component:Proposal3Component },
+    { path:'proposalClientDetail',component:Propform5Component},
+    { path:'proposalCompanyDetail',component:Propform6Component},
 
 ];
 

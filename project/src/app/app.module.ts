@@ -29,7 +29,12 @@ import { Propform1Component } from './propform1/propform1.component';
 import { Propform2Component } from './propform2/propform2.component';
 import { ProposalService} from './proposal.service';
 import { Proposal1Component } from './proposal1/proposal1.component';
-import { Proposal2Component } from './proposal2/proposal2.component'
+import { Proposal2Component } from './proposal2/proposal2.component';
+import { Propform3Component } from './propform3/propform3.component';
+import { Propform4Component } from './propform4/propform4.component';
+import { Proposal3Component } from './proposal3/proposal3.component';
+import { Propform5Component } from './propform5/propform5.component';
+import { Propform6Component } from './propform6/propform6.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,11 @@ import { Proposal2Component } from './proposal2/proposal2.component'
     Propform2Component,
     Proposal1Component,
     Proposal2Component,
+    Propform3Component,
+    Propform4Component,
+    Proposal3Component,
+    Propform5Component,
+    Propform6Component,
   ],
   imports: [
     BrowserModule,

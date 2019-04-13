@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-proposal1',
-  templateUrl: './proposal1.component.html',
-  styleUrls: ['./proposal1.component.css']
+  selector: 'app-proposal3',
+  templateUrl: './proposal3.component.html',
+  styleUrls: ['./proposal3.component.css']
 })
-export class Proposal1Component implements OnInit {
+export class Proposal3Component implements OnInit {
 
   cname=localStorage.getItem('cname');
   cadd =localStorage.getItem('cadd');
@@ -22,7 +22,6 @@ export class Proposal1Component implements OnInit {
   comstat =localStorage.getItem('comstat');
   comcity =localStorage.getItem('comcity');
   comdate =localStorage.getItem('comdate');
-
 
   constructor() { }
 
@@ -54,6 +53,9 @@ export class Proposal1Component implements OnInit {
     $("#a9").click(function(){
       $(".tr9").toggle();
     });
+    $("#a10").click(function(){
+      $(".tr10").toggle();
+    });
   }
-  
+
 }
