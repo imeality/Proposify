@@ -21,36 +21,27 @@ export class Resform3Component implements OnInit {
 
    createForm() {
     this.angForm = this.fb.group({
+      Email:[''],
       Company_name:[''],
       Job_profile:[''],
       Experience:[''],
       Start_date:[''],
       End_date:[''],
       Achivement:[''],
-      Skills:[''],
-      Languages:[''],
-      Hobbies:['']
+      Skills:['',Validators.required],
+      Languages:['',Validators.required],
+      Hobbies:['',Validators.required]
     });
   }
 
-  onClick(Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
-    console.log(Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
-    this.resum.addUser3(Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
+  onClick(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
+    console.log(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
+    this.resum.addUser3(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.router.navigate(['/welcome'])
 
   }
 
   ngOnInit() {
-    $('.multi-field-wrapper').each(function() {
-      var $wrapper = $('.multi-fields', this);
-      $(".add-field", $(this)).click(function(e) {
-          $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('').focus();
-      });
-      $('.multi-field .remove-field', $wrapper).click(function() {
-          if ($('.multi-field', $wrapper).length > 1)
-              $(this).parent('.multi-field').remove();
-      });
-  });
   }
 
   logout(){

@@ -31,10 +31,10 @@ export class Resform2Component implements OnInit {
       Graduation_Stream:['', Validators.required],
       Graduation_per:['', Validators.required],
       Graduation_Passingyear:['', Validators.required],
-      PG_collage:[''],
-      PG_Stream:[''],
-      PG_per:[''],
-      PG_Passingyear:[''],
+      PG_collage:[' '],
+      PG_Stream:[' '],
+      PG_per:[' '],
+      PG_Passingyear:[' '],
     });
   }
 

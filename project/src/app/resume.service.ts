@@ -50,12 +50,14 @@ getUser(){
       PG_per:PG_per,
       PG_Passingyear:PG_Passingyear,
     };
+    console.log(Email,tenth_school,tenth_per,tenth_Passingyear,twelth_school ,twelth_per,twelth_Passingyear,Graduation_Collage,Graduation_Stream,Graduation_per,Graduation_Passingyear,PG_collage,PG_Stream,PG_per,PG_Passingyear);
     return this.http.post(this.url2, obj)
     .subscribe(res => console.log('Done'));
   }
     
-  addUser3(Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
+  addUser3(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
     const obj = {
+      Email:Email,
       Company_name:Company_name,
       Job_profile:Job_profile,
       Experience:Experience,

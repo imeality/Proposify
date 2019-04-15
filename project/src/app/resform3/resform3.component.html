@@ -107,7 +107,7 @@
                 <div class="alert alert-success" role="alert" style="font-family: 'proxima-nova',sans-serif;font-size: 16px"><i class="fa fa-check-circle" style="display:inline;"> </i> You have selected the "Resume" template</div>
                 <h6 style="color: #004053"> <b>Experience Details</b></h6> 
 
-                <input type="hidden" class="form-control"  #Email value="{{email}}">
+                <input type="text" class="form-control"  #Email value="{{email}}">
 
                         <div class="form-group">
                             <small class="form-text text-muted" ><label>Company Name</label></small>
@@ -127,68 +127,50 @@
                             <br>
                         <div class="form-row">
                                 <div class="col-md-6">
-                                        <small class="form-text text-muted" ><label>Start_date Date</label></small> 
+                                        <small class="form-text text-muted" ><label>Start Year</label></small> 
                                 <input type="text" class="form-control" formControlName="Start_date" #Start_date >
                                 </div>
                                 <div class="col-md-6">
-                                <small class="form-text text-muted" ><label> End_date Date</label></small> 
+                                <small class="form-text text-muted" ><label> End Year</label></small> 
                                 <input type="text" class="form-control" formControlName="End_date" #End_date>
                                 </div>
                             </div> 
                             <br>
                             <div class="form-group">
                                 <small class="form-text text-muted" ><label>Achivement</label></small>
-                                  <div class="multi-field-wrapper">
-                                    <div class="multi-fields">
-                                      <div class="multi-field ">
-                                        <input  type="text" name="Achivement[]" class="form-control" formControlName="Achivement" #Achivement style="width:440px;display:inline"> <span style="padding-left :10px"></span>
-                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
-                                      </div>
-                                    </div> <span class="margin-top:10px"></span>
-                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <small class="form-text text-muted" ><label>Skills</label></small>
-                                  <div class="multi-field-wrapper">
-                                    <div class="multi-fields">
-                                      <div class="multi-field ">
-                                        <input  type="text" name="Skills[]" class="form-control" formControlName="Skills" #Skills style="width:440px;display:inline"> <span style="padding-left :10px"></span>
-                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
-                                      </div>
-                                    </div> <span class="margin-top:10px"></span>
-                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
-                                </div>
+                                <input type="text" class="form-control" formControlName="Achivement"  #Achivement >
                             </div>
 
-                              
+                            <div class="form-group">
+                                <small class="form-text text-muted" ><label>Skills</label></small>
+                                <input type="text" class="form-control" formControlName="Skills" required #Skills >
+                            </div> 
+                            <small><div *ngIf="angForm.controls['Skills'].invalid && (angForm.controls['Skills'].dirty )" class="alert-danger">
+                                <div *ngIf="angForm.controls['Skills'].errors.required">
+                                Skills is required.
+                                </div>
+                            </div></small>                      
 
                             <div class="form-group">
                                 <small class="form-text text-muted" ><label>Languages</label></small>
-                                  <div class="multi-field-wrapper">
-                                    <div class="multi-fields">
-                                      <div class="multi-field ">
-                                        <input  type="text" name="Languages[]" class="form-control" formControlName="Languages" #Languages style="width:440px;display:inline"> <span style="padding-left :10px"></span>
-                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
-                                      </div>
-                                    </div> <span class="margin-top:10px"></span>
-                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
+                                <input type="text" class="form-control" formControlName="Languages" required #Languages >
+                            </div> 
+                            <small><div *ngIf="angForm.controls['Languages'].invalid && (angForm.controls['Languages'].dirty )" class="alert-danger">
+                                <div *ngIf="angForm.controls['Languages'].errors.required">
+                                 Languages is required.
                                 </div>
-                            </div>
-                            
+                            </div></small>
+
                             <div class="form-group">
                                 <small class="form-text text-muted" ><label>Hobbies</label></small>
-                                  <div class="multi-field-wrapper">
-                                    <div class="multi-fields">
-                                      <div class="multi-field ">
-                                        <input  type="text" name="Hobbies[]" class="form-control" formControlName="Hobbies" #Hobbies style="width:440px;display:inline"> <span style="padding-left :10px"></span>
-                                        <button id="sign1" type="button" class="form-control remove-field" style="width:100px;display:inline">Remove</button>
-                                      </div>
-                                    </div> <span class="margin-top:10px"></span>
-                                  <button id="sign1" type="button" class="form-control add-field" style="width:100px;margin-top: 5px">Add field</button>
-                                </div>
+                                <input type="text" class="form-control" formControlName="Hobbies" required #Hobbies >
                             </div>
+                            <small><div *ngIf="angForm.controls['Hobbies'].invalid && (angForm.controls['Hobbies'].dirty )" class="alert-danger">
+                                <div *ngIf="angForm.controls['Hobbies'].errors.required">
+                                Hobbies is required.
+                                </div>
+                            </div></small> 
+    
                             <br>
                 <div class="form-group">
                         <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Company_name.value,Job_profile.value,Experience.value,Start_date.value,End_date.value,Achivement.value,Skills.value,Languages.value,Hobbies.value)" style="margin-left: 200px"> Next Step</button>                               
