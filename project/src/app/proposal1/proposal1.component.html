@@ -1,8 +1,8 @@
 <html>
 <head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
 
-span.cls_002{font-family:Arial,serif;font-size:67.5px;color:rgb(255,255,255);font-weight:bold;font-style:normal;text-decoration: none}
 div.cls_002{font-family:Arial,serif;font-size:67.5px;color:rgb(255,255,255);font-weight:bold;font-style:normal;text-decoration: none}
 span.cls_003{font-family:Arial,serif;font-size:22.6px;color:rgb(193,162,78);font-weight:bold;font-style:normal;text-decoration: none}
 div.cls_003{font-family:Arial,serif;font-size:22.6px;color:rgb(193,162,78);font-weight:bold;font-style:normal;text-decoration: none}
@@ -14,7 +14,7 @@ span.cls_006{font-family:Arial,serif;font-size:11.3px;color:rgb(255,255,255);fon
 div.cls_006{font-family:Arial,serif;font-size:11.3px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
 span.cls_008{font-family:Arial,serif;font-size:52.5px;color:rgb(255,255,255);font-weight:bold;font-style:normal;text-decoration: none}
 div.cls_008{font-family:Arial,serif;font-size:52.5px;color:rgb(255,255,255);font-weight:bold;font-style:normal;text-decoration: none}
-span.cls_009{font-family:Arial,serif;font-size:11.3px;color:rgb(0,98,119);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_009{font-family:Arial,serif;font-size:12px;color:rgb(0,98,119);font-weight:bold;font-style:normal;text-decoration: none}
 div.cls_009{font-family:Arial,serif;font-size:11.3px;color:rgb(0,98,119);font-weight:bold;font-style:normal;text-decoration: none}
 span.cls_010{font-family:Arial,serif;font-size:11.3px;color:rgb(9,45,45);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_010{font-family:Arial,serif;font-size:11.3px;color:rgb(9,45,45);font-weight:normal;font-style:normal;text-decoration: none}
@@ -72,8 +72,7 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
     <div  class="box" >
         <canvas id="c" width=590 height=835	style="border-style: ridge"></canvas>
     </div></div>
-<div style="position:absolute;left:105.75px;top:250.18px" class="cls_002"><span class="cls_002">ACCOUNTING</span></div>
-<div style="position:absolute;left:105.75px;top:324.18px" class="cls_002"><span class="cls_002">PROPOSAL</span></div>
+<div style="position:absolute;left:105.75px;top:250.18px;line-height:1" class="cls_002"><span class="cls_002"> <canvas id="p1" width="450px" height="200px" ></canvas></span></div>
 <div style="position:absolute;left:105.75px;top:599.30px" class="cls_003"><span class="cls_003">For {{cname}}</span></div>
 <div style="position:absolute;left:105.75px;top:641.04px" class="cls_004"><span class="cls_004">Prepared by {{comname}}</span></div>
 <div style="position:absolute;left:105.75px;top:664.87px" class="cls_005"><span class="cls_005">{{comname}}</span></div>
@@ -84,41 +83,24 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
   <div  class="box1" >
     <canvas id="c1" width=590 height=835 style="border-style: ridge"></canvas>
 </div></div>
-<div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008">COVER LETTER</span></div>
+<div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008"> <canvas id="p2" width="450px"></canvas></span></div>
 <div style="position:absolute;left:51.75px;top:171.71px" class="cls_009"><span class="cls_009">{{cname}}</span></div>
-<div style="position:absolute;left:51.75px;top:183.71px" class="cls_009"><span class="cls_009">{{cadd}}</span></div>
-<div style="position:absolute;left:51.75px;top:195.71px" class="cls_009"><span class="cls_009">{{ccoun}}</span></div>
-<div style="position:absolute;left:51.75px;top:207.71px" class="cls_009"><span class="cls_009">{{cstat}}</span></div>
-<div style="position:absolute;left:51.75px;top:219.71px" class="cls_009"><span class="cls_009">{{ccity}}</span></div>
-<div style="position:absolute;left:51.75px;top:231.71px" class="cls_009"><span class="cls_009">{{cmob1}}</span></div>
-<div style="position:absolute;left:51.75px;top:243.71px" class="cls_009"><span class="cls_009">{{cmob2}}</span></div>
+<div style="position:absolute;left:51.75px;top:186.71px" class="cls_009"><span class="cls_009">{{cadd}}</span></div>
+<div style="position:absolute;left:51.75px;top:202.71px" class="cls_009"><span class="cls_009">{{ccoun}}</span></div>
+<div style="position:absolute;left:51.75px;top:216.71px" class="cls_009"><span class="cls_009">{{cstat}}</span></div>
+<div style="position:absolute;left:51.75px;top:228.71px" class="cls_009"><span class="cls_009">{{ccity}}</span></div>
+<div style="position:absolute;left:51.75px;top:244.71px" class="cls_009"><span class="cls_009">{{cmob1}}</span></div>
+<div style="position:absolute;left:51.75px;top:252.71px" class="cls_009"><span class="cls_009">{{cmob2}}</span></div>
 <div style="position:absolute;left:204.00px;top:173.62px" class="cls_010"><span class="cls_010">Dear {{cname}},</span></div>
 <div style="position:absolute;left:51.75px;top:209.21px" class="cls_009"><span class="cls_009">,</span></div>
-<div style="position:absolute;left:204.00px;top:208.12px" class="cls_010"><span class="cls_010">{{comname}} is pleased to present this proposal to provide</span></div>
-<div style="position:absolute;left:204.00px;top:225.37px" class="cls_010"><span class="cls_010">professional accounting, consulting and financial</span></div>
-<div style="position:absolute;left:204.00px;top:242.62px" class="cls_010"><span class="cls_010">managements services to you. Our experience in providing</span></div>
-<div style="position:absolute;left:204.00px;top:259.87px" class="cls_010"><span class="cls_010">(INSERT INDUSTRY, ie. medical, small-business, etc)</span></div>
-<div style="position:absolute;left:51.75px;top:275.46px" class="cls_007"><span class="cls_007">REGARDING:</span></div>
-<div style="position:absolute;left:204.00px;top:277.12px" class="cls_010"><span class="cls_010">accounting services in over the last # years, provides us with</span></div>
-<div style="position:absolute;left:51.75px;top:294.21px" class="cls_009"><span class="cls_009">PROPOSAL TO PROVIDE</span></div>
-<div style="position:absolute;left:204.00px;top:294.37px" class="cls_010"><span class="cls_010">a solid understanding of your business environment and</span></div>
-<div style="position:absolute;left:51.75px;top:309.21px" class="cls_009"><span class="cls_009">PROFESSIONAL</span></div>
-<div style="position:absolute;left:204.00px;top:311.62px" class="cls_010"><span class="cls_010">needs.</span></div>
-<div style="position:absolute;left:51.75px;top:324.21px" class="cls_009"><span class="cls_009">ACCOUNTING, CONSULTING</span></div>
-<div style="position:absolute;left:51.75px;top:339.21px" class="cls_009"><span class="cls_009">AND FINANCIAL</span></div>
-<div style="position:absolute;left:51.75px;top:354.21px" class="cls_009"><span class="cls_009">MANAGEMENT SERVICES</span></div>
-<div style="position:absolute;left:204.00px;top:346.12px" class="cls_010"><span class="cls_010">We have over # of clients that work in the INDUSTRY. This</span></div>
-<div style="position:absolute;left:204.00px;top:363.37px" class="cls_010"><span class="cls_010">represents #% of the business completed by infosys. We are</span></div>
-<div style="position:absolute;left:204.00px;top:380.62px" class="cls_010"><span class="cls_010">active members in the INDUSTRY community and believe that</span></div>
-<div style="position:absolute;left:204.00px;top:397.87px" class="cls_010"><span class="cls_010">we can provide you with outstanding expert service that is</span></div>
-<div style="position:absolute;left:204.00px;top:415.12px" class="cls_010"><span class="cls_010">unmatched by other accounting companies.</span></div>
-<div style="position:absolute;left:204.00px;top:449.62px" class="cls_010"><span class="cls_010">We have developed this package that follows with you in mind,</span></div>
-<div style="position:absolute;left:204.00px;top:466.87px" class="cls_010"><span class="cls_010">providing information that is most relevant to your current</span></div>
-<div style="position:absolute;left:204.00px;top:484.12px" class="cls_010"><span class="cls_010">business needs.</span></div>
-<div style="position:absolute;left:204.00px;top:518.62px" class="cls_010"><span class="cls_010">If you are interested in any additional information, do not</span></div>
-<div style="position:absolute;left:204.00px;top:535.87px" class="cls_010"><span class="cls_010">hesitate to contact us. We look forward to serving you.</span></div>
-<div style="position:absolute;left:204.00px;top:587.62px" class="cls_010"><span class="cls_010">Sincerely,</span></div>
-<div style="position:absolute;left:204.00px;top:633.87px" class="cls_011"><span class="cls_011">{{comname}}</span></div>
+<div style="position:absolute;left:204.00px;top:215.12px" class="cls_010"><span class="cls_010">{{comname}} <canvas id="p3" height="600px" width="450px"></canvas></span></div>
+<div style="position:absolute;left:51.75px;top:295.46px" class="cls_007"><span class="cls_007">REGARDING:</span></div>
+<div style="position:absolute;left:51.75px;top:320.21px" class="cls_009"><span class="cls_009">PROPOSAL TO PROVIDE</span></div>
+<div style="position:absolute;left:51.75px;top:335.21px" class="cls_009"><span class="cls_009">PROFESSIONAL</span></div>
+<div style="position:absolute;left:51.75px;top:350.21px" class="cls_009"><span class="cls_009">ACCOUNTING, CONSULTING</span></div>
+<div style="position:absolute;left:51.75px;top:365.21px" class="cls_009"><span class="cls_009">AND FINANCIAL</span></div>
+<div style="position:absolute;left:51.75px;top:380.21px" class="cls_009"><span class="cls_009">MANAGEMENT SERVICES</span></div>
+<div style="position:absolute;left:214.00px;top:643.87px" class="cls_011"><span class="cls_011">{{comname}}</span></div>
 <div style="position:absolute;left:578.56px;top:805.46px" class="cls_007"><span class="cls_007">1</span></div>
 </div>
 <div style="position:absolute;left:50%;margin-left:-297px;top:1802px;width:595px;height:841px;border-style:outset;overflow:hidden">
@@ -126,31 +108,10 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
     <div  class="box1" >
         <canvas id="c2" width=590 height=837 style="border-style: ridge"></canvas>
     </div></div>
-<div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008">ABOUT US</span></div>
-<div style="position:absolute;left:53.25px;top:171.54px" class="cls_012"><span class="cls_012">With more than x years of service, {{comname}} is focused on</span></div>
-<div style="position:absolute;left:53.25px;top:192.54px" class="cls_012"><span class="cls_012">providing our clients advice on taxation, accounting and</span></div>
-<div style="position:absolute;left:53.25px;top:213.54px" class="cls_012"><span class="cls_012">consulting services that reflect their needs. {{comname}} has been</span></div>
-<div style="position:absolute;left:53.25px;top:234.54px" class="cls_012"><span class="cls_012">located in the area, providing our accounting, tax and</span></div>
-<div style="position:absolute;left:53.25px;top:255.54px" class="cls_012"><span class="cls_012">consulting services focussed on [industry 1], [industry 2], and</span></div>
-<div style="position:absolute;left:53.25px;top:276.54px" class="cls_012"><span class="cls_012">[industry 3].</span></div>
-<div style="position:absolute;left:53.25px;top:332.62px" class="cls_010"><span class="cls_010">Our team has X people dedicated to our PROPOSED CLIENT INDUSTRY, with an additional</span></div>
-<div style="position:absolute;left:53.25px;top:349.87px" class="cls_010"><span class="cls_010"># people supporting them in the practice. Our team of consultants provides strategic</span></div>
-<div style="position:absolute;left:53.25px;top:367.12px" class="cls_010"><span class="cls_010">support for your planning, marketing assessment, facility planning, capital planning,</span></div>
-<div style="position:absolute;left:53.25px;top:384.37px" class="cls_010"><span class="cls_010">operational needs and leadership needs.</span></div>
-<div style="position:absolute;left:53.25px;top:418.87px" class="cls_010"><span class="cls_010">We pride ourselves on being experts in the INSERT INDUSTRY, offering insight that stems</span></div>
-<div style="position:absolute;left:53.25px;top:436.12px" class="cls_010"><span class="cls_010">beyond accounting and can help guide strategy and operations in your company - helping</span></div>
-<div style="position:absolute;left:53.25px;top:453.37px" class="cls_010"><span class="cls_010">you to manage revenues, build market share and comply with continually changing</span></div>
-<div style="position:absolute;left:53.25px;top:470.62px" class="cls_010"><span class="cls_010">regulations.</span></div>
-<div style="position:absolute;left:51.75px;top:601.55px" class="cls_003"><span class="cls_003">Client Experience</span></div>
-<div style="position:absolute;left:51.75px;top:643.29px" class="cls_004"><span class="cls_004">Some of our related client experience includes:</span></div>
-<div style="position:absolute;left:51.00px;top:682.87px" class="cls_006"><span class="cls_006">Coldwell Partners</span></div>
-<div style="position:absolute;left:317.25px;top:682.87px" class="cls_006"><span class="cls_006">Coldwell Partners</span></div>
-<div style="position:absolute;left:51.00px;top:700.12px" class="cls_006"><span class="cls_006">MacKenzie Cross</span></div>
-<div style="position:absolute;left:317.25px;top:700.12px" class="cls_006"><span class="cls_006">MacKenzie Cross</span></div>
-<div style="position:absolute;left:51.00px;top:717.37px" class="cls_006"><span class="cls_006">JG Graphic Design</span></div>
-<div style="position:absolute;left:317.25px;top:717.37px" class="cls_006"><span class="cls_006">JG Graphic Design</span></div>
-<div style="position:absolute;left:51.00px;top:734.62px" class="cls_006"><span class="cls_006">Proposify</span></div>
-<div style="position:absolute;left:317.25px;top:734.62px" class="cls_006"><span class="cls_006">Proposify</span></div>
+<div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008"><canvas id="p4" height="600px" width="450px"></canvas></span></div>
+<div style="position:absolute;left:53.25px;top:171.54px" class="cls_012"><span class="cls_012"><canvas id="p5" height="600px" width="550px"></canvas></span></div>
+<div style="position:absolute;left:51.75px;top:601.55px" class="cls_003"><span class="cls_003"><canvas id="p6" height="600px" width="450px"></canvas></span></div>
+<div style="position:absolute;left:51.75px;top:643.29px" class="cls_004"><span class="cls_004"><canvas id="p7" height="600px" width="450px"></canvas></span></div>
 <div style="position:absolute;left:578.56px;top:805.46px" class="cls_007"><span class="cls_007">2</span></div>
 </div>
 <div style="position:absolute;left:50%;margin-left:-297px;top:2653px;width:595px;height:841px;border-style:outset;overflow:hidden">
@@ -158,7 +119,7 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
     <div  class="box1" >
         <canvas id="c3" width=590 height=837 style="border-style: ridge"></canvas>
     </div></div>
-<div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008">MEET OUR TEAM</span></div>
+<div style="position:absolute;left:53.25px;top:54.55px" class="cls_008"><span class="cls_008"><canvas id="p8" height="600px" width="450px"></canvas></span></div>
 <div style="position:absolute;left:51.75px;top:172.29px" class="cls_012"><span class="cls_012">As our client your engagement would be led by a single partner,</span></div>
 <div style="position:absolute;left:51.75px;top:193.29px" class="cls_012"><span class="cls_012">{{cname}}. {{cname}} is backed by a team of dedicated</span></div>
 <div style="position:absolute;left:51.75px;top:214.29px" class="cls_012"><span class="cls_012">and seasoned professionals, who have a combined # years</span></div>
@@ -354,9 +315,7 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
             </tbody>
     </table>
     </div>
-<div>  
   <div id="text-wrapper" style="margin-top: 10px; padding-left: 20px;" >
-
     <div id="text-controls">
         <div class="row">
             <div class="col"> <p>
@@ -365,7 +324,7 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
             <div class="col"><p>
                 <label><span><small class="text-muted">Height</small></span> <input type="number" class="form-control input-xs" id="top-control" value="10" min="-500" max="300" style="width:75px;height: 35px"></label>
               </p></div>
-          </div>
+          </div>    
           <div class="row" >
               <div class="col" ><p>
                   <label><span><small class="text-muted">Corners</small></span> <input type="number" class="form-control input-xs" id="scale-control" value="0.7" min="0.1" max="3" step="0.1" style="width:75px;height: 35px"></label>
@@ -376,7 +335,43 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
           </div>
       </div>
   </div>
-  </div>
+  <div>
+    <table style="width:100%">
+            <tbody>
+                <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;border-top: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>TEXT PROPERTIES</b> </small></th> </tr> 
+            </tbody>
+    </table>
+    </div>
+  <div id="text-wrapper" style="margin-top: 10px; padding-left: 20px;" >
+    <div id="text-controls">
+        <div class="row">
+            <div class="col"> <p>
+                <label><i class="fa fa-bold"  id="bold" aria-hidden="true"></i></label>
+              </p></div>
+            <div class="col"><p>
+                <label><i class="fa fa-italic"  id="italic" aria-hidden="true"></i></label>
+              </p></div>
+              <div class="col" ><p>
+                  <label><i class="fa fa-superscript" id="super-script" aria-hidden="true"></i></label>
+                </p></div>
+              <div class="col"><p>
+                  <label><i class="fa fa-subscript" id="sub-script" aria-hidden="true"></i></label>
+                </p></div>
+          </div>
+          <div class="row">
+                <div class="col"> <p>
+                        <label><span> <small class="text-muted">Font Colour</small></span><input type="color" class="form-control input-xs" value="24" min="-500" max="300" style="width:75px;height: 35px;" id="color"></label>    
+                  </p></div>
+                  <div class="col"><p>
+                        <label><span> <small class="text-muted">Font Size</small></span><input type="number" class="form-control input-xs" min="5" max="150" value="20" style="width:75px;height: 35px;" id="size"></label>
+                  </p></div>
+                <div class="col"><p>
+                        <label><span> <small class="text-muted">Background Color</small></span><input type="color" class="form-control input-xs" value="24" min="-500" max="300" style="width:75px;height: 35px;" id="bg-color"></label>
+                  </p></div>
+                 
+              </div>
+      </div>
+    </div>
   <div>
       <table style="width:100%">
               <tbody>
@@ -402,8 +397,9 @@ div.cls_013{font-family:Arial,serif;font-size:11.3px;color:rgb(252,252,252);font
             <br>
             <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input"></small>
             <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
-            <i class="fas fa-question-circle"></i>
-          </p>    
+            <i class="fa fa-question-circle"></i>
+          </p> 
+             
 </div>
   
 </body>

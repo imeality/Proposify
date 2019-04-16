@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
     onClick(){
    for( var i=0;i<this.login.length;i++){
     if(this.login[i].Email == this.email.nativeElement.value && this.login[i].Password == this.password.nativeElement.value) {
-      console.log('valid');
       localStorage.setItem('key',this.login[i].Fname); 
       localStorage.setItem('key1',this.login[i].Lname);
       localStorage.setItem('key2',this.login[i].Email);
@@ -38,7 +37,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/dashboard']);
       break
     }else{
-      console.log('invalid email or password');
       this.router.navigate(['/login']);
       document.getElementById("demo").innerHTML = "Invalid Email address or Password";
       document.getElementById("demo").style.color = "red";

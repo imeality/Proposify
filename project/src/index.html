@@ -567,6 +567,158 @@ function updateControls() {
   canvas10.add(img);
 });
 
+var canvases = this.__canvases = [
+  new fabric.Canvas('p1'),
+  new fabric.Canvas('p2'),
+  new fabric.Canvas('p3'),
+  new fabric.Canvas('p4'),
+  new fabric.Canvas('p5'),
+  new fabric.Canvas('p6'),
+  new fabric.Canvas('p7'),
+  new fabric.Canvas('p8'),
+];
+
+var iText1 = new fabric.IText('ACCOUNTING \n\ PROPOSAL', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 64,
+    fill:'white',
+  });
+  canvases[0].add(iText1);
+
+  var iText2 = new fabric.IText('COVER LETTER', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill:'white',
+  });
+  canvases[1].add(iText2);
+
+  var iText3 = new fabric.IText('Is pleased to present this proposal to provide \n\ professional accounting, consulting and financial\n\ managements services to you. Our experience in providing\n\ (INSERT INDUSTRY, ie. medical, small-business, etc)\n\ accounting services in over the last # years, provides us with\n\ a solid understanding of your business environment and\n\ needs.\n\ \n\  We have over # of clients that work in the INDUSTRY. This\n\ represents #% of the business completed by infosys. We are\n\active members in the INDUSTRY community and believe that\n\ we can provide you with outstanding expert service that is\n\ unmatched by other accounting companies.\n\ We have developed this package that follows with you in mind,\n\providing information that is most relevant to your current\n\ business needs.\n\ \n\ If you are interested in any additional information, do not\n\ hesitate to contact us. We look forward to serving you.\n\ \n\ \n\  Sincerely,', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[2].add(iText3);
+
+  var iText4 = new fabric.IText('ABOUT US', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill:'white',
+  });
+  canvases[3].add(iText4);
+
+  var iText5 = new fabric.IText('\n\ With more than x years of service, we are focused on \n\providing our clients advice on taxation, accounting and\n\ consulting services that reflect their needs. Our company has been\n\ located in the area, providing our accounting, tax and\n\ consulting services focussed on [industry 1], [industry 2], and\n\ [industry 3].\n\ \n\ Our team has X people dedicated to our PROPOSED CLIENT INDUSTRY, with an additional\n\ # people supporting them in the practice. Our team of consultants provides strategic\n\ support for your planning, marketing assessment, facility planning, capital planning,\n\ operational needs and leadership needs.\n\ \n\ We pride ourselves on being experts in the INSERT INDUSTRY, offering insight that stems\n\  beyond accounting and can help guide strategy and operations in your company - helping\n\ you to manage revenues, build market share and comply with continually changing\n\ regulations.\n\ \n\ If you are interested in any additional information, do not\n\ hesitate to contact us. We look forward to serving you.\n\ \n\ ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[4].add(iText5);
+
+  var iText6 = new fabric.IText('Client Experience', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 23,
+    fill:'orange',
+  });
+  canvases[5].add(iText6);
+
+  var iText7 = new fabric.IText('Some of our related client experience includes:\n\ \n\ Coldwell Partners \n\ MacKenzie Cross \n\ JG Graphic Design \n\ Proposify', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 15,
+    fill:'white',
+  });
+  canvases[6].add(iText7);
+
+  var iText8 = new fabric.IText('MEET OUR TEAM', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill:'white',
+  });
+  canvases[7].add(iText8);
+
+
+
+
+
+
+
+
+
+
+canvases.forEach(function(c) {
+  c.item(0) && c.item(0).setCoords();
+  c.calcOffset();
+  // back reference
+  c.wrapperEl.canvas = c;
+});
+
+function setStyle(object, styleName, value) {
+  if (object.setSelectionStyles && object.isEditing) {
+    var style = { };
+    style[styleName] = value;
+    object.setSelectionStyles(style);
+  }
+  else {
+    object[styleName] = value;
+  }
+}
+function getStyle(object, styleName) {
+  return (object.getSelectionStyles && object.isEditing)
+    ? object.getSelectionStyles()[styleName]
+    : object[styleName];
+}
+
+function addHandler(id, fn, eventName) {
+  document.getElementById(id)[eventName || 'onclick'] = function() {
+    var el = this;
+    canvases.forEach(function(canvas, obj) {
+      if (obj = canvas.getActiveObject()) {
+        fn.call(el, obj);
+        canvas.renderAll();
+      }
+    });
+  };
+}
+	
+addHandler('super-script', function(obj) {
+  if (obj.selectionStart !== obj.selectionEnd) {
+    obj.setSuperscript();
+  }
+});
+
+addHandler('sub-script', function(obj) {
+  if (obj.selectionStart !== obj.selectionEnd) {
+    obj.setSubscript();
+  }
+});
+
+addHandler('bold', function(obj) {
+  var isBold = getStyle(obj, 'fontWeight') === 'bold';
+  setStyle(obj, 'fontWeight', isBold ? '' : 'bold');
+});
+
+addHandler('italic', function(obj) {
+  var isItalic = getStyle(obj, 'fontStyle') === 'italic';
+  setStyle(obj, 'fontStyle', isItalic ? '' : 'italic');
+});
+
+addHandler('color', function(obj) {
+  setStyle(obj, 'fill', this.value);
+}, 'onchange');
+
+addHandler('bg-color', function(obj) {
+  setStyle(obj, 'textBackgroundColor', this.value);
+}, 'onchange');
+
+addHandler('size', function(obj) {
+  setStyle(obj, 'fontSize', parseInt(this.value, 10));
+}, 'onchange');
+
+
 
 var btns = btnContainer.getElementsByClassName("btn1");
 for (var i = 0; i < btns.length; i++) {
@@ -601,6 +753,7 @@ $(document).ready(function () {
         });
     });
 });
+
 
     </script>
 </html>
