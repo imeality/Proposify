@@ -17,7 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-    filterSelection("all")
+filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("column");
@@ -28,30 +28,7 @@ function filterSelection(c) {
   }
 }
 
-function AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
 
-function RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
 var canvas = this.__canvas = new fabric.Canvas('c');
   fabric.Object.prototype.transparentCorners = false;
 
@@ -568,14 +545,13 @@ function updateControls() {
 });
 
 var canvases = this.__canvases = [
-  new fabric.Canvas('p1'),
-  new fabric.Canvas('p2'),
-  new fabric.Canvas('p3'),
-  new fabric.Canvas('p4'),
-  new fabric.Canvas('p5'),
-  new fabric.Canvas('p6'),
-  new fabric.Canvas('p7'),
-  new fabric.Canvas('p8'),
+  new fabric.Canvas('p1'), new fabric.Canvas('p2'), new fabric.Canvas('p3'), new fabric.Canvas('p4'), new fabric.Canvas('p5'), 
+  new fabric.Canvas('p6'), new fabric.Canvas('p7'), new fabric.Canvas('p8'), new fabric.Canvas('p9'), new fabric.Canvas('p10'),
+  new fabric.Canvas('p11'), new fabric.Canvas('p12'), new fabric.Canvas('p13'), new fabric.Canvas('p14'), new fabric.Canvas('p15'),
+  new fabric.Canvas('p16'), new fabric.Canvas('p17'), new fabric.Canvas('p18'), new fabric.Canvas('p19'), new fabric.Canvas('p20'),
+  new fabric.Canvas('p21'), new fabric.Canvas('p22'), new fabric.Canvas('p23'), new fabric.Canvas('p24'), new fabric.Canvas('p25'),
+  new fabric.Canvas('p26'), new fabric.Canvas('p27'), new fabric.Canvas('p28'), new fabric.Canvas('p29'), new fabric.Canvas('p30'),
+  new fabric.Canvas('p31'), new fabric.Canvas('p32'), new fabric.Canvas('p33'), new fabric.Canvas('p34'),
 ];
 
 var iText1 = new fabric.IText('ACCOUNTING \n\ PROPOSAL', {
@@ -640,12 +616,206 @@ var iText1 = new fabric.IText('ACCOUNTING \n\ PROPOSAL', {
   });
   canvases[7].add(iText8);
 
+  var iText9 = new fabric.IText('James McIntyre', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 25,
+    fill:'orange',
+  });
+  canvases[8].add(iText9);
+
+  var iText10 = new fabric.IText('CPA, Team Lead \n\ \n\ James has over 20 years experience with INDUSTRY \n\ finance and operations, working with INDUSTRY \n\ EXAMPLE ORGANIZATIONS. He has consulted \n\ on a wide variety of financial management and \n\ operation issues including: \n\ \t\ • Preparation of facility operating and capital budgets \n\ \t\ • Reimbursement and billing issues \n\ \t\ • Evaluating financial managementoperations \n\ \n\ PROFESSIONAL / CIVIC ORGANIZATIONS \n\ \t\ • Member of the American Institute of CPAs \n\ \t\ • INDUSTRY association', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[9].add(iText10);
+
+  var iText11 = new fabric.IText('PROPOSAL', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill: 'white'
+  });
+  canvases[10].add(iText11);
+
+  var iText12 = new fabric.IText('QuickBooks Startup (20 hrs) ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 25,
+    fill: 'orange'
+  });
+  canvases[11].add(iText12);
+
+  var iText13 = new fabric.IText(' \n\ • Build the QuickBooks file based on existing Chart of Accounts (CSA) \n\ • Routing of vendor invoices, statements, and paperless bank debit transactions \n\ • Process for communicating cash position and A/P Aging for client approval \n\ • Customer Payments and Deposit Detail', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[12].add(iText13);
+
+  var iText14 = new fabric.IText('Data Migration (20 Hrs) ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 25,
+    fill: 'orange'
+  });
+  canvases[13].add(iText14);
+
+  var iText15 = new fabric.IText(' \n\ • Customer and Vendor List \n\ • Customer Balance Summary \n\ • Daily Customer Invoice Summary (report to QB as journal entry - sales and A/R)', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[14].add(iText15);
+
+  var iText16 = new fabric.IText('PROPOSAL', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill: 'white'
+  });
+  canvases[15].add(iText16);
+
+  var iText17 = new fabric.IText('QuickBooks Data Build (40 hrs) ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 25,
+    fill: 'orange'
+  });
+  canvases[16].add(iText17);
+
+  var iText18 = new fabric.IText(' \n\ • Quote/Order/Invoice construction \n\ • Remote check deposit, EFT payment, CC processing \n\ • Warehouse database (as inventory items) \n\ • Remote access and/or publishing of Customer data (login) \n\ • Rolling bank reconciliation and cash flow analysis.', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[17].add(iText18);
+
+  var iText19 = new fabric.IText('Overall', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 25,
+    fill: 'orange'
+  });
+  canvases[18].add(iText19);
+
+  var iText20 = new fabric.IText(' \n\ • Customer and Vendor List \n\ • Customer Balance Summary \n\ • Daily Customer Invoice Summary (report to QB as journal entry - sales and A/R)', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,                                                                                                                                                                                                                                                                                                                                         
+  });
+  canvases[19].add(iText20);
+
+  var iText21 = new fabric.IText('SERVICE & PRICING', {
+    styles: { },
+    top:15,
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill: 'white'
+  });
+  canvases[20].add(iText21);
+
+  var iText22 = new fabric.IText('SERVICE & PRICING', {
+    styles: { },
+    top:15,
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill: 'white'
+  });
+  canvases[21].add(iText22);
+
+  var iText23 = new fabric.IText('NEXT STEPS', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill: 'white'
+  });
+  canvases[22].add(iText23);
+
+  var iText24 = new fabric.IText('NEProject Kick-Off / Requirements DocumentationXT STEPS', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 20,
+    fill: 'orange'
+  });
+  canvases[23].add(iText24);
 
 
+  var iText25 = new fabric.IText(' During this phase, our collective teams will meet to review overall project goals, establish \n\ review annual tax preparation requirements and determine specific accounting \n\ responsibilities of your company and of Accounting Experts to confirm they align with the \n\ scope of the proposal. \n\ ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[24].add(iText25);
 
+  var iText26 = new fabric.IText('System Configuration', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 20,
+    fill: 'orange'
+  });
+  canvases[25].add(iText26);
 
+  var iText27 = new fabric.IText(' Set up QuickBooks accounting software to services the needs of PROPOSAL COMPANY. \n\ ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[26].add(iText27);
 
+  var iText28 = new fabric.IText('Data Migration', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 20,
+    fill: 'orange'
+  });
+  canvases[27].add(iText28);
 
+  var iText29 = new fabric.IText(' During this phase we will upload files for: \n\ • Customer, vendors, beginning balances, general ledger month-end balances for 12months prior \n\ • Open invoices and bills as of planned production dates \n\ • Chart of accounts', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[28].add(iText29);
+
+  var iText30 = new fabric.IText('Training', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 20,
+    fill: 'orange'
+  });
+  canvases[29].add(iText30);
+
+  var iText31 = new fabric.IText(' Training of PROPOSAL COMPANY staff on QuickBooks System. \n\ ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[30].add(iText31);
+
+  var iText32 = new fabric.IText('Ongoing', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 20,
+    fill: 'orange'
+  });
+  canvases[31].add(iText32);
+
+  var iText33 = new fabric.IText(' Provide monthly services as agreed upon in the contract. \n\ ', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 13,
+  });
+  canvases[32].add(iText33);
+
+  var iText34 = new fabric.IText('CONTACT US', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 54,
+    fill: 'white'
+  });
+  canvases[33].add(iText34);
 
 
 
@@ -718,8 +888,36 @@ addHandler('size', function(obj) {
   setStyle(obj, 'fontSize', parseInt(this.value, 10));
 }, 'onchange');
 
+addHandler('font-family', function(obj) {
+  setStyle(obj, 'fontFamily', this.value);
+}, 'onchange');
 
 
+
+    
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn1");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
@@ -728,6 +926,8 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
     
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
