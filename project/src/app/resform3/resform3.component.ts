@@ -37,7 +37,7 @@ export class Resform3Component implements OnInit {
   onClick(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
     console.log(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.resum.addUser3(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
-    this.router.navigate(['/welcome'])
+    this.router.navigate(['/resume1'])
 
   }
 

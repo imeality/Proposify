@@ -27,6 +27,7 @@ import { Propform4Component } from './propform4/propform4.component';
 import { Proposal3Component } from './proposal3/proposal3.component';
 import { Propform5Component } from './propform5/propform5.component';
 import { Propform6Component } from './propform6/propform6.component';
+import { Resume1Component } from './resume1/resume1.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
     { path:'previewresume6',component:Preview6Component},
     { path:'previewresume7',component:Preview7Component},
 
+    { path:'resume1',component:Resume1Component},
     { path:'resumeuserdetail',component:Resform1Component},
     { path:'resumeeducationaldetail',component:Resform2Component},
     { path:'resumejobdetail',component:Resform3Component},

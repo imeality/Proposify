@@ -27,6 +27,9 @@ export class Proposal1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    this.loadScript('../assets/JS/Canvas1.js');
+
     $("#a1").click(function(){
       $(".tr1").toggle();
     });
@@ -56,4 +59,13 @@ export class Proposal1Component implements OnInit {
     });
   }
   
+  public loadScript(url: string) {
+    const body = <HTMLDivElement> document.body;
+    const script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = url;
+    script.async = false;
+    script.defer = true;
+    body.appendChild(script);
+  }
 }

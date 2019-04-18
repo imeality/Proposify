@@ -173,8 +173,10 @@
                     <div class="form-row">
                         <div class="col-md-4 ">
                                 <small class="form-text text-muted" ><label>Country</label></small> 
-                        <input type="text" class="form-control" formControlName="Country" required #Country >
-                        <br>
+                                <select  class="form-control" formControlName="Country" required #Country (change)="changeCountry($event.target.value)">
+                                    <option *ngFor ="let count of countryList">{{count.name}} </option>
+                                </select>
+                            <br>
                     <small><div *ngIf="angForm.controls['Country'].invalid && (angForm.controls['Country'].dirty)" class=" alert-danger">
                             <div *ngIf="angForm.controls['Country'].errors.required">
                                 Country is required.
@@ -182,8 +184,10 @@
                             </div></small>
                         </div>
                         <div class="col-md-4 ">
-                                <small class="form-text text-muted" ><label>State</label></small> 
-                        <input type="text" class="form-control" formControlName="State" required #State >
+                                <small class="form-text text-muted" ><label>State</label></small>
+                                <select class="form-control" formControlName="State" required #State>
+                                    <option *ngFor ="let State of state">{{State}} </option>
+                              </select> 
                         <br>
                     <small><div *ngIf="angForm.controls['State'].invalid && (angForm.controls['State'].dirty)" class=" alert-danger">
                             <div *ngIf="angForm.controls['State'].errors.required">
@@ -210,6 +214,7 @@
              </div>
         </div>
       </div>
+
 </body>
 <script type="text/javascript">
 

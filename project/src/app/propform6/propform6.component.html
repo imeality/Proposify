@@ -139,8 +139,10 @@
                 <div class="form-row">
                         <div class="col-md-4 ">
                                 <small class="form-text text-muted" ><label>Company Country</label></small> 
-                        <input type="text" class="form-control" formControlName="Company_country" required #Company_country >
-                        <br>
+                                <select  class="form-control" formControlName="Company_country" required #Company_country (change)="changeCountry($event.target.value)">
+                                  <option *ngFor ="let count of countryList">{{count.name}} </option>
+                              </select>
+                              <br>
                     <small><div *ngIf="angForm.controls['Company_country'].invalid && (angForm.controls['Company_country'].dirty)" class=" alert-danger">
                             <div *ngIf="angForm.controls['Company_country'].errors.required">
                               Company Country is required.
@@ -149,8 +151,10 @@
                         </div>
                         <div class="col-md-4 ">
                                 <small class="form-text text-muted" ><label>Company State</label></small> 
-                        <input type="text" class="form-control" formControlName="Company_state" required #Company_state >
-                        <br>
+                                <select class="form-control" formControlName="Company_state" required #Company_state>
+                                  <option *ngFor ="let State of state">{{State}} </option>
+                            </select>
+                            <br>
                     <small><div *ngIf="angForm.controls['Company_state'].invalid && (angForm.controls['Company_state'].dirty)" class=" alert-danger">
                             <div *ngIf="angForm.controls['Company_state'].errors.required">
                               Company State is required.
