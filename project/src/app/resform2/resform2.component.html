@@ -106,7 +106,7 @@
                 <div class="alert alert-success" role="alert" style="font-family: 'proxima-nova',sans-serif;font-size: 16px"><i class="fa fa-check-circle" style="display:inline;"> </i> You have selected the "Resume" template</div>
                 <h6 style="color: #004053"> <b>Educational Details</b></h6>
 
-                <input type="text" class="form-control"  #Email value="{{email}}">
+                <input type="hidden" class="form-control"  #Email value="{{email}}">
                 
                     <div class="form-row">
                             <div class="col-md-8 ">
@@ -239,7 +239,7 @@
                                 </div>
                             <br>
                 <div class="form-group">
-                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Email.value,tenth_school.value,tenth_per.value,tenth_Passingyear.value,twelth_school .value,twelth_per.value,twelth_Passingyear.value,Graduation_Collage.value,Graduation_Stream.value,Graduation_per.value,Graduation_Passingyear.value,PG_collage.value,PG_Stream.value,PG_per.value,PG_Passingyear.value)" style="margin-left: 200px"> Next Step</button>                               
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Email.value,tenth_school.value,tenth_per.value,tenth_Passingyear.value,twelth_school .value,twelth_per.value,twelth_Passingyear.value,Graduation_Collage.value,Graduation_Stream.value,Graduation_per.value,Graduation_Passingyear.value,PG_collage.value,PG_Stream.value,PG_per.value,PG_Passingyear.value)" [disabled]="angForm.pristine || angForm.invalid" style="margin-left: 200px"> Next Step</button>                               
                 </div> <br>
              
             </form>

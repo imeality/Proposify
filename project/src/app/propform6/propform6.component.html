@@ -185,7 +185,7 @@
 
                             <br>
                 <div class="form-group">
-                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Company_name.value,Company_email.value,Company_address.value,Company_country.value,Company_state .value,Company_city.value,Date.value)" style="margin-left: 200px"> Next Step</button>                               
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Company_name.value,Company_email.value,Company_address.value,Company_country.value,Company_state .value,Company_city.value,Date.value)" [disabled]="angForm.pristine || angForm.invalid" style="margin-left: 200px"> Next Step</button>                               
                 </div> <br>
              
             </form>

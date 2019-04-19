@@ -23,7 +23,7 @@ export class Resform1Component implements OnInit {
   }
 
   name =localStorage.getItem('key');
-  email=localStorage.getItem('id');
+  email=localStorage.getItem('eid');
   angForm:FormGroup;
   constructor(private fb:FormBuilder, public logn:LoginService,private resum:ResumeService,private router:Router) {
     this.createForm();
@@ -31,11 +31,11 @@ export class Resform1Component implements OnInit {
 
    createForm() {
     this.angForm = this.fb.group({
-      Name:['', Validators.required],
+      Name:['', [Validators.required, Validators.pattern('[a-zA-Z ]+')]],
       DOB:['', Validators.required],
       Age:['', Validators.required],
-      Mobile_no:['', Validators.required],
-      Email:['', [Validators.required, Validators.email]],
+      Mobile_no:['', [Validators.required, Validators.pattern('[0-9]{10}')]],
+      Email:['', [Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}')]],
       Address:['', Validators.required],
       Country:['', Validators.required],
       State:['', Validators.required],
@@ -47,7 +47,15 @@ export class Resform1Component implements OnInit {
     console.log(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City);
     this.resum.addUser1(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City);
     this.router.navigate(['/resumeeducationaldetail']) 
-    localStorage.setItem('id',Email);
+    localStorage.setItem('rname',Name);
+    localStorage.setItem('dob',DOB);
+    localStorage.setItem('age',Age);
+    localStorage.setItem('rmob',Mobile_no); 
+    localStorage.setItem('eid',Email);
+    localStorage.setItem('radd',Address);
+    localStorage.setItem('rcount',Country);
+    localStorage.setItem('rstat',State);
+    localStorage.setItem('rcity',City);
   }
   
   ngOnInit() {

@@ -31,13 +31,13 @@ export class Propform3Component implements OnInit {
 
   createForm() {
     this.angForm = this.fb.group({
-      Client_name:['',Validators.required],
+      Client_name:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
       Client_address:['', Validators.required],
       Client_country:['', Validators.required],
       Client_state:['', Validators.required],
       Client_city :['', Validators.required],
-      Client_mob1:['', Validators.required],
-      Client_mob2:['', Validators.required],
+      Client_mob1:['', [Validators.required, Validators.pattern('[0-9]{10}')]],
+      Client_mob2:['', [Validators.required, Validators.pattern('[0-9]{10}')]],
     });
   }
 

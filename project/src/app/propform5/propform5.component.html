@@ -114,6 +114,7 @@
                   <div *ngIf="angForm.controls['Client_name'].errors.required">
                     Client Name is required.
                   </div>
+                  <div *ngIf="angForm.controls['Client_name'].errors.pattern"> Name has only alphabets </div>
                 </div></small>
 
                 <div class="form-group">
@@ -173,6 +174,11 @@
                                   Client Mobile No. is required.
                                 </div>
                                 </div></small>
+                                <small><div *ngIf="angForm.controls['Client_mob1'].invalid && (angForm.controls['Client_mob1'].dirty )" class=" alert-danger">
+                                    <div *ngIf="angForm.controls['Client_mob1'].errors.pattern">
+                                      Enter valid Mobile Number.
+                                    </div>
+                                  </div></small>
                             </div>
                             <div class="col-md-6">
                                     <small class="form-text text-muted" ><label>Client Mobile No.2</label></small> 
@@ -183,11 +189,16 @@
                                   Client Mobile No. is required.
                                 </div>
                                 </div></small>
+                                <small><div *ngIf="angForm.controls['Client_mob2'].invalid && (angForm.controls['Client_mob2'].dirty )" class=" alert-danger">
+                                    <div *ngIf="angForm.controls['Client_mob2'].errors.pattern">
+                                      Enter valid Mobile Number.
+                                    </div>
+                                  </div></small>
                             </div>
                         </div> 
                             <br>
                 <div class="form-group">
-                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Client_name.value,Client_address.value,Client_country.value,Client_state.value,Client_city .value,Client_mob1.value,Client_mob2.value)" style="margin-left: 200px"> Next Step</button>                               
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Client_name.value,Client_address.value,Client_country.value,Client_state.value,Client_city .value,Client_mob1.value,Client_mob2.value)" [disabled]="angForm.pristine || angForm.invalid" style="margin-left: 200px"> Next Step</button>                               
                 </div> <br>
              
             </form>

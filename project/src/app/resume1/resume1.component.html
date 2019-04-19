@@ -1,9 +1,30 @@
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Resume</title>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="../assets/JS/Canvas1.js"></script>
+
+<script type="text/javascript" src="proposalAccounnting/wz_jsgraphics.js"></script> 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
+    <div class="container-fluid">
+        <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
+        <button type="button" class="btn btn-arrow-right " id="sign"> <small>Send</small></button>
+    </div>
+</nav>
+
+<div class="sidebar main" id="table-wrapper">
+  <div id="table-scroll">
+    <table style="width:100%">
+        <tbody>
+           <tr style="background-color: white;"> <th style=" border-bottom: 1px solid darkgrey"><a href="#resume1" style="padding:1%"><small style="color:#004053;">Cover</small></a></th> </tr> 
+           <tr><td style=" border-bottom: 1px solid darkgrey ;height: 70px;"><a href="#resume1"> <img src="./assets/resume1.png" height="40px" width="50px"/> </a> </td></tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container" >
 <!-- Begin Wrapper -->
 <div id="wrapper">
   <div class="wrapper-top"></div>
@@ -15,46 +36,51 @@
         <div class="entry">
           <!-- Begin Personal Information -->
           <div class="self">
-            <h1 class="name">John Smith <br /></h1>
+            <h1 class="name">{{name}}<br /></h1>
             <ul>
-              <li class="ad">111 Lorem Street, 34785, Ipsum City</li>
-              <li class="mail">johnsmith@business.com</li>
-              <li class="tel">+11 444 555 22 33</li>
-              <li class="dat">1997-02-20</li>
-              <li class="age">22 Years</li>
+              <li class="ad">{{add}}, {{count}}, {{stat}}, {{rcity}}</li>
+              <li class="mail">{{eid}}</li>
+              <li class="tel">{{mob}}</li>
+              <li class="dat">{{dob}}</li>
+              <li class="age">{{age}} Years</li>
             </ul>
           </div>
           <!-- End Personal Information -->
-          <!-- Begin Social -->
-          <div class="social">
-            <ul>
-              <li><a class='north' href="#" title="Download .pdf"><img src="images/icn-save.jpg" alt="Download the pdf version" /></a></li>
-              <li><a class='north' href="javascript:window.print()" title="Print"><img src="images/icn-print.jpg" alt="" /></a></li>
-              <li><a class='north' id="contact" href="contact/index.html" title="Contact Me"><img src="images/icn-contact.jpg" alt="" /></a></li>
-              <li><a class='north' href="#" title="Follow me on Twitter"><img src="images/icn-twitter.jpg" alt="" /></a></li>
-              <li><a class='north' href="#" title="My Facebook Profile"><img src="images/icn-facebook.jpg" alt="" /></a></li>
-            </ul>
-          </div>
-          <!-- End Social -->
         </div>
         <!-- Begin 1st Row -->
         <div class="entry">
           <h2>OBJECTIVE</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim viverra nibh sed varius. Proin bibendum nunc in sem ultrices posuere. Aliquam ut aliquam lacus.</p>
+          <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim viverra nibh sed varius. Proin bibendum nunc in sem ultrices posuere. Aliquam ut aliquam lacus.</p>
         </div>
         <!-- End 1st Row -->
         <!-- Begin 2nd Row -->
         <div class="entry">
           <h2>EDUCATION</h2>
           <div class="content">
-            <h3>Sep 2005 - Feb 2007</h3>
-            <p>Academy of Art University, London <br />
-              <em>Master in Communication Design</em></p>
+            <h3> 10th </h3>
+            <p class="p">{{tensch}}<br />
+              <em>Percentage :- {{tenper}}%</em>
+              <em>Passing Year  :- {{tenpass}}</em></p>
           </div>
           <div class="content">
-            <h3>Sep 2001 - Jun 2005</h3>
-            <p>University of Art &amp; Design, New York <br />
-              <em>Bachelor of Science in Graphic Design</em></p>
+            <h3> 12th </h3>
+            <p class="p">{{twlsch}}<br />
+              <em>Percentage :- {{twlper}}%</em>
+              <em>Passing Year  :- {{twlpass}}</em></p>
+          </div>
+          <div class="content">
+            <h3>Graduation</h3>
+            <p class="p">{{gcoll}}<br />
+              <em>Stream :- {{gstr}}</em>
+              <em>Percentage :- {{gper}}%</em>
+              <em>Passing Year  :- {{gpass}}</em></p>
+          </div>
+          <div class="content">
+            <h3>Post Graduation</h3>
+            <p class="p">{{pgcoll}}<br />
+              <em>Stream :- {{pgstr}}</em>
+              <em>Percentage :- {{pgper}}%</em>
+              <em>Passing Year  :- {{pgpass}}</em></p>
           </div>
         </div>
         <!-- End 2nd Row -->
@@ -62,22 +88,10 @@
         <div class="entry">
           <h2>EXPERIENCE</h2>
           <div class="content">
-            <h3>May 2009 - Feb 2010</h3>
-            <p>Agency Creative, London <br />
-              <em>Senior Web Designer</em></p>
-            <ul class="info">
-              <li>Vestibulum eu ante massa, sed rhoncus velit.</li>
-              <li>Pellentesque at lectus in <a href="#">libero dapibus</a> cursus. Sed arcu ipsum, varius at ultricies acuro, tincidunt iaculis diam.</li>
-            </ul>
-          </div>
-          <div class="content">
-            <h3>Jun 2007 - May 2009</h3>
-            <p>Junior Web Designer <br>
-              <em>Bachelor of Science in Graphic Design</em></p>
-            <ul class="info">
-              <li>Sed fermentum sollicitudin interdum. Etiam imperdiet sapien in dolor rhoncus a semper tortor posuere. </li>
-              <li>Pellentesque at lectus in libero dapibus cursus. Sed arcu ipsum, varius at ultricies acuro, tincidunt iaculis diam.</li>
-            </ul>
+            <h3>{{sdate}} - {{edate}}</h3>
+            <p class="p">{{comnam}}<br />
+              <em>Job Profile :- {{jobpro}}</em>
+              <em>Year of Experience:- {{exper}}</em></p>
           </div>
         </div>
         <!-- End 3rd Row -->
@@ -85,27 +99,27 @@
         <div class="entry">
           <h2>SKILLS</h2>
           <div class="content">
-            <h3>Languages</h3>
+            <h3>Techinical Skills</h3>
             <ul class="skills">
-              <li>CSS/XHTML, PHP, JavaScript, ActionScript, C++ </li>
+              <li>{{skil}}</li>
             </ul>
           </div>
             <div class="content">
             <h3>Achivement</h3>
             <ul class="info">
-              <li>1st position in Technology field</li>
+              <li>{{achiv}}</li>
             </ul>
           </div>
 	    <div class="content">
             <h3>Languages</h3>
             <ul class="skills">
-              <li>English, Hindi, Maharati, Gujarati</li>
+              <li>{{lang}}</li>
             </ul>
           </div>
 	    <div class="content">
             <h3>Hobbies</h3>
             <ul class="skills">
-              <li>Football, Cricket, Dancing, Sketching</li>
+              <li>{{hobb}}</li>
             </ul>
           </div>
         </div>
@@ -120,5 +134,115 @@
   <div class="wrapper-bottom"></div>
 </div>
 <!-- End Wrapper -->
+</div>
+
+
+  <div class="sidenav-r">
+    <br><br>
+    <div>
+    <table style="width:100%">
+            <tbody>
+                <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>IMAGE PROPERTIES</b> </small></th> </tr> 
+            </tbody>
+    </table>
+    </div>
+  <div id="text-wrapper" style="margin-top: 10px; padding-left: 20px;" >
+    <div id="text-controls">
+        <div class="row">
+            <div class="col"> <p>
+                <label><span> <small class="text-muted">Width</small></span> <input type="number" class="form-control input-xs" id="left-control" value="24" min="-500" max="300"></label>
+              </p></div>
+            <div class="col"><p>
+                <label><span><small class="text-muted">Height</small></span> <input type="number" class="form-control input-xs" id="top-control" value="10" min="-500" max="300" style="width:75px;height: 35px"></label>
+              </p></div>
+          </div>    
+          <div class="row" >
+              <div class="col" ><p>
+                  <label><span><small class="text-muted">Corners</small></span> <input type="number" class="form-control input-xs" id="scale-control" value="0.7" min="0.1" max="3" step="0.1" style="width:75px;height: 35px"></label>
+                </p></div>
+              <div class="col"><p>
+                  <label><span><small class="text-muted">Rotate</small></span> <input type="number" class="form-control input-xs" id="angle-control" value="0"  min="0" max="360" style="width:75px;height: 35px"></label>
+                </p></div>
+          </div>
+      </div>
+  </div>
+  <div>
+    <table style="width:100%">
+            <tbody>
+                <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;border-top: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>TEXT PROPERTIES</b> </small></th> </tr> 
+            </tbody>
+    </table>
+    </div>
+  <div id="text-wrapper" style="margin-top: 10px; padding-left: 20px;" >
+    <div id="text-controls">
+        <div class="row">
+            <div class="col"> <p>
+                <label><i class="fa fa-bold"  id="bold" aria-hidden="true"></i></label>
+              </p></div>
+            <div class="col"><p>
+                <label><i class="fa fa-italic"  id="italic" aria-hidden="true"></i></label>
+              </p></div>
+              <div class="col" ><p>
+                  <label><i class="fa fa-superscript" id="super-script" aria-hidden="true"></i></label>
+                </p></div>
+              <div class="col"><p>
+                  <label><i class="fa fa-subscript" id="sub-script" aria-hidden="true"></i></label>
+                </p></div>
+          </div>
+          <div class="row">
+                <div class="col"> <p>
+                        <label><span> <small class="text-muted">Font Colour</small></span><input type="color" class="form-control input-xs" value="24" min="-500" max="300" style="width:75px;height: 35px;" id="color"></label>    
+                  </p></div>
+                  <div class="col"><p>
+                        <label><span> <small class="text-muted">Font Size</small></span><input type="number" class="form-control input-xs" min="5" max="150" value="20" style="width:75px;height: 35px;" id="size"></label>
+                  </p></div>
+                <div class="col"><p>
+                        <label><span> <small class="text-muted">BG Color</small></span><input type="color" class="form-control input-xs" value="24" min="-500" max="300" style="width:75px;height: 35px;" id="bg-color"></label>
+                  </p></div>
+                  <div class="col">
+                  <label><span><small class="text-muted">Font Style</small></span>
+                        <select id="font-family" class="form-control" style="height: 35px;">
+                            <option value="arial">Arial</option>
+                            <option value="myriad pro">Myriad Pro</option>
+                            <option value="courier">Courier</option>
+                            <option value="comic sans ms">Comic Sans MS</option>
+                        </select></label>
+                    </div>
+              </div>
+      </div>
+    </div>
+  <div>
+      <table style="width:100%">
+              <tbody>
+                  <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;border-top: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>RESUME DETAILS  </b> </small></th> </tr> 
+              </tbody>
+      </table>
+      </div>
+      <p>
+          <label style="margin-top: 10px; padding-left: 20px;"><span> <small class="text-muted">NAME & CLIENT</small></span></label>
+          <br>
+          <small class="text-muted" style="padding-left: 20px;"><font size="2"> NAME :-</font></small>
+          <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> Resume </b></font></small> 
+          <br>
+          <small class="text-muted" style="padding-left: 20px;"><font size="2"> CLIENT :-</font></small>
+          <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> {{cname}} </b></font></small>
+        </p> 
+        <hr> 
+        <p>
+            <label style="padding-left: 20px;"><span> <small class="text-muted">RESUME PRICE</small></span></label>
+            <br>
+            <small class="text-muted" style="padding-left: 20px;"><font size="2"> One Time Fee :-</font></small>
+            <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> $6,900.00 </b></font></small> 
+            <br>
+            <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input"></small>
+            <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
+            <i class="fa fa-question-circle"></i>
+          </p> 
+             
+</div>
+  
 </body>
+<script>
+
+</script>
 </html>

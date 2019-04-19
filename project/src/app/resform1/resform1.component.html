@@ -114,6 +114,7 @@
                     <div *ngIf="angForm.controls['Name'].errors.required">
                     Name is required.
                     </div>
+                    <div *ngIf="angForm.controls['Name'].errors.pattern"> Name has only alphabets </div>
                 </div></small>
                 
                 <div class="form-row">
@@ -148,6 +149,11 @@
                         Mobile Number is required.
                         </div>
                     </div></small>
+                    <small><div *ngIf="angForm.controls['Mobile_no'].invalid && (angForm.controls['Mobile_no'].dirty || angForm.controls['Mobile_no'].touched)" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Mobile_no'].errors.pattern">
+                          Enter valid Mobile Number.
+                        </div>
+                      </div></small>
 
                     <div class="form-group">
                         <small class="form-text text-muted" ><label>Your Email</label></small>
@@ -157,7 +163,7 @@
                         <div *ngIf="angForm.controls['Email'].errors.required">
                         Email is required.
                         </div>
-                        <div *ngIf="angForm.controls['Email'].errors.email">Email must be a valid email address</div>
+                        <div *ngIf="angForm.controls['Email'].errors.pattern">Email must be a valid email address</div>
                     </div></small>
     
                     <div class="form-group" >
@@ -208,7 +214,7 @@
                     </div>
                     <br>
                 <div class="form-group">
-                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Name.value,DOB.value,Age.value,Mobile_no.value,Email.value,Address.value,Country.value,State.value,City.value)" style="margin-left: 200px"> Next Step</button>                               
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Name.value,DOB.value,Age.value,Mobile_no.value,Email.value,Address.value,Country.value,State.value,City.value)" [disabled]="angForm.pristine || angForm.invalid" style="margin-left: 200px"> Next Step</button>                               
                 </div> <br>
             </form>
              </div>

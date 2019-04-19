@@ -12,7 +12,7 @@ import { LoginService } from '../login.service';
 })
 export class Resform3Component implements OnInit {
 
-  email=localStorage.getItem('id');
+  email=localStorage.getItem('eid');
   name =localStorage.getItem('key');
   angForm:FormGroup;
   constructor(private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
@@ -38,7 +38,15 @@ export class Resform3Component implements OnInit {
     console.log(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.resum.addUser3(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.router.navigate(['/resume1'])
-
+    localStorage.setItem('comnam',Company_name);
+    localStorage.setItem('jobpro',Job_profile);
+    localStorage.setItem('exper',Experience);
+    localStorage.setItem('sdate',Start_date);
+    localStorage.setItem('edate',End_date);
+    localStorage.setItem('achiv',Achivement);
+    localStorage.setItem('skil',Skills);
+    localStorage.setItem('lang',Languages);
+    localStorage.setItem('hobb',Hobbies);
   }
 
   ngOnInit() {

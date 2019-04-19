@@ -13,7 +13,7 @@ export class Resform2Component implements OnInit {
 
   angForm:FormGroup;
   name =localStorage.getItem('key');
-  email=localStorage.getItem('id');
+  email=localStorage.getItem('eid');
   constructor(private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
     this.createForm();
    }
@@ -42,7 +42,20 @@ export class Resform2Component implements OnInit {
     console.log(Email,tenth_school,tenth_per,tenth_Passingyear,twelth_school,twelth_per,twelth_Passingyear,Graduation_Collage,Graduation_Stream,Graduation_per,Graduation_Passingyear,PG_collage,PG_Stream,PG_per,PG_Passingyear);
     this.resum.addUser2(Email,tenth_school,tenth_per,tenth_Passingyear,twelth_school,twelth_per,twelth_Passingyear,Graduation_Collage,Graduation_Stream,Graduation_per,Graduation_Passingyear,PG_collage,PG_Stream,PG_per,PG_Passingyear);
     this.router.navigate(['/resumejobdetail'])
-
+    localStorage.setItem('tensch',tenth_school);
+    localStorage.setItem('tenper',tenth_per);
+    localStorage.setItem('tenpass',tenth_Passingyear);
+    localStorage.setItem('twlsch',twelth_school);
+    localStorage.setItem('twlper',twelth_per);
+    localStorage.setItem('twlpass',twelth_Passingyear);
+    localStorage.setItem('gcoll',Graduation_Collage);
+    localStorage.setItem('gstr',Graduation_Stream);
+    localStorage.setItem('gper',Graduation_per);
+    localStorage.setItem('gpass',Graduation_Passingyear);
+    localStorage.setItem('pgcoll',PG_collage);
+    localStorage.setItem('pgstr',PG_Stream);
+    localStorage.setItem('pgper',PG_per);
+    localStorage.setItem('pgpass',PG_Passingyear);
   }
 
   ngOnInit() {
