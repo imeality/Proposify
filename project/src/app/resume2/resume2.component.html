@@ -1,0 +1,290 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="../assets/JS/Canvas1.js"></script>
+
+<script type="text/javascript" src="proposalAccounnting/wz_jsgraphics.js"></script> 
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
+    <div class="container-fluid">
+        <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
+        <button type="button" class="btn btn-arrow-right " id="sign"> <small>Send</small></button>
+    </div>
+</nav>
+
+<div class="sidebar main" id="table-wrapper">
+  <div id="table-scroll">
+    <table style="width:100%">
+        <tbody>
+           <tr style="background-color: white;"> <th style=" border-bottom: 1px solid darkgrey"><a href="#resume1" style="padding:1%"><small style="color:#004053;">Cover</small></a></th> </tr> 
+           <tr><td style=" border-bottom: 1px solid darkgrey ;height: 70px;"><a> <img src="./assets/resume2.png" height="40px" width="50px"/> </a> </td></tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container" style="padding-top:50px;">
+<div id="cv"> 
+	<div class="mainDetails">
+		<div id="name">
+			<h1>{{name}}</h1>
+		</div>
+		<div id="contactDetails">
+			<ul>
+				<li>Email: {{eid}}</li>
+				<li>Mobile No.: {{mob}}</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="mainArea">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Personal Profile</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<ul>
+				<li>Name : {{name}}</li>
+				<li>Date of Birth : {{dob}}</li>
+				<li>Age : {{age}}</li>
+				<li>Mobile No. : {{mob}}</li>
+				<li>Email : {{eid}}</li>
+				<li>Address : {{add}}</li>
+				<li>Country : {{count}}</li>
+				<li>State : {{stat}}</li>
+				<li>City : {{rcity}}</li>
+			</ul><br>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		
+		 
+		<section>
+			<div class="sectionTitle">
+				<h1>Work Experience</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<article>
+					<h2>Job Title at Company</h2>
+					<p class="subDetails">{{sdate}} - {{edate}}</p>
+					<h3>Job Details</h3>
+					<ul>
+				<li>Experience : {{exper}}</li>
+				<li>Job Profile : {{jobpro}}</li>
+				<li>Company Name : {{comnam}}</li>
+			</ul><br>
+				</article>
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Key Skills</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<ul class="keySkills">
+					<li>{{skil}}</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Achivement</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<ul class="keySkills">
+					<li>{{achiv}}</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
+			
+			<div class="sectionContent">
+				
+				<article>
+					<h2>School</h2>
+					<p class="subDetails">Qualification</p>
+					<ul class="keySkills">
+					<li>Tenth School : {{tensch}}</li>
+					<li>Tenth Percentage: {{tenper}}%</li>
+					<li>Tenth Passingyear : {{tenpass}}</li>
+					<li>Twelth School  : {{twlsch}}</li>
+					<li>Twelth Percentage  : {{twlper}}%</li>
+					<li>Twelth Passingyear  : {{twlpass}}</li>
+				</ul>
+        </article>
+        
+        <article>
+					<h2>Graduation College/University</h2>
+					<p class="subDetails">Qualification</p>
+					<ul class="keySkills">
+					<li>Graduation Collage : {{gcoll}}</li>
+					<li>Graduation Stream : {{gstr}}</li>
+					<li>Graduation Percentage : {{gper}}%</li>
+					<li>Graduation Passing year : {{gpass}}</li>
+				</ul>
+        </article>
+        
+        <article>
+					<h2>Post Graduation College/University</h2>
+					<p class="subDetails">Qualification</p>
+					<ul class="keySkills">
+					<li>Post Graduation Collage : {{pgcoll}}</li>
+					<li>Post Graduation Stream : {{pgstr}}</li>
+					<li>PG Percentage : {{pgper}}%</li>
+					<li>PG Passing year : {{pgpass}}</li>
+				</ul>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Languages & Hobbies</h1>
+			</div>
+			
+			<div class="sectionContent">
+					<h2>Languages</h2>
+				<ul class="keySkills">
+					<li>{{lang}}</li>
+				</ul>
+					<h2>Hobbies</h2>
+				<ul class="keySkills">
+					<li>{{hobb}}</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+	</div>
+<br>
+</div>
+</div>
+  <div class="sidenav-r">
+    <br><br>
+    <div>
+    <table style="width:100%">
+            <tbody>
+                <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>IMAGE PROPERTIES</b> </small></th> </tr> 
+            </tbody>
+    </table>
+    </div>
+  <div id="text-wrapper" style="margin-top: 10px; padding-left: 20px;" >
+    <div id="text-controls">
+        <div class="row">
+            <div class="col"> <p>
+                <label><span> <small class="text-muted">Width</small></span> <input type="number" class="form-control input-xs" id="left-control" value="24" min="-500" max="300"></label>
+              </p></div>
+            <div class="col"><p>
+                <label><span><small class="text-muted">Height</small></span> <input type="number" class="form-control input-xs" id="top-control" value="10" min="-500" max="300" style="width:75px;height: 35px"></label>
+              </p></div>
+          </div>    
+          <div class="row" >
+              <div class="col" ><p>
+                  <label><span><small class="text-muted">Corners</small></span> <input type="number" class="form-control input-xs" id="scale-control" value="0.7" min="0.1" max="3" step="0.1" style="width:75px;height: 35px"></label>
+                </p></div>
+              <div class="col"><p>
+                  <label><span><small class="text-muted">Rotate</small></span> <input type="number" class="form-control input-xs" id="angle-control" value="0"  min="0" max="360" style="width:75px;height: 35px"></label>
+                </p></div>
+          </div>
+      </div>
+  </div>
+  <div>
+    <table style="width:100%">
+            <tbody>
+                <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;border-top: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>TEXT PROPERTIES</b> </small></th> </tr> 
+            </tbody>
+    </table>
+    </div>
+  <div id="text-wrapper" style="margin-top: 10px; padding-left: 20px;" >
+    <div id="text-controls">
+        <div class="row">
+            <div class="col"> <p>
+                <label><i class="fa fa-bold"  id="bold" aria-hidden="true"></i></label>
+              </p></div>
+            <div class="col"><p>
+                <label><i class="fa fa-italic"  id="italic" aria-hidden="true"></i></label>
+              </p></div>
+              <div class="col" ><p>
+                  <label><i class="fa fa-superscript" id="super-script" aria-hidden="true"></i></label>
+                </p></div>
+              <div class="col"><p>
+                  <label><i class="fa fa-subscript" id="sub-script" aria-hidden="true"></i></label>
+                </p></div>
+          </div>
+          <div class="row">
+                <div class="col"> <p>
+                        <label><span> <small class="text-muted">Font Colour</small></span><input type="color" class="form-control input-xs" value="24" min="-500" max="300" style="width:75px;height: 35px;" id="color"></label>    
+                  </p></div>
+                  <div class="col"><p>
+                        <label><span> <small class="text-muted">Font Size</small></span><input type="number" class="form-control input-xs" min="5" max="150" value="20" style="width:75px;height: 35px;" id="size"></label>
+                  </p></div>
+                <div class="col"><p>
+                        <label><span> <small class="text-muted">BG Color</small></span><input type="color" class="form-control input-xs" value="24" min="-500" max="300" style="width:75px;height: 35px;" id="bg-color"></label>
+                  </p></div>
+                  <div class="col">
+                  <label><span><small class="text-muted">Font Style</small></span>
+                        <select id="font-family" class="form-control" style="height: 35px;">
+                            <option value="arial">Arial</option>
+                            <option value="myriad pro">Myriad Pro</option>
+                            <option value="courier">Courier</option>
+                            <option value="comic sans ms">Comic Sans MS</option>
+                        </select></label>
+                    </div>
+              </div>
+      </div>
+    </div>
+  <div>
+      <table style="width:100%">
+              <tbody>
+                  <tr style="background-color: #EDEDED;"> <th style=" border-bottom: 1px solid darkgrey;padding:2%;border-top: 1px solid darkgrey;padding:2%;padding-left:15px"><small style="color:#004053;"> <b>RESUME DETAILS  </b> </small></th> </tr> 
+              </tbody>
+      </table>
+      </div>
+      <p>
+          <label style="margin-top: 10px; padding-left: 20px;"><span> <small class="text-muted">NAME & CLIENT</small></span></label>
+          <br>
+          <small class="text-muted" style="padding-left: 20px;"><font size="2"> NAME :-</font></small>
+          <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> Resume </b></font></small> 
+          <br>
+          <small class="text-muted" style="padding-left: 20px;"><font size="2"> CLIENT :-</font></small>
+          <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> {{cname}} </b></font></small>
+        </p> 
+        <hr> 
+        <p>
+            <label style="padding-left: 20px;"><span> <small class="text-muted">RESUME PRICE</small></span></label>
+            <br>
+            <small class="text-muted" style="padding-left: 20px;"><font size="2"> One Time Fee :-</font></small>
+            <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> $6,900.00 </b></font></small> 
+            <br>
+            <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input"></small>
+            <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
+            <i class="fa fa-question-circle"></i>
+          </p> 
+             
+</div>
+  
+</body>
+<script>
+
+</script>
+</html>

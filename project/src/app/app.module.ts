@@ -35,6 +35,11 @@ import { Propform4Component } from './propform4/propform4.component';
 import { Proposal3Component } from './proposal3/proposal3.component';
 import { Propform5Component } from './propform5/propform5.component';
 import { Propform6Component } from './propform6/propform6.component';
+import { Resform4Component } from './resform4/resform4.component';
+import { Resform5Component } from './resform5/resform5.component';
+import { Resform6Component } from './resform6/resform6.component';
+import { Resume2Component } from './resume2/resume2.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +72,12 @@ import { Propform6Component } from './propform6/propform6.component';
     Proposal3Component,
     Propform5Component,
     Propform6Component,
+    Resform4Component,
+    Resform5Component,
+    Resform6Component,
+    Resume2Component,
+    PaymentComponent,
+    
   ],
   imports: [
     BrowserModule,

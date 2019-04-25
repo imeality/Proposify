@@ -28,6 +28,12 @@ import { Proposal3Component } from './proposal3/proposal3.component';
 import { Propform5Component } from './propform5/propform5.component';
 import { Propform6Component } from './propform6/propform6.component';
 import { Resume1Component } from './resume1/resume1.component';
+import { Resform4Component } from './resform4/resform4.component';
+import { Resform5Component } from './resform5/resform5.component';
+import { Resform6Component } from './resform6/resform6.component';
+import { Resume2Component } from './resume2/resume2.component';
+import { PaymentComponent } from './payment/payment.component';
+
 
 
 const routes: Routes = [
@@ -37,6 +43,7 @@ const routes: Routes = [
     { path:'signup',component:SignupComponent},
     { path:'welcome',component:WelcomeComponent},
     { path:'forgot',component:ForgotComponent},
+    { path:'payment',component:PaymentComponent},
 
     { path:'dashboard',component:DashboardComponent},
     { path:'profile',component:ProfileComponent},
@@ -47,14 +54,20 @@ const routes: Routes = [
     { path:'previewresume3',component:Preview3Component},
     { path:'previewresume4',component:Preview4Component},
 
-    { path:'previewresume5',component:Preview5Component},
-    { path:'previewresume6',component:Preview6Component},
-    { path:'previewresume7',component:Preview7Component},
+    { path:'previewproposal5',component:Preview5Component},
+    { path:'previewproposal6',component:Preview6Component},
+    { path:'previewproposal7',component:Preview7Component},
 
     { path:'resume1',component:Resume1Component},
     { path:'resumeuserdetail',component:Resform1Component},
     { path:'resumeeducationaldetail',component:Resform2Component},
     { path:'resumejobdetail',component:Resform3Component},
+
+    { path:'resume2',component:Resume2Component},
+    { path:'Resumeuserdetail',component:Resform4Component},
+    { path:'Resumeeducationaldetail',component:Resform5Component},
+    { path:'Resumejobdetail',component:Resform6Component},
+
 
     { path:'proposal1',component:Proposal1Component },
     { path:'proposalclientdetail',component:Propform1Component},

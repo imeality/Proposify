@@ -1,0 +1,215 @@
+/* slide menu*/
+nav {
+    border-bottom: thin solid darkgrey;
+  }
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EDEDED;
+    overflow-x: hidden;  
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  
+  .main {
+    margin-top: 55px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+
+  #table-scroll {
+    height:805px;
+  }
+
+/* arrow button style */
+  .btn-arrow-right{
+    position: relative;
+}
+
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    width: 22px; /* same as height */
+    height: 22px; /* button_outer_height / sqrt(2) */
+    background: #83db77 ; /* use parent background */
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    transform: rotate(45deg); 
+}
+
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+    right: -12px;
+}
+
+#sign{
+    color: #ffffff;
+    background-color: #83db77;
+    width:100px;
+    height: 35px;
+ }
+
+ .sidenav-r {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:#EDEDED;
+    overflow-x: hidden;
+    border-left: 10px; 
+}
+
+.sidenav-r a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #004053;
+  display: block;
+} 
+
+.tr2,.tr3,.tr4,.tr5,.tr6,.tr7,.tr8,.tr9{
+  display: none;
+}
+
+.fa {
+  cursor: pointer;
+  }
+	
+	/* -----------------------------------------------------  Resume Css  ------------------------------------------------------------------------------- */
+
+	h1,h2,h3,ul,li{
+		border:0;
+		font:inherit;
+		font-size:100%;
+		margin:0;
+		padding:0;
+		vertical-align:baseline;
+		}
+			
+		.clear {clear: both;}
+		
+		
+		#cv {
+			width: 90%;
+			max-width: 700px;
+			background: #f3f3f3;
+			margin: 30px auto;
+		}
+		
+		.mainDetails {
+			padding: 25px 35px;
+			border-bottom: 2px solid #cf8a05;
+			background: #ededed;
+		}
+		
+		#name h1 {
+			font-size: 2.5em;
+			font-weight: 700;
+			font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+			margin-bottom: -6px;
+		}
+		
+		#mainArea {
+			padding: 0 40px;
+			border-bottom: 2px solid #cf8a05;
+		}
+		
+		#name {
+			float: left;
+		}
+		
+		#contactDetails {
+			float: right;
+		}
+		
+		#contactDetails ul {
+			list-style-type: none;
+			font-size: 0.9em;
+			margin-top: 2px;
+		}
+		
+		#contactDetails ul li {
+			margin-bottom: 3px;
+			color: #444;
+		}
+		
+		section {
+			border-top: 1px solid #dedede;
+			padding: 20px 0 0;
+		}
+		
+		section:first-child {
+			border-top: 0;
+		}
+		
+		section:last-child {
+			padding: 20px 0 10px;
+		}
+		
+		.sectionTitle {
+			float: left;
+			width: 25%;
+		}
+		
+		.sectionContent {
+			float: right;
+			width: 72.5%;
+		}
+		
+		.sectionContent ul {
+			list-style-type: none;
+			font-size: 0.9em;
+			margin-top: 2px;
+		}
+		
+		.sectionContent ul li {
+			margin-bottom: 3px;
+			color: #444;
+		}
+		
+		.sectionTitle h1 {
+			font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+			font-style: italic;
+			font-size: 1.5em;
+			color: #cf8a05;
+		}
+		
+		.sectionContent h2 {
+			font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+			font-size: 1.5em;
+			margin-bottom: -2px;
+		}
+		
+		.subDetails {
+			font-size: 0.8em;
+			font-style: italic;
+			margin-bottom: 3px;
+		}
+		
+		.keySkills {
+			list-style-type: none;
+			column-count:2;
+			margin-bottom: 20px;
+			font-size: 1em;
+			color: #444;
+		}
+		
+		@media all and (min-width: 602px) and (max-width: 800px) {
+			
+			.keySkills {
+			column-count:2;
+			}
+		}
+		
+		

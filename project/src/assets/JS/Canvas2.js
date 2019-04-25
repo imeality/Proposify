@@ -476,8 +476,7 @@ var canvases = this.__canvases = [
   new fabric.Canvas('p11'), new fabric.Canvas('p12'), new fabric.Canvas('p13'), new fabric.Canvas('p14'), new fabric.Canvas('p15'),
   new fabric.Canvas('p16'), new fabric.Canvas('p17'), new fabric.Canvas('p18'), new fabric.Canvas('p19'), new fabric.Canvas('p20'),
   new fabric.Canvas('p21'), new fabric.Canvas('p22'), new fabric.Canvas('p23'), new fabric.Canvas('p24'), new fabric.Canvas('p25'),
-  new fabric.Canvas('p26'), new fabric.Canvas('p27'), new fabric.Canvas('p28'), new fabric.Canvas('p29'), new fabric.Canvas('p30'),
-  new fabric.Canvas('p31'), new fabric.Canvas('p32'), new fabric.Canvas('p33'), new fabric.Canvas('p34'),
+  new fabric.Canvas('p26'), new fabric.Canvas('p27'), new fabric.Canvas('p28')
 ];
 
 var iText1 = new fabric.IText('Project Management \n\You Can Count On', {
@@ -624,122 +623,76 @@ var iText1 = new fabric.IText('Project Management \n\You Can Count On', {
   });
   canvases[18].add(iText19);
 
-  var iText20 = new fabric.IText(' \n\ • Customer and Vendor List \n\ • Customer Balance Summary \n\ • Daily Customer Invoice Summary (report to QB as journal entry - sales and A/R)', {
+  var iText20 = new fabric.IText('Project management is a specialized discipline. It\'s planning, running, monitoring, and \n\controlling a project from start to finish. It\'s the processes, methods, knowledge, skills, \n\and experience you need to meet the objectives of a time-limited undertaking. \n\ \n\We specializes in partnering with companies to meet their project targets and goals. We get \n\you from point A to point B, as smoothly and painlessly as possible. \n\ \n\Our experts hail from many different backgrounds, including real estate development, sales \n\and marketing, software and IT, and design. We make it our business to study and incorporate \n\ the art and science of professional project management into everything we do. \n\ \n\ \n\Certification \n\  Our lead consultants are certified project management professionals (PMPs) accredited by the \n\  Project Management Institute (PMI). They have completed a rigorous certification process and \n\  adhere to the highest ethical standards of their profession. \n\ ', {
     styles: { },
     fontFamily: 'Arial,serif',
     fontSize: 13,                                                                                                                                                                                                                                                                                                                                         
   });
   canvases[19].add(iText20);
 
-  var iText21 = new fabric.IText('About Us', {
+  var iText21 = new fabric.IText('\t\ \t\ \t\ \t\ "With us, my customers are happier, and so are my \n\ \t\ \t\ \t\  employees. Everyone knows the plan and what they \n\ \t\ \t\ \t\  should be doing. Everyone knows what\'s expected \n\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ of them and when it\'s due."\n\ \n\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ \t\ - CEO, Lanai Ltd.', {
     styles: { },
     top:15,
     fontFamily: 'Arial,serif',
-    fontSize: 54,
+    fontSize: 17,
     fill: 'white'
   });
   canvases[20].add(iText21);
 
-  var iText22 = new fabric.IText('SERVICE & PRICING', {
+  var iText22 = new fabric.IText('Meet Our Team', {
     styles: { },
-    top:15,
     fontFamily: 'Arial,serif',
-    fontSize: 54,
-    fill: 'white'
+    fontSize: 44,
+    fill:'rgb(241,47,106)'
   });
   canvases[21].add(iText22);
 
-  var iText23 = new fabric.IText('NEXT STEPS', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 54,
-    fill: 'white'
-  });
-  canvases[22].add(iText23);
-
-  var iText24 = new fabric.IText('NEProject Kick-Off / Requirements DocumentationXT STEPS', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 20,
-    fill: 'orange'
-  });
-  canvases[23].add(iText24);
-
-
-  var iText25 = new fabric.IText(' During this phase, our collective teams will meet to review overall project goals, establish \n\ review annual tax preparation requirements and determine specific accounting \n\ responsibilities of your company and of Accounting Experts to confirm they align with the \n\ scope of the proposal. \n\ ', {
+  var iText23 = new fabric.IText('Rose Nylund, Certified Project \n\Management Professional (PMP) \n\LOREM IPSUM lorem ipsum lorem ipsum lorem ipsum \n\lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem \n\ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. \n\ \n\ \n\ \n\Sophia Petrillo, Project Managements \n\Software Consultant\n\LOREM IPSUM lorem ipsum lorem ipsum lorem ipsum \n\lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem \n\ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.\n\ \n\ \n\ \n\Blanche Devereaux, Consultant\n\LOREM IPSUM lorem ipsum lorem ipsum lorem ipsum \n\lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem \n\ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.', {
     styles: { },
     fontFamily: 'Arial,serif',
     fontSize: 13,
   });
-  canvases[24].add(iText25);
+  canvases[22].add(iText23);
 
-  var iText26 = new fabric.IText('System Configuration', {
+  var iText24 = new fabric.IText('In the last year, we\'ve completed major projects for: \n\ \t\ Acme Tchotchkes\n\ \t\ Tribble Enterprises\n\ \t\ Lanai Ltd.\n\ \t\ The Department of Internal Departments\n\ \t\ St. Olaf Chamber of Commerce', {
     styles: { },
     fontFamily: 'Arial,serif',
-    fontSize: 20,
-    fill: 'orange'
+    fontSize: 13,
+    fill: 'white'
+  });
+  canvases[23].add(iText24);
+
+
+  var iText25 = new fabric.IText('Cost Summary', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 44,
+    fill:'rgb(241,47,106)'
+  });
+  canvases[24].add(iText25);
+
+  var iText26 = new fabric.IText('Statement of Work \n\ \t\ \t\and Contract', {
+    styles: { },
+    fontFamily: 'Arial,serif',
+    fontSize: 44,
+    fill:'rgb(241,47,106)'
   });
   canvases[25].add(iText26);
 
-  var iText27 = new fabric.IText(' Set up QuickBooks accounting software to services the needs of PROPOSAL COMPANY. \n\ ', {
+  var iText27 = new fabric.IText('NOTE: WE ARE NOT LAWYERS. THIS IS A SAMPLE CONTRACT ONLY. BE SURE \n\ TO HAVE YOUR OWN LEGAL COUNSEL REVIEW. \n\ \n\Project Management Agreement Owner hereby engages Manager to manage on behalf of \n\Owner in accordance with the following: \n\ \n\ 1. Manager shall provide Owner with the planning, budgeting, scheduling, expediting, \n\ \t\    coordinating and supervising necessary for the timely execution of the Project by all \n\ \t\    workmen, suppliers of material, contractors, subcontractors and others (collectively, \n\ \t\    Contractors) supplying materials for services to the Project. \n\ \n\ 2. Owner and Manager have discussed and agreed upon Project design and specifications,\n\ \t\    the details of which are set forth in Schedule "A" attached. \n\ \n\ 3. Owner and Manager have discussed and agreed upon the Project cost estimate as set forth \n\ \t\    in Schedule "B" attached. Manager has used the best effort to obtain and verify such estimate \n\ \t\    but does not warrant that the actual Project costs shall be as stated in Schedule "B". \n\ \n\ 4. Manager shall take all reasonable steps on behalf of Owner to ensure the project shall be \n\ \t\   completed in a good and workmanlike manner in accordance with the design specifications \n\ \t\   and cost estimate, subject to any changes. \n\ \n\ 5. The detail of services to be provided by Manager for Owner are as set forth in Schedule "C" \n\ \t\    attached. ', {
     styles: { },
     fontFamily: 'Arial,serif',
     fontSize: 13,
   });
   canvases[26].add(iText27);
 
-  var iText28 = new fabric.IText('Data Migration', {
+  var iText28 = new fabric.IText(' 6. Nothing in this Agreement shall prevent or restrict Manager from acting as a Contractor \n\ \t\   for the purpose of performing work or service to the Project, provided such shall be fully \n\ \t\   disclosed to owner. \n\ \n\ 7. Owner hereby indemnifies and holds harmless Manager from all debts, claims and \n\ \t\   liabilities incurred by Manager in the performance of the functions under the Agreement, \n\ \t\   provided that such functions are carried out by Manager within the scope of its authority. \n\ \n\ 8. Manager\'s fee shall be as outlined below: \n\ \n\ 9. In addition to such fee, Owner shall pay Goods and Services Tax of X%', {
     styles: { },
     fontFamily: 'Arial,serif',
-    fontSize: 20,
-    fill: 'orange'
+    fontSize: 13,
   });
   canvases[27].add(iText28);
 
-  var iText29 = new fabric.IText(' During this phase we will upload files for: \n\ • Customer, vendors, beginning balances, general ledger month-end balances for 12months prior \n\ • Open invoices and bills as of planned production dates \n\ • Chart of accounts', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 13,
-  });
-  canvases[28].add(iText29);
-
-  var iText30 = new fabric.IText('Training', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 20,
-    fill: 'orange'
-  });
-  canvases[29].add(iText30);
-
-  var iText31 = new fabric.IText(' Training of PROPOSAL COMPANY staff on QuickBooks System. \n\ ', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 13,
-  });
-  canvases[30].add(iText31);
-
-  var iText32 = new fabric.IText('Ongoing', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 20,
-    fill: 'orange'
-  });
-  canvases[31].add(iText32);
-
-  var iText33 = new fabric.IText(' Provide monthly services as agreed upon in the contract. \n\ ', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 13,
-  });
-  canvases[32].add(iText33);
-
-  var iText34 = new fabric.IText('CONTACT US', {
-    styles: { },
-    fontFamily: 'Arial,serif',
-    fontSize: 54,
-    fill: 'white'
-  });
-  canvases[33].add(iText34);
 
 
 

@@ -1,0 +1,229 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-top navbar-light bg-light" >
+        <div class="container">
+          <div>  <a class="navbar-brand" href="#"><img src="./assets/proposifylogo.png" height="80px" width="110px"></a>
+          </div>
+          <div class="btn-group">
+              <button type="button" id ="sign1" class="btn  dropdown-toggle" data-toggle="dropdown" *ngIf="logn.logged">
+                  {{name}}
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" routerLink="/profile"> <small class="text-muted">Profile</small></a>
+                <a class="dropdown-item" *ngIf="logn.logged" routerLink="/home" (click) = "logout()"> <small class="text-muted">Logout</small></a>
+            </div>
+          </div>
+      </div>
+      </nav>  
+  
+      
+      <nav class="main-menu">
+        <ul>
+            <li>
+                <a routerLink="/dashboard">
+                    <i class="fa fa-product-hunt fa-3x"></i>
+                    <span class="nav-text">
+                        Pipeline
+                    </span>
+                </a>
+              
+            </li>
+            <li class="has-subnav">
+                <a>
+                    <i class="fa fa-archive fa-2x"></i>
+                    <span class="nav-text">
+                        Content Library
+                    </span>
+                </a>
+                
+            </li>
+            <li  class="has-subnav">
+                <a routerLink="/template">
+                   <i class="fa fa-file-text-o fa-2x"></i>
+                    <span class="nav-text">
+                        Templates
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a>
+                   <i class="fa fa-bullseye fa-2x"></i>
+                    <span class="nav-text">
+                        Metrics
+                    </span>
+                </a>
+               
+            </li>
+            <li>
+                <a>
+                    <i class="fa fa-users fa-2x"></i>
+                    <span class="nav-text">
+                        Users
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a >
+                    <i class="fa fa-address-book-o fa-2x"></i>
+                    <span class="nav-text">
+                       Clients
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a>
+                   <i class="fa fa-plug fa-2x"></i>
+                    <span class="nav-text">
+                        Integrations
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a>
+                    <i class="fa fa-cog fa-2x"></i>
+                    <span class="nav-text">
+                        Setting
+                    </span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+<br><br>
+<div class="container">
+    <button routerLink="/template" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px;height: 30px;margin-left:320px;" >&#9666; Back</button>
+</div>
+<hr>
+<div class="container">
+    <div class="card" id="maindiv" style="width: 37rem;">
+        <div class="card-body">
+            <form [formGroup]="angForm" novalidate>
+                <h3 style="color: #004053">Enter the Resume Details</h3> <br>
+                <div class="alert alert-success" role="alert" style="font-family: 'proxima-nova',sans-serif;font-size: 16px"><i class="fa fa-check-circle" style="display:inline;"> </i> You have selected the "Resume" template</div>
+                <h6 style="color: #004053"> <b>Personal Details</b></h6>
+                
+                <div class="form-group">
+                    <small class="form-text text-muted" ><label>Your Name</label></small>
+                    <input type="text" class="form-control" formControlName="Name" required #Name >
+                </div>
+                <small><div *ngIf="angForm.controls['Name'].invalid && (angForm.controls['Name'].dirty )" class="alert-danger">
+                    <div *ngIf="angForm.controls['Name'].errors.required">
+                    Name is required.
+                    </div>
+                    <div *ngIf="angForm.controls['Name'].errors.pattern"> Name has only alphabets </div>
+                </div></small>
+                
+                <div class="form-row">
+                    <div class="col">
+                        <small class="form-text text-muted" ><label>Date of Birth</label></small> 
+                        <input type="date" class="form-control" formControlName="DOB" required #DOB >
+                        <br>
+                    <small><div *ngIf="angForm.controls['DOB'].invalid && (angForm.controls['DOB'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['DOB'].errors.required">
+                                Date of Birth is required.
+                            </div>
+                            </div></small>
+                        </div>
+                    <div class="col">
+                        <small class="form-text text-muted" ><label> AGE</label></small>
+                        <input type="number" class="form-control" formControlName="Age" required #Age >
+                        <br>
+                    <small><div *ngIf="angForm.controls['Age'].invalid && (angForm.controls['Age'].dirty )" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Age'].errors.required">
+                                Age is required.
+                            </div>
+                            </div></small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <small class="form-text text-muted" ><label> Your Mobile Number</label></small>
+                        <input type="tel" class="form-control" formControlName="Mobile_no" required #Mobile_no >
+                    </div>
+                    <small><div *ngIf="angForm.controls['Mobile_no'].invalid && (angForm.controls['Mobile_no'].dirty )" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Mobile_no'].errors.required">
+                        Mobile Number is required.
+                        </div>
+                    </div></small>
+                    <small><div *ngIf="angForm.controls['Mobile_no'].invalid && (angForm.controls['Mobile_no'].dirty || angForm.controls['Mobile_no'].touched)" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Mobile_no'].errors.pattern">
+                          Enter valid Mobile Number.
+                        </div>
+                      </div></small>
+
+                    <div class="form-group">
+                        <small class="form-text text-muted" ><label>Your Email</label></small>
+                        <input type="email" class="form-control" formControlName="Email" required #Email >
+                    </div>
+                    <small><div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty )" class="alert-danger">
+                        <div *ngIf="angForm.controls['Email'].errors.required">
+                        Email is required.
+                        </div>
+                        <div *ngIf="angForm.controls['Email'].errors.pattern">Email must be a valid email address</div>
+                    </div></small>
+    
+                    <div class="form-group" >
+                        <small class="form-text text-muted" ><label> Your Address </label></small>
+                        <textarea class="form-control" formControlName="Address" required #Address  cols="30" rows="3"></textarea>
+                        </div>
+                        <small><div *ngIf="angForm.controls['Address'].invalid && (angForm.controls['Address'].dirty || angForm.controls['Address'].touched)" class=" alert-danger">
+                        <div *ngIf="angForm.controls['Address'].errors.required">
+                                Address is required.
+                        </div>
+                    </div></small>
+            
+                    <div class="form-row">
+                        <div class="col-md-4 ">
+                                <small class="form-text text-muted" ><label>Country</label></small> 
+                                <select  class="form-control" formControlName="Country" required #Country (change)="changeCountry($event.target.value)">
+                                    <option *ngFor ="let count of countryList">{{count.name}} </option>
+                                </select>
+                            <br>
+                    <small><div *ngIf="angForm.controls['Country'].invalid && (angForm.controls['Country'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['Country'].errors.required">
+                                Country is required.
+                            </div>
+                            </div></small>
+                        </div>
+                        <div class="col-md-4 ">
+                                <small class="form-text text-muted" ><label>State</label></small>
+                                <select class="form-control" formControlName="State" required #State>
+                                    <option *ngFor ="let State of state">{{State}} </option>
+                              </select> 
+                        <br>
+                    <small><div *ngIf="angForm.controls['State'].invalid && (angForm.controls['State'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['State'].errors.required">
+                                State is required.
+                            </div>
+                            </div></small>
+                        </div>
+                        <div class="col-md-4 ">
+                        <small class="form-text text-muted" ><label>City</label></small> 
+                        <input type="text" class="form-control" formControlName="City" required #City >
+                        <br>
+                    <small><div *ngIf="angForm.controls['City'].invalid && (angForm.controls['City'].dirty)" class=" alert-danger">
+                            <div *ngIf="angForm.controls['City'].errors.required">
+                                City is required.
+                            </div>
+                            </div></small>
+                        </div>
+                    </div>
+                    <br>
+                <div class="form-group">
+                        <button type="button" class="btn btn-arrow-right " id="sign" (click)="onClick(Name.value,DOB.value,Age.value,Mobile_no.value,Email.value,Address.value,Country.value,State.value,City.value)" [disabled]="angForm.pristine || angForm.invalid" style="margin-left: 200px"> Next Step</button>                               
+                </div> <br>
+            </form>
+             </div>
+        </div>
+      </div>
+
+</body>
+<script type="text/javascript">
+
+    </script>
+
+</html>
