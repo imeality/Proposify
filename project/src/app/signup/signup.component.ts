@@ -28,6 +28,9 @@ export class SignupComponent implements OnInit {
     this.logn.addUser(Fname, Lname, Email ,Mobile_no ,Password);
     this.logn.logged = true;
     localStorage.setItem('key',Fname);
+    localStorage.setItem('key1',Lname);
+    localStorage.setItem('key2',Email);
+    localStorage.setItem('key3',Mobile_no);
     this.router.navigate(['/welcome'])
 
   }

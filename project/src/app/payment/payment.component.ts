@@ -56,6 +56,10 @@ export class PaymentComponent implements AfterViewChecked {
   }
 
   today: Date;
+   fname =localStorage.getItem('key');
+   lname =localStorage.getItem('key1');
+   emal =localStorage.getItem('key2');
+   mob =localStorage.getItem('key3');
 
   constructor() {
     this.today =new Date();

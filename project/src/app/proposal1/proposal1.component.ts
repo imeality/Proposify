@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
+import * as jspdf from 'jspdf';
+import html2canvas from 'html2canvas';
+
+declare var xepOnline: any;
 
 @Component({
   selector: 'app-proposal1',
@@ -7,6 +11,53 @@ import * as $ from 'jquery';
   styleUrls: ['./proposal1.component.css']
 })
 export class Proposal1Component implements OnInit {
+
+
+// @ViewChild('content') content: ElementRef;
+
+// makePdf() {
+//   const filename  = 'ThisIsYourPDFFilename.pdf';
+
+// 		html2canvas(document.querySelector('#content')).then(canvas => {
+// 			let pdf = new jspdf('p', 'mm', 'a4');
+// 			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+// 			pdf.save(filename);
+// 		});
+
+//return xepOnline.Formatter.Format('contentToConvert', {render: 'download'});
+
+//   let data = document.getElementById('contentToConvert'); 
+//  html2canvas(data).then(canvas => { 
+//  // Few necessary setting options 
+//  let imgWidth = 208; 
+//  let pageHeight = 295; 
+//  let imgHeight = canvas.height * imgWidth / canvas.width; 
+//  let heightLeft = imgHeight; 
+ 
+//  const contentDataURL = canvas.toDataURL('image/png') 
+//  let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF 
+//  let position = 0; 
+//  pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight) 
+//  pdf.save('MYPdf.pdf'); // Generated PDF  
+//  }); 
+
+
+  // let doc = new jspdf();
+  
+  // let specialElementsHandlers={
+  //   '#editor' : function(element ,renderer){
+  //     return true;
+  //   }
+  // };
+  // let content = this.content.nativeElement;
+
+  // doc.fromHTML(content.innerHTML, 20 ,10,{
+  //   'width':100,
+  //   'elementsHandlers' : specialElementsHandlers
+  // });
+  // doc.save('proposal.pdf');
+  //}
+
 
   cname=localStorage.getItem('cname');
   cadd =localStorage.getItem('cadd');

@@ -22,17 +22,17 @@
 
               <div class="form-group">
                     <small class="form-text text-muted" ><label>First name</label></small> 
-                    <input type="text" class="form-control" required >
+                    <input type="text" class="form-control" value="{{fname}} {{lname}}" required >
                    </div>
 
               <div class="form-group">
                     <small class="form-text text-muted" ><label> Your Mobile Number</label></small>
-                    <input type="tel" class="form-control" required>
+                    <input type="tel" class="form-control" value="{{emal}}" required>
                   </div>
 
                <div class="form-group">
                     <small class="form-text text-muted" ><label>Your Email</label></small>
-                    <input type="email" class="form-control" required>
+                    <input type="email" class="form-control"  value="{{mob}}" required>
                     </div>
 
                 <div class="form-row">
@@ -48,7 +48,7 @@
                     <br> <br>
                 <div class="form-group">
                     <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
-                    <div id="paypal-checkout-btn" style="text-align:right;"></div>
+                    <div id="paypal-checkout-btn" class="btn1" style="text-align:right;"></div>
                     </div>
         </div>
     </div>

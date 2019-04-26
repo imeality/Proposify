@@ -84,6 +84,7 @@ body{
   width:60px;
   overflow:hidden;
   transition:width .1s linear;
+  z-index: 1;
   }
   
   .main-menu li {
