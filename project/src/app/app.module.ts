@@ -40,6 +40,7 @@ import { Resform5Component } from './resform5/resform5.component';
 import { Resform6Component } from './resform6/resform6.component';
 import { Resume2Component } from './resume2/resume2.component';
 import { PaymentComponent } from './payment/payment.component';
+import { Payment4Component } from './payment4/payment4.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { PaymentComponent } from './payment/payment.component';
     Resform6Component,
     Resume2Component,
     PaymentComponent,
+    Payment4Component,
     
   ],
   imports: [

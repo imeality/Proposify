@@ -64,7 +64,7 @@ ul {
 	display:block;
 	padding:0;
 	overflow: hidden;
-	padding-bottom:75px;
+	padding-bottom:30px;
 	padding-top:7px;
 }
 
@@ -82,7 +82,7 @@ ul {
 .entry {
 	width:720px;
 	display: block;
-	padding-top:25px;
+	padding-top:10px;
 	clear: both;
 	margin-left:4px;
 }
@@ -116,23 +116,27 @@ h2 {
 }
 
 .p {
-	width:500px;
-	float:right;	
+	padding-left:220px;
+	margin-bottom: 0px;	
 }
-
+.bottom{
+	margin-bottom: 20px;
+}
 p img {
 	float:right;
 	margin-left:20px;
 	padding-left:10px;
 }
-
+.top{
+	padding-top: 20px;
+}
 div.content {
 	clear: both;
 	padding:0;
 	margin:0;
 	overflow: hidden;
 	display:block;
-	padding-top:20px;
+	padding-top:0px;
 }
 
 h3 {
@@ -311,7 +315,7 @@ img.portrait {
 	background-repeat: no-repeat;
 	padding-left:26px;
 	background-position: 0 .1em;
-	height:25px;
+	height:26px;
 	display:block;
 	margin-top:-2px;
 }
@@ -413,5 +417,7 @@ nav {
 
 .fa {
   cursor: pointer;
-  }
-  
+	}
+	.name{
+		height: 40px;
+	}

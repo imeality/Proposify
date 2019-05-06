@@ -1,9 +1,7 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import * as $ from 'jquery';
-import * as jspdf from 'jspdf';
+import * as jspdf from 'jspdf'; 
 import html2canvas from 'html2canvas';
-
-declare var xepOnline: any;
 
 @Component({
   selector: 'app-proposal1',
@@ -12,51 +10,41 @@ declare var xepOnline: any;
 })
 export class Proposal1Component implements OnInit {
 
+  @ViewChild('content') content: ElementRef;
 
-// @ViewChild('content') content: ElementRef;
-
-// makePdf() {
-//   const filename  = 'ThisIsYourPDFFilename.pdf';
-
-// 		html2canvas(document.querySelector('#content')).then(canvas => {
-// 			let pdf = new jspdf('p', 'mm', 'a4');
-// 			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
-// 			pdf.save(filename);
-// 		});
-
-//return xepOnline.Formatter.Format('contentToConvert', {render: 'download'});
-
-//   let data = document.getElementById('contentToConvert'); 
-//  html2canvas(data).then(canvas => { 
-//  // Few necessary setting options 
-//  let imgWidth = 208; 
-//  let pageHeight = 295; 
-//  let imgHeight = canvas.height * imgWidth / canvas.width; 
-//  let heightLeft = imgHeight; 
+public generatePDF() {
  
-//  const contentDataURL = canvas.toDataURL('image/png') 
-//  let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF 
-//  let position = 0; 
-//  pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight) 
-//  pdf.save('MYPdf.pdf'); // Generated PDF  
-//  }); 
-
-
-  // let doc = new jspdf();
+    let HTML_Width = $("#canvas_div_pdf").width();
+    let HTML_Height = $("#canvas_div_pdf").height();
+    let top_left_margin = 15;
+    let PDF_Width = HTML_Width+(top_left_margin*2);
+    let PDF_Height = (PDF_Width*1.5)+(top_left_margin*2);
+    let canvas_image_width = HTML_Width;
+    let canvas_image_height = HTML_Height;
+    
+    let totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
+    
+    
+    html2canvas($("#canvas_div_pdf")[0],{allowTaint:true}).then(function(canvas) {
+    canvas.getContext('2d');
+    
+    console.log(canvas.height+"  "+canvas.width);
+    
+    
+    let imgData = canvas.toDataURL("image/png", 1.0);
+    let pdf = new jspdf('p', 'pt', [PDF_Width, PDF_Height]);
+        pdf.addImage(imgData, 'PNG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+    
+    
+    for (let i = 1; i <= totalPDFPages; i++) { 
+    pdf.addPage(PDF_Width, PDF_Height);
+    pdf.addImage(imgData, 'PNG', top_left_margin, -(PDF_Height*i)+(top_left_margin*1),canvas_image_width,canvas_image_height);
+    }
+    
+        pdf.save("ProposalACCOUNT.pdf");
+           });
+}
   
-  // let specialElementsHandlers={
-  //   '#editor' : function(element ,renderer){
-  //     return true;
-  //   }
-  // };
-  // let content = this.content.nativeElement;
-
-  // doc.fromHTML(content.innerHTML, 20 ,10,{
-  //   'width':100,
-  //   'elementsHandlers' : specialElementsHandlers
-  // });
-  // doc.save('proposal.pdf');
-  //}
 
 
   cname=localStorage.getItem('cname');

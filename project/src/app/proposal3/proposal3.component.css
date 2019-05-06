@@ -61,7 +61,7 @@ nav {
 
 .sidenav-r {
   height: 100%;
-  width: 220px;
+  width: 230px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -84,3 +84,14 @@ cursor: pointer;
 .tr2,.tr3,.tr4,.tr5,.tr6,.tr7,.tr8,.tr9,.tr10{
   display: none;
 }
+
+.wrapper-top {
+  width:590px;
+   height:841px;
+}
+
+.img{
+	width: 638px;
+  height: 840px;
+}
+

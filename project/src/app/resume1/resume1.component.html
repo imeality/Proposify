@@ -1,7 +1,7 @@
 <html>
 <head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="../assets/JS/Canvas1.js"></script>
+<script src="../assets/JS/rescanvas1.js"></script>
 
 <script type="text/javascript" src="proposalAccounnting/wz_jsgraphics.js"></script> 
 </head>
@@ -9,7 +9,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
     <div class="container-fluid">
         <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
-        <button type="button" class="btn btn-arrow-right " id="sign"> <small>Send</small></button>
+        <button routerLink="/payment4" type="button" class="btn btn-arrow-right " id="sign">Purchase</button>
     </div>
 </nav>
 
@@ -26,7 +26,7 @@
 
 <div class="container" >
 <!-- Begin Wrapper -->
-<div id="wrapper">
+<div class="canvas_div_pdf" id="wrapper">
   <div class="wrapper-top"></div>
   <div class="wrapper-mid">
     <!-- Begin Paper -->
@@ -36,92 +36,81 @@
         <div class="entry">
           <!-- Begin Personal Information -->
           <div class="self">
-            <h1 class="name">{{name}}<br /></h1>
+            <h1 class="name"> <canvas id="p1" width="250px"></canvas><br /></h1>
             <ul>
-              <li class="ad">{{add}}, {{count}}, {{stat}}, {{rcity}}</li>
-              <li class="mail">{{eid}}</li>
-              <li class="tel">{{mob}}</li>
-              <li class="dat">{{dob}}</li>
-              <li class="age">{{age}} Years</li>
+              <li class="ad"><canvas id="p2" width="700px"></canvas><br /></li>
+              <li class="mail"></li>
+              <li class="tel"></li>
+              <li class="dat"></li>
+              <li class="age"></li>
             </ul>
           </div>
           <!-- End Personal Information -->
         </div>
         <!-- Begin 1st Row -->
-        <div class="entry">
-          <h2>OBJECTIVE</h2>
-          <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim viverra nibh sed varius. Proin bibendum nunc in sem ultrices posuere. Aliquam ut aliquam lacus.</p>
+        <div class="entry ">
+          <h2 style="margin-left:8%"><canvas id="p3" width="170px" ></canvas></h2>
+          <p class="p bottom" style="height:50px;"><canvas id="p4" width="600px" height="90px"></canvas></p>
         </div>
         <!-- End 1st Row -->
         <!-- Begin 2nd Row -->
         <div class="entry">
-          <h2>EDUCATION</h2>
-          <div class="content">
-            <h3> 10th </h3>
-            <p class="p">{{tensch}}<br />
-              <em>Percentage :- {{tenper}}%</em>
-              <em>Passing Year  :- {{tenpass}}</em></p>
+          <h2 style="margin-left:7%"><canvas id="p5" width="150px" height="70px"></canvas></h2>
+          <div class="content top">
+            <h3 class="top" style="margin-left:130px"><canvas id="p6" width="60px" height="40px"></canvas>  </h3>
+            <p class="p top"><canvas id="p7" width="170px" height="70px"></canvas><br />
+              </p>
           </div>
           <div class="content">
-            <h3> 12th </h3>
-            <p class="p">{{twlsch}}<br />
-              <em>Percentage :- {{twlper}}%</em>
-              <em>Passing Year  :- {{twlpass}}</em></p>
+            <h3 style="margin-left:130px; position: unset" ><canvas id="p8" width="60px" height="40px" ></canvas>  </h3>
+            <p class="p"><canvas id="p9" width="170px"  height="70px"></canvas><br />
+              </p>
           </div>
           <div class="content">
-            <h3>Graduation</h3>
-            <p class="p">{{gcoll}}<br />
-              <em>Stream :- {{gstr}}</em>
-              <em>Percentage :- {{gper}}%</em>
-              <em>Passing Year  :- {{gpass}}</em></p>
+            <h3 style="margin-left:85px; position: unset" ><canvas id="p10" width="100px" height="40px" ></canvas>  </h3>
+            <p class="p"><canvas id="p11" width="200px"  height="100px"></canvas><br />
+              </p>
           </div>
           <div class="content">
-            <h3>Post Graduation</h3>
-            <p class="p">{{pgcoll}}<br />
-              <em>Stream :- {{pgstr}}</em>
-              <em>Percentage :- {{pgper}}%</em>
-              <em>Passing Year  :- {{pgpass}}</em></p>
+            <h3 style="margin-left:45px; position: unset" ><canvas id="p12" width="140px" height="40px" ></canvas>  </h3>
+            <p class="p"><canvas id="p13" width="200px"  height="100px"></canvas><br />
+              </p>
           </div>
         </div>
         <!-- End 2nd Row -->
         <!-- Begin 3rd Row -->
         <div class="entry">
-          <h2>EXPERIENCE</h2>
-          <div class="content">
-            <h3>{{sdate}} - {{edate}}</h3>
-            <p class="p">{{comnam}}<br />
-              <em>Job Profile :- {{jobpro}}</em>
-              <em>Year of Experience:- {{exper}}</em></p>
-          </div>
+            <h2 style="margin-left:6%"><canvas id="p14" width="150px" height="70px"></canvas></h2>
+            <div class="content top">
+                <h3 class="top" style="margin-left:60px"><canvas id="p15" width="120px" height="40px"></canvas>  </h3>
+                <p class="p top"><canvas id="p16" width="400px" height="70px"></canvas><br />
+                  </p>
+              </div>
         </div>
         <!-- End 3rd Row -->
         <!-- Begin 4th Row -->
         <div class="entry">
-          <h2>SKILLS</h2>
-          <div class="content">
-            <h3>Techinical Skills</h3>
-            <ul class="skills">
-              <li>{{skil}}</li>
-            </ul>
-          </div>
-            <div class="content">
-            <h3>Achivement</h3>
-            <ul class="info">
-              <li>{{achiv}}</li>
-            </ul>
-          </div>
-	    <div class="content">
-            <h3>Languages</h3>
-            <ul class="skills">
-              <li>{{lang}}</li>
-            </ul>
-          </div>
-	    <div class="content">
-            <h3>Hobbies</h3>
-            <ul class="skills">
-              <li>{{hobb}}</li>
-            </ul>
-          </div>
+            <h2 style="margin-left:14%"><canvas id="p17" width="150px" height="70px"></canvas></h2>
+            <div class="content top">
+                <h3 class="top" style="margin-left:60px"><canvas id="p18" width="120px" height="20px"></canvas>  </h3>
+                <p class="p top"><canvas id="p19" width="400px" height="20px"></canvas><br />
+                  </p>
+              </div>
+            <div class="content top">
+                <h3 style="margin-left:85px"><canvas id="p20" width="120px" height="20px"></canvas>  </h3>
+                <p class="p "><canvas id="p21" width="400px" height="20px"></canvas><br />
+                  </p>
+              </div>
+            <div class="content top">
+                <h3 style="margin-left:90px"><canvas id="p22" width="120px" height="20px"></canvas>  </h3>
+                <p class="p "><canvas id="p23" width="400px" height="20px"></canvas><br />
+                  </p>
+              </div>
+            <div class="content top">
+                <h3 style="margin-left:105px"><canvas id="p24" width="120px" height="20px"></canvas>  </h3>
+                <p class="p "><canvas id="p25" width="400px" height="20px"></canvas><br />
+                  </p>
+              </div>
         </div>
         <!-- End 4th Row --> 
         <!-- Begin 5th Row -->
@@ -225,19 +214,26 @@
           <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> Resume </b></font></small> 
           <br>
           <small class="text-muted" style="padding-left: 20px;"><font size="2"> CLIENT :-</font></small>
-          <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> {{cname}} </b></font></small>
+          <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> {{name}} </b></font></small>
         </p> 
         <hr> 
         <p>
             <label style="padding-left: 20px;"><span> <small class="text-muted">RESUME PRICE</small></span></label>
             <br>
             <small class="text-muted" style="padding-left: 20px;"><font size="2"> One Time Fee :-</font></small>
-            <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> $6,900.00 </b></font></small> 
+            <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> INR1,200.00 </b></font></small> 
             <br>
-            <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input"></small>
+            <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input" checked></small>
             <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
             <i class="fa fa-question-circle"></i>
           </p> 
+
+          <div id="content" #content> 
+						<div>
+						 <input class="btn" type="button" value="Download" (click)="generatePDF()"/> 
+						 </div>
+				</div>
+				<br>
              
 </div>
   

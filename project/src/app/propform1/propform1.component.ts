@@ -63,5 +63,4 @@ export class Propform1Component implements OnInit {
 
   ngOnInit() {
   }
-
 }

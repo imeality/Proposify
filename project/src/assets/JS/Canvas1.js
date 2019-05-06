@@ -1,3 +1,23 @@
+cname=localStorage.getItem('cname');
+console.log(cname);
+cadd =localStorage.getItem('cadd');
+ccoun =localStorage.getItem('ccoun');
+cstat =localStorage.getItem('cstat');
+ccity =localStorage.getItem('ccity');
+cmob1 =localStorage.getItem('cmob1');
+cmob2 =localStorage.getItem('cmob2');
+comname =localStorage.getItem('comname');
+comemail =localStorage.getItem('comemail');
+comadd =localStorage.getItem('comadd');
+comcont =localStorage.getItem('comcont');
+comstat =localStorage.getItem('comstat');
+comcity =localStorage.getItem('comcity');
+comdate =localStorage.getItem('comdate');
+
+
+
+
+
 var canvas = this.__canvas = new fabric.Canvas('c');
   fabric.Object.prototype.transparentCorners = false;
 
@@ -43,6 +63,7 @@ function updateControls() {
     'object:resizing': updateControls,
   });
   canvas.add(img);
+  canvas.save(img); 
 });
 
 
@@ -860,4 +881,5 @@ addHandler('size', function(obj) {
 addHandler('font-family', function(obj) {
   setStyle(obj, 'fontFamily', this.value);
 }, 'onchange');
+
 
