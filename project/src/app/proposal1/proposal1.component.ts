@@ -67,7 +67,7 @@ public generatePDF() {
 
   ngOnInit() {
 
-    this.loadScript('../assets/JS/Canvas1.js');
+    this.loadScript('../assets/JS/proposal3.js');
 
     $("#a1").click(function(){
       $(".tr1").toggle();
