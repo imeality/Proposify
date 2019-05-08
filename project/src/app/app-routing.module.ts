@@ -28,12 +28,10 @@ import { Proposal3Component } from './proposal3/proposal3.component';
 import { Propform5Component } from './propform5/propform5.component';
 import { Propform6Component } from './propform6/propform6.component';
 import { Resume1Component } from './resume1/resume1.component';
-import { Resform4Component } from './resform4/resform4.component';
-import { Resform5Component } from './resform5/resform5.component';
-import { Resform6Component } from './resform6/resform6.component';
 import { Resume2Component } from './resume2/resume2.component';
 import { PaymentComponent } from './payment/payment.component';
 import { Payment4Component } from './payment4/payment4.component';
+import { Resume3Component } from './resume3/resume3.component';
 
 
 
@@ -52,25 +50,21 @@ const routes: Routes = [
     { path:'profile',component:ProfileComponent},
     { path:'template',component:TemplateComponent},
 
-    { path:'previewresume1',component:Preview1Component},
-    { path:'previewresume2',component:Preview2Component},
-    { path:'previewresume3',component:Preview3Component},
-    { path:'previewresume4',component:Preview4Component},
+    { path:'previewresume/:r1',component:Preview1Component},
+    { path:'Previewresume/:r2',component:Preview2Component},
+    { path:'previewResume/:r3',component:Preview3Component},
+    { path:'PreviewResume/:r4',component:Preview4Component},
 
     { path:'previewproposal5',component:Preview5Component},
     { path:'previewproposal6',component:Preview6Component},
     { path:'previewproposal7',component:Preview7Component},
 
-    { path:'resume1',component:Resume1Component},
-    { path:'resumeuserdetail',component:Resform1Component},
-    { path:'resumeeducationaldetail',component:Resform2Component},
-    { path:'resumejobdetail',component:Resform3Component},
-
-    { path:'resume2',component:Resume2Component},
-    { path:'Resumeuserdetail',component:Resform4Component},
-    { path:'Resumeeducationaldetail',component:Resform5Component},
-    { path:'Resumejobdetail',component:Resform6Component},
-
+    { path:'resume/1',component:Resume1Component},
+    { path:'resume/2',component:Resume2Component},
+    { path:'resume/3',component:Resume3Component},
+    { path:'resumeuserdetail/:id',component:Resform1Component},
+    { path:'resumeeducationaldetail/:id',component:Resform2Component},
+    { path:'resumejobdetail/:id',component:Resform3Component},
 
     { path:'proposal1',component:Proposal1Component },
     { path:'proposalclientdetail',component:Propform1Component},
@@ -83,6 +77,8 @@ const routes: Routes = [
     { path:'proposal3',component:Proposal3Component },
     { path:'proposalClientDetail',component:Propform5Component},
     { path:'proposalCompanyDetail',component:Propform6Component},
+
+
 
 ];
 

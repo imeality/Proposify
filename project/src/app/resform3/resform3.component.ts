@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { FormBuilder,FormGroup , Validators } from '@angular/forms';
 import { ResumeService } from '../resume.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class Resform3Component implements OnInit {
   email=localStorage.getItem('eid');
   name =localStorage.getItem('key');
   angForm:FormGroup;
-  constructor(private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
+  constructor(private route: ActivatedRoute,private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
     this.createForm();
    }
 
@@ -37,7 +37,7 @@ export class Resform3Component implements OnInit {
   onClick(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
     console.log(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.resum.addUser3(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
-    this.router.navigate(['/resume1'])
+    this.router.navigate(['/resume',this.param1])
     localStorage.setItem('comnam',Company_name);
     localStorage.setItem('jobpro',Job_profile);
     localStorage.setItem('exper',Experience);
@@ -48,8 +48,10 @@ export class Resform3Component implements OnInit {
     localStorage.setItem('lang',Languages);
     localStorage.setItem('hobb',Hobbies);
   }
-
+  param1: string;
   ngOnInit() {
+    this.param1 = this.route.snapshot.paramMap.get("id")
+    console.log(this.param1);
   }
 
   logout(){

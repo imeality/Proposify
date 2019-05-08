@@ -7,7 +7,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light">
         <div class="container-fluid">
             <button routerLink="/template" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
-            <button routerLink="/resumeuserdetail" type="button" class="btn btn-arrow-right " id="sign"> <small>Use this</small></button>
+            <button [routerLink]="['/resumeuserdetail',this.param1]" type="button" class="btn btn-arrow-right " id="sign"> <small>Use this</small></button>
       </div>
       </nav> 
 
@@ -35,7 +35,7 @@
                 
                 <div class="column RESUME">
                   <div class="content show-image">
-                  <a routerLink="/previewresume2"><img src="./assets/resume2.png" alt="RESUME" style="width:70%;height:200px;border: solid 1px;margin-left: 25px">
+                  <a routerLink="/Previewresume/2"><img src="./assets/resume2.png" alt="RESUME" style="width:70%;height:200px;border: solid 1px;margin-left: 25px">
                   <br>
                   <h3 style="color:#004053;text-align: center;margin-top: 5px">Resume</h3></a>
                   <br>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="column RESUME">
                   <div class="content show-image">
-                  <a routerLink="/previewresume3"><img src="./assets/resume3.png" alt="RESUME" style="width:70%;height:200px;border: solid 1px;margin-left: 25px">
+                  <a routerLink="/previewResume/3"><img src="./assets/resume3.png" alt="RESUME" style="width:70%;height:200px;border: solid 1px;margin-left: 25px">
                   <br>
                   <h3 style="color:#004053;text-align: center;margin-top: 5px">Resume</h3></a>
                   <br>
@@ -51,7 +51,7 @@
                 </div> 
                 <div class="column RESUME">
                     <div class="content show-image">
-                    <a routerLink="/previewresume4"><img src="./assets/resume4.png" alt="RESUME" style="width:70%;height:200px;border: solid 1px;margin-left: 25px">
+                    <a routerLink="/PreviewResume/4"><img src="./assets/resume4.png" alt="RESUME" style="width:70%;height:200px;border: solid 1px;margin-left: 25px">
                     <br>
                     <h3 style="color:#004053;text-align: center;margin-top: 5px">Resume</h3></a>
                     <br>

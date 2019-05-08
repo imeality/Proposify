@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup , Validators } from '@angular/forms';
 import { ResumeService } from '../resume.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class Resform2Component implements OnInit {
   angForm:FormGroup;
   name =localStorage.getItem('key');
   email=localStorage.getItem('eid');
-  constructor(private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
+  constructor(private route: ActivatedRoute,private fb:FormBuilder, public logn:LoginService, private resum:ResumeService,private router:Router) {
     this.createForm();
    }
 
@@ -41,7 +41,7 @@ export class Resform2Component implements OnInit {
   onClick(Email,tenth_school,tenth_per,tenth_Passingyear,twelth_school,twelth_per,twelth_Passingyear,Graduation_Collage,Graduation_Stream,Graduation_per,Graduation_Passingyear,PG_collage,PG_Stream,PG_per,PG_Passingyear) {
     console.log(Email,tenth_school,tenth_per,tenth_Passingyear,twelth_school,twelth_per,twelth_Passingyear,Graduation_Collage,Graduation_Stream,Graduation_per,Graduation_Passingyear,PG_collage,PG_Stream,PG_per,PG_Passingyear);
     this.resum.addUser2(Email,tenth_school,tenth_per,tenth_Passingyear,twelth_school,twelth_per,twelth_Passingyear,Graduation_Collage,Graduation_Stream,Graduation_per,Graduation_Passingyear,PG_collage,PG_Stream,PG_per,PG_Passingyear);
-    this.router.navigate(['/resumejobdetail'])
+    this.router.navigate(['/resumejobdetail',this.param1])
     localStorage.setItem('tensch',tenth_school);
     localStorage.setItem('tenper',tenth_per);
     localStorage.setItem('tenpass',tenth_Passingyear);
@@ -57,9 +57,12 @@ export class Resform2Component implements OnInit {
     localStorage.setItem('pgper',PG_per);
     localStorage.setItem('pgpass',PG_Passingyear);
   }
-
+  param1: string;
   ngOnInit() {
+    this.param1 = this.route.snapshot.paramMap.get("id")
+    console.log(this.param1);
   }
+  
 
   logout(){
     this.logn.logged = false;

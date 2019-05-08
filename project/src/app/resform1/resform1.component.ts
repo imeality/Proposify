@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup , Validators } from '@angular/forms';
 import { ResumeService } from '../resume.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class Resform1Component implements OnInit {
   name =localStorage.getItem('key');
   email=localStorage.getItem('eid');
   angForm:FormGroup;
-  constructor(private fb:FormBuilder, public logn:LoginService,private resum:ResumeService,private router:Router) {
+  constructor(private fb:FormBuilder, public logn:LoginService,private resum:ResumeService,private router:Router,private route: ActivatedRoute) {
     this.createForm();
    }
 
@@ -46,7 +46,7 @@ export class Resform1Component implements OnInit {
   onClick(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City) {
     console.log(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City);
     this.resum.addUser1(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City);
-    this.router.navigate(['/resumeeducationaldetail']) 
+    this.router.navigate(['/resumeeducationaldetail',this.param1]) 
     localStorage.setItem('rname',Name);
     localStorage.setItem('dob',DOB);
     localStorage.setItem('age',Age);
@@ -57,8 +57,10 @@ export class Resform1Component implements OnInit {
     localStorage.setItem('rstat',State);
     localStorage.setItem('rcity',City);
   }
-  
+  param1: string;
   ngOnInit() {
+    this.param1 = this.route.snapshot.paramMap.get("id")
+    console.log(this.param1);
   }
 
   logout(){

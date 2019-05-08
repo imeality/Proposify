@@ -4,11 +4,11 @@ import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
 
 @Component({
-  selector: 'app-resume1',
-  templateUrl: './resume1.component.html',
-  styleUrls: ['./resume1.component.css']
+  selector: 'app-resume3',
+  templateUrl: './resume3.component.html',
+  styleUrls: ['./resume3.component.css']
 })
-export class Resume1Component implements OnInit {
+export class Resume3Component implements OnInit {
 
   @ViewChild('content') content: ElementRef;
 
@@ -41,7 +41,7 @@ public generatePDF() {
     pdf.addImage(imgData, 'PNG', top_left_margin, -(PDF_Height*i)+(top_left_margin*1),canvas_image_width,canvas_image_height);
     }
     
-        pdf.save("Resume1.pdf");
+        pdf.save("Resume3.pdf");
            });
 }
 
@@ -83,7 +83,6 @@ public generatePDF() {
   ngOnInit() {
     this.loadScript('../assets/JS/proposal3.js');
   }
-
   public loadScript(url: string) {
     const body = <HTMLDivElement> document.body;
     const script = document.createElement('script');
