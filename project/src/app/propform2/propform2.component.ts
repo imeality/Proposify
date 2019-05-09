@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup , Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from '../login.service';
 import { ProposalService } from '../proposal.service';
 
@@ -25,7 +25,7 @@ export class Propform2Component implements OnInit {
   angForm:FormGroup;
   name =localStorage.getItem('key');
 
-  constructor(private fb:FormBuilder, public logn:LoginService, private prop:ProposalService,private router:Router) {
+  constructor(private route: ActivatedRoute,private fb:FormBuilder, public logn:LoginService, private prop:ProposalService,private router:Router) {
     this.createForm();
    }
 
@@ -43,7 +43,7 @@ export class Propform2Component implements OnInit {
 
   onClick(Company_name,Company_email,Company_address,Company_country,Company_state ,Company_city,Date) {
     this.prop.addUser2(Company_name,Company_email,Company_address,Company_country,Company_state ,Company_city,Date);
-    this.router.navigate(['/proposal1'])
+    this.router.navigate(['/proposal',this.param1])
     localStorage.setItem('comname',Company_name);
     localStorage.setItem('comemail',Company_email);
     localStorage.setItem('comadd',Company_address);
@@ -60,8 +60,9 @@ export class Propform2Component implements OnInit {
     localStorage.removeItem('key');
     localStorage.removeItem('id');
   }
-
+  param1: string;
   ngOnInit() {
+    this.param1 = this.route.snapshot.paramMap.get("id")
   }
 
 }

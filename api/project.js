@@ -294,42 +294,6 @@ app.put('/job/:id' , function (req, res) {
   });
 });
 
- 				//Proposal tabel api
-
-//rest api to get all proposal
-app.get('/proposal', function (req, res) {
-   connection.query('select * from Proposal', function (error, results, fields) {
-	  //if (error) throw error;
-	  res.end(JSON.stringify(results));
-	});
-});
-
-//rest api to create a new user record into mysql database
-app.post('/proposal', function (req, res) {
-   var params = { 
-     "Proposal_detail" : req.body.Proposal_detail,
-     "Date" : req.body.Date,
-   }
-   console.log(params);
-     connection.query('INSERT INTO Proposal SET ?', params, function (error, results) {
-      //if (error) throw error;
-      res.end(JSON.stringify(results));
-      console.log('Record has been Inserted!');
-    });  
-});
-
-
-//rest api to update record into mysql database using put
-app.put('/proposal/:id' , function (req, res) {   
-  let Proposal_detail = req.body.Proposal_detail;
-  let Date = req.body.Date;
-  connection.query('UPDATE `Proposal` SET `Proposal_detail`=?,`Date`=? where `Proposal_ID`=?', [Proposal_detail,Date,req.params.id], function (error, results, fields) {
-	  //if (error) throw error;
-    res.end(JSON.stringify(results));
-    console.log('Record has been Updated!');
-	});
-});
-
                                                 //Client table api
 
 //rest api to get all client
@@ -351,7 +315,6 @@ app.get('/client/:id', function (req, res) {
  //rest api to create a new client record into mysql database
  app.post('/client', function (req, res) {
     var params = { 
-      "Proposal_ID" : req.body.Proposal_ID,
       "Client_name" : req.body.Client_name,
       "Client_address" : req.body.Client_address,
       "Client_country" : req.body.Client_country,
@@ -378,6 +341,7 @@ app.get('/client/:id', function (req, res) {
    let Client_city = req.body.Client_city;
    let Client_mob1 = req.body.Client_mob1;
    let Client_mob2 = req.body.Client_mob2;
+
    connection.query('UPDATE `Client` SET `Client_name`=?,`Client_address`=?,`Client_country`=?,`Client_state`=?,`Client_city`=?,`Client_mob1`=?,`Client_mob2`=? where `Client_ID`=?', [Client_name,Client_address,Client_country,Client_state,Client_city,Client_mob1,Client_mob2,req.params.id], function (error, results, fields) {
        //if (error) throw error;
      res.end(JSON.stringify(results));
@@ -406,13 +370,13 @@ app.get('/company/:id', function (req, res) {
  //rest api to create a new company record into mysql database
  app.post('/company', function (req, res) {
     var params = { 
-      "Proposal_ID" : req.body.Proposal_ID,
       "Company_name" : req.body.Company_name,
       "Company_email" : req.body.Company_email,
       "Company_address" : req.body.Company_address,
       "Company_country" : req.body.Company_country,
       "Company_state" : req.body.Company_state,
-      " " :req.body.Company_city,
+      "Company_city" :req.body.Company_city,
+      "Date":req.body.Date,
     }
     console.log(params);
       connection.query('INSERT INTO Company SET ?', params, function (error, results) {
@@ -431,7 +395,8 @@ app.get('/company/:id', function (req, res) {
    let Company_country = req.body.Company_country;
    let Company_state = req.body.Company_state;
    let Company_city = req.body.Company_city;
-   connection.query('UPDATE `Company` SET `Company_name`=?,`Company_email`=?,`Company_address`=?,`Company_country`=?,`Company_state`=?,`Company_city`=? where `Company_Id`=?', [Company_name,Company_address,Company_country,Company_state,Company_city,req.params.id], function (error, results, fields) {
+   let Date = req.body.Date;
+   connection.query('UPDATE `Company` SET `Company_name`=?,`Company_email`=?,`Company_address`=?,`Company_country`=?,`Company_state`=?,`Company_city`=?,`Date`=? where `Company_Id`=?', [Company_name,Company_address,Company_country,Company_state,Company_city,Date,req.params.id], function (error, results, fields) {
        //if (error) throw error;
      res.end(JSON.stringify(results));
      console.log('Record has been Updated!');
@@ -448,7 +413,7 @@ app.get('/payment', function (req, res) {
 
 //rest api to get a single user data
 app.get('/payment/:id', function (req, res) {
-   connection.query('select * from Payment where User_ID=?', [req.params.id], function (error, results, fields) {
+   connection.query('select * from Payment where Payment_ID=?', [req.params.id], function (error, results, fields) {
 	  //if (error) throw error;
     res.end(JSON.stringify(results));
 	});
@@ -457,36 +422,28 @@ app.get('/payment/:id', function (req, res) {
 //rest api to create a new user record into mysql database
 app.post('/payment', function (req, res) {
    var params = {
-     "Bank_name" : req.body.Bank_name,
-     "Date" : req.body.Date,
-     "Email" : req.body.Email, 
-     "Amount" : req.body.Amount,
-     "Payment_status" : req.body.Payment_status,
-     "Payment_methord" : req.body.Payment_methord,
+    "Name" : req.body.Name,
+    "Mobile_no" : req.body.Mobile_no,
+    "Email" : req.body.Email, 
+    "Amount" : req.body.Amount,
+    "Date" : req.body.Date,
    }
-   connection.query('select * from Payment', function (error, results, fields){
-     if(results.Email !=0){
-      console.log('Email already exist');
-     }else{
-      console.log(params);
+     console.log(params);
       connection.query('INSERT INTO Payment SET ?', params, function (error, results) {
        //if (error) throw error;
        res.end(JSON.stringify(results));
        console.log('Record has been Inserted!');
      });
-     }
-   })
 });
 
 //rest api to update record into mysql database using put
 app.put('/payment' , function (req, res) {   
-  let Bank_name = req.body.Bank_name;
-  let Date = req.body.Date;
-  let Email = req.body.Email; 
-  let Amount = req.body.Amount;
-  let Payment_status = req.body.Payment_status;
-  let Payment_methord = req.body.Payment_methord;
-  connection.query('UPDATE `Payment` SET `Bank_name`=?,`Date`=?,`Amount`=?,`Payment_status`=?,`Payment_methord`=? where `Email`=?', [Bank_name,Date,Amount,Payment_status,Payment_methord,Email], function (error, results, fields) {
+     let Name = req.body.Name;
+     let Mobile_no = req.body.Mobile_no;
+     let Email = req.body.Email; 
+     let Amount = req.body.Amount;
+     let Date = req.body.Date;
+     connection.query('UPDATE `Payment` SET `Name`=?,`Mobile_no`=?,`Amount`=?,`Date`=? where `Email`=?', [Name,Mobile_no,Email,Amount,Date], function (error, results, fields) {
 	  //if (error) throw error;
     res.end(JSON.stringify(results));
     console.log('Record has been Updated!');

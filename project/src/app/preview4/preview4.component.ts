@@ -12,7 +12,6 @@ export class Preview4Component implements OnInit {
 
   ngOnInit() {
     this.param1 = this.route.snapshot.paramMap.get("r4")
-    console.log(this.param1);
   }
 
 }

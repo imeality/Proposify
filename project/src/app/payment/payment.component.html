@@ -21,39 +21,39 @@
               <h3 style="color: #004053">Check your details </h3><br>
 
               <div class="form-group">
-                    <small class="form-text text-muted" ><label>First name</label></small> 
-                    <input type="text" class="form-control" value="{{fname}} {{lname}}" required >
+                    <small class="form-text text-muted" ><label>Your Name</label></small> 
+                    <input type="text" class="form-control" value="{{fname}} {{lname}}" required #Fullname>
                    </div>
 
               <div class="form-group">
                     <small class="form-text text-muted" ><label> Your Mobile Number</label></small>
-                    <input type="tel" class="form-control" value="{{emal}}" required>
+                    <input type="tel" class="form-control" value="{{mob}}" required #mobil>
                   </div>
 
                <div class="form-group">
                     <small class="form-text text-muted" ><label>Your Email</label></small>
-                    <input type="email" class="form-control"  value="{{mob}}" required>
+                    <input type="email" class="form-control"  value="{{emal}}" required #mail>
                     </div>
 
                 <div class="form-row">
                         <div class="col">
                             <small class="form-text text-muted" ><label>Date</label></small> 
-                            <input type="TEXT" [ngModel]="today | date:'yyyy-MM-dd'" (ngModelChange)="today = $event" class="form-control" disabled="disabled">
+                            <input type="TEXT" [ngModel]="today | date:'yyyy-MM-dd'" (ngModelChange)="today = $event" class="form-control" disabled="disabled" #dat>
                             </div>
                         <div class="col">
                             <small class="form-text text-muted" ><label> Amount</label></small>
-                            <input type="number" [(ngModel)]="finalAmount" class="form-control" disabled="disabled">
+                            <input type="number" [(ngModel)]="finalAmount" class="form-control" disabled="disabled" #amont>
                             </div>
                     </div>
                     <br> <br>
                 <div class="form-group">
                     <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
-                    <div id="paypal-checkout-btn" class="btn1" style="text-align:right;"></div>
+                    <div id="paypal-checkout-btn" class="btn1" style="text-align:right;" (click)="onClick(Fullname.value, mobil.value, mail.value ,amont.value ,dat.value )"></div>
                     </div>
         </div>
     </div>
     <br>
 </div>
 
-  </body>
+  </body> 
 </html>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-preview7',
@@ -8,9 +9,12 @@ import * as $ from 'jquery';
 })
 export class Preview7Component implements OnInit {
 
-  constructor() { }
-
+  constructor(private route: ActivatedRoute) { }
+  param1: string;
   ngOnInit() {
+
+    this.param1 = this.route.snapshot.paramMap.get("p3")
+
     $("#a1").click(function(){
       $(".tr1").toggle();
     });

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
 import { FormBuilder,FormGroup , Validators } from '@angular/forms';
 import { ResumeService } from '../resume.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -35,7 +34,6 @@ export class Resform3Component implements OnInit {
   }
 
   onClick(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies) {
-    console.log(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.resum.addUser3(Email,Company_name,Job_profile,Experience,Start_date,End_date,Achivement,Skills,Languages,Hobbies);
     this.router.navigate(['/resume',this.param1])
     localStorage.setItem('comnam',Company_name);
@@ -51,7 +49,6 @@ export class Resform3Component implements OnInit {
   param1: string;
   ngOnInit() {
     this.param1 = this.route.snapshot.paramMap.get("id")
-    console.log(this.param1);
   }
 
   logout(){

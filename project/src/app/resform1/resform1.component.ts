@@ -44,7 +44,6 @@ export class Resform1Component implements OnInit {
   }
 
   onClick(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City) {
-    console.log(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City);
     this.resum.addUser1(Name,DOB,Age,Mobile_no,Email,Address,Country,State,City);
     this.router.navigate(['/resumeeducationaldetail',this.param1]) 
     localStorage.setItem('rname',Name);
@@ -60,7 +59,6 @@ export class Resform1Component implements OnInit {
   param1: string;
   ngOnInit() {
     this.param1 = this.route.snapshot.paramMap.get("id")
-    console.log(this.param1);
   }
 
   logout(){

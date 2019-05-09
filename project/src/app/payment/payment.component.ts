@@ -1,4 +1,6 @@
 import { Component, OnInit ,AfterViewChecked } from '@angular/core';
+import { Router } from '@angular/router';
+import { PaymentService } from '../payment.service';
 declare let paypal: any;
 
 @Component({
@@ -55,13 +57,18 @@ export class PaymentComponent implements AfterViewChecked {
     })
   }
 
+  onClick(Fullname, mobil, mail, amont ,dat) {
+    this.pay.addUser(Fullname, mobil, mail, amont ,dat);
+    this.router.navigate(['/welcome'])
+  }
+  
   today: Date;
    fname =localStorage.getItem('key');
    lname =localStorage.getItem('key1');
    emal =localStorage.getItem('key2');
    mob =localStorage.getItem('key3');
 
-  constructor() {
+  constructor(private router:Router,private pay:PaymentService) {
     this.today =new Date();
    }
 

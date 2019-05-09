@@ -12,7 +12,6 @@ export class Preview3Component implements OnInit {
 
   ngOnInit() {
     this.param1 = this.route.snapshot.paramMap.get("r3")
-    console.log(this.param1);
   }
 
 }
