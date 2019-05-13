@@ -9,7 +9,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light bg-light" >
     <div class="container-fluid">
         <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
-        <button routerLink="/payment4" type="button" class="btn btn-arrow-right " id="sign">Purchase</button>
+        <button class="btn btn-arrow-right" id="sign" *ngIf="!pay.payed" [routerLink]="['/Payment',this.param1]" type="button"> Purchase </button>
+        <button style="background-color: #83db77;border: none; border-radius: 0.5rem;"   *ngIf="pay.payed">
+            <div id="content" #content> 
+                    <input class="btn" id ="sign" style="padding: 0rem 0rem;" type="button" value="Download" *ngIf="pay.payed" (click)="generatePDF()"/> 
+                </div>
+      </button>  
     </div>
 </nav>
 
@@ -176,19 +181,12 @@
             <label style="padding-left: 20px;"><span> <small class="text-muted">RESUME PRICE</small></span></label>
             <br>
             <small class="text-muted" style="padding-left: 20px;"><font size="2"> One Time Fee :-</font></small>
-            <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> INR1,000.00 </b></font></small> 
+            <small class="text-muted" style="padding-left: 5px"><font size="2" color="#004053"> <b> INR1,500.00 </b></font></small> 
             <br>
             <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input" checked></small>
             <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
             <i class="fa fa-question-circle"></i>
-          </p> 
-
-          <div id="content" #content> 
-						<div>
-						 <input class="btn" type="button" value="Download" (click)="generatePDF()"/> 
-						 </div>
-				</div>
-				<br>            
+          </p>          
 </div>
   
 </body>

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as $ from 'jquery';
 import * as jspdf from 'jspdf'; 
 import html2canvas from 'html2canvas';
+import { PaymentService } from '../payment.service';
 
 @Component({
   selector: 'app-resume2',
@@ -14,6 +15,10 @@ export class Resume2Component implements OnInit {
 
 public generatePDF() {
  
+  this.pay.payed = false;
+  this.pay.payed = false;
+  this.pay.username ='';
+  
     let HTML_Width = $(".canvas_div_pdf").width();
     let HTML_Height = $(".canvas_div_pdf").height();
     let top_left_margin = 15;
@@ -77,8 +82,8 @@ public generatePDF() {
     skil=localStorage.getItem('skil');
     lang=localStorage.getItem('lang');
     hobb=localStorage.getItem('hobb');
-  constructor() { }
-
+  constructor(public pay:PaymentService) { }
+  param1= 2;
   ngOnInit() {
     this.loadScript('../assets/JS/proposal3.js');
   }

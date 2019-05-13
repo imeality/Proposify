@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class PaymentService {
 
   url='http://0.0.0.0:3000/payment';
+  username : string;
+  payed : boolean;
 
   constructor(private http:HttpClient) { }
 

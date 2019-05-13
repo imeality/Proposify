@@ -26,9 +26,9 @@ import { Proposal3Component } from './proposal3/proposal3.component';
 import { Resume1Component } from './resume1/resume1.component';
 import { Resume2Component } from './resume2/resume2.component';
 import { PaymentComponent } from './payment/payment.component';
-import { Payment4Component } from './payment4/payment4.component';
 import { Resume3Component } from './resume3/resume3.component';
 import { Resume4Component } from './resume4/resume4.component';
+import { Payment2Component } from './payment2/payment2.component';
 
 
 const routes: Routes = [
@@ -38,8 +38,8 @@ const routes: Routes = [
     { path:'signup',component:SignupComponent},
     { path:'welcome',component:WelcomeComponent},
     { path:'forgot',component:ForgotComponent},
-    { path:'payment',component:PaymentComponent},
-    { path:'payment4',component:Payment4Component},
+    { path:'payment/:id',component:PaymentComponent},
+    { path:'Payment/:id',component:Payment2Component},
 
     { path:'dashboard',component:DashboardComponent},
     { path:'profile',component:ProfileComponent},

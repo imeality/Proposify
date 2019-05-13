@@ -24,7 +24,7 @@ export class Proposal2Component implements OnInit {
   comdate =localStorage.getItem('comdate');
 
   constructor() { }
-
+  param1= 2;
   ngOnInit() {
 
     this.loadScript('../assets/JS/Canvas2.js');

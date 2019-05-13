@@ -23,9 +23,19 @@ body{
     color: #111;
   }
   .btn1{
-    border-radius: 15px;
-    background: #ffc439;
-    padding-top: 10px;
-    width: 150px;
-    zoom: 1;
+    color: #ffffff;
+    background-color: #80c676;
+    width: 20%;
+    height: 10%;
   }
+  
+  .StripeElement {
+    margin: 1rem 0 1rem;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    width: 100%;
+    border-radius: .25rem;
+    line-height: 1.5;
+  }
+  

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import * as $ from 'jquery';
 import * as jspdf from 'jspdf'; 
 import html2canvas from 'html2canvas';
+import { PaymentService } from '../payment.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-proposal1',
@@ -13,6 +15,10 @@ export class Proposal1Component implements OnInit {
   @ViewChild('content') content: ElementRef;
 
 public generatePDF() {
+
+  this.pay.payed = false;
+    this.pay.payed = false;
+    this.pay.username ='';
  
     let HTML_Width = $("#canvas_div_pdf").width();
     let HTML_Height = $("#canvas_div_pdf").height();
@@ -43,6 +49,7 @@ public generatePDF() {
     
         pdf.save("ProposalACCOUNT.pdf");
            });
+            this.router.navigate(['/dashboard']);
 }
   
 
@@ -63,8 +70,8 @@ public generatePDF() {
   comdate =localStorage.getItem('comdate');
 
 
-  constructor() { }
-
+  constructor(public pay:PaymentService,private router:Router) { }
+  param1= 1;
   ngOnInit() {
 
     this.loadScript('../assets/JS/proposal3.js');

@@ -33,10 +33,10 @@ import { Proposal2Component } from './proposal2/proposal2.component';
 import { Proposal3Component } from './proposal3/proposal3.component';
 import { Resume2Component } from './resume2/resume2.component';
 import { PaymentComponent } from './payment/payment.component';
-import { Payment4Component } from './payment4/payment4.component';
 import { Resume3Component } from './resume3/resume3.component';
 import { Resume4Component } from './resume4/resume4.component';
 import { PaymentService } from './payment.service';
+import { Payment2Component } from './payment2/payment2.component';
 
 @NgModule({
   declarations: [
@@ -67,9 +67,9 @@ import { PaymentService } from './payment.service';
     Proposal3Component,
     Resume2Component,
     PaymentComponent,
-    Payment4Component,
     Resume3Component,
     Resume4Component,
+    Payment2Component,
     
   ],
   imports: [

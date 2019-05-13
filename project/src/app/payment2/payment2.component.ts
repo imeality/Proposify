@@ -1,16 +1,16 @@
-import { Component, OnInit, AfterViewInit, OnDestroy, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PaymentService } from '../payment.service';
-import { NgForm } from '@angular/forms';
 declare var stripe: any;
 declare var elements: any;
 
 @Component({
-  selector: 'app-payment',
-  templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.css']
+  selector: 'app-payment2',
+  templateUrl: './payment2.component.html',
+  styleUrls: ['./payment2.component.css']
 })
-export class PaymentComponent implements AfterViewInit, OnDestroy{
+export class Payment2Component implements AfterViewInit, OnDestroy {
   [x: string]: any;
 
   @ViewChild('cardInfo') cardInfo: ElementRef;
@@ -49,7 +49,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy{
       //this.router.navigate(['/custom-form'])
       console.log('Success!', token);
       this.pay.payed = true;
-      this.router.navigate(['/proposal',this.param1])
+      this.router.navigate(['/resume',this.param1])
       // ...send the token to the your backend to process the charge
     }
   }
@@ -67,9 +67,9 @@ export class PaymentComponent implements AfterViewInit, OnDestroy{
   constructor(private router:Router,private pay:PaymentService,private cd: ChangeDetectorRef,private route: ActivatedRoute) {
     this.today =new Date();
    }
-   param1: string;
+
+  param1: string;
   ngOnInit() {
     this.param1 = this.route.snapshot.paramMap.get("id")
   }
-
 }

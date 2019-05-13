@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as $ from 'jquery';
 import * as jspdf from 'jspdf'; 
 import html2canvas from 'html2canvas';
+import { Router } from '@angular/router';
+import { PaymentService } from '../payment.service';
 
 @Component({
   selector: 'app-resume1',
@@ -13,6 +15,10 @@ export class Resume1Component implements OnInit {
   @ViewChild('content') content: ElementRef;
 
 public generatePDF() {
+
+  this.pay.payed = false;
+  this.pay.payed = false;
+  this.pay.username ='';
  
     let HTML_Width = $(".canvas_div_pdf").width();
     let HTML_Height = $(".canvas_div_pdf").height();
@@ -41,8 +47,9 @@ public generatePDF() {
     pdf.addImage(imgData, 'PNG', top_left_margin, -(PDF_Height*i)+(top_left_margin*1),canvas_image_width,canvas_image_height);
     }
     
-        pdf.save("Resume1.pdf");
+        pdf.save("Resume1.pdf");       
            });
+           //this.router.navigate(['/template'])
 }
 
     name=localStorage.getItem('rname');
@@ -78,8 +85,8 @@ public generatePDF() {
     lang=localStorage.getItem('lang');
     hobb=localStorage.getItem('hobb');
 
-  constructor() { }
-
+  constructor(public pay:PaymentService) { }
+  param1= 1;
   ngOnInit() {
     this.loadScript('../assets/JS/proposal3.js');
   }
