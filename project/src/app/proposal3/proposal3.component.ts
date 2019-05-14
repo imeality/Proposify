@@ -49,7 +49,7 @@ public generatePDF() {
     
         pdf.save("ProposalAPP.pdf");
            });
-           this.router.navigate(['/dashboard']);
+           this.router.navigate(['/Thanks']);
 }
 
   cname=localStorage.getItem('cname');

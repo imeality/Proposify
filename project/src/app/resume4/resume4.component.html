@@ -186,7 +186,10 @@
             <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input" checked></small>
             <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
             <i class="fa fa-question-circle"></i>
-          </p>          
+          </p>
+          <hr>
+          <small *ngIf="pay.payed" class="text-muted" style="padding-left: 20px;"><input class="myCheckBox" type="checkbox" aria-label="Checkbox for following text input" value="true"></small>
+            <small *ngIf="pay.payed" class="text-muted" style="padding-left: 5px"><font size="2">Customize your Resume and <span style="margin-left: 38px">Check to Download</span>  </font></small>          
 </div>
   
 </body>

@@ -29,6 +29,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { Resume3Component } from './resume3/resume3.component';
 import { Resume4Component } from './resume4/resume4.component';
 import { Payment2Component } from './payment2/payment2.component';
+import { ThanksComponent } from './thanks/thanks.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
     { path:'forgot',component:ForgotComponent},
     { path:'payment/:id',component:PaymentComponent},
     { path:'Payment/:id',component:Payment2Component},
+    { path:'Thanks',component:ThanksComponent},
 
     { path:'dashboard',component:DashboardComponent},
     { path:'profile',component:ProfileComponent},

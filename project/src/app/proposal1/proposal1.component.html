@@ -9,8 +9,8 @@
     <div class="container-fluid">
         <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
         <button class="btn btn-arrow-right" id="sign" *ngIf="!pay.payed" [routerLink]="['/payment',this.param1]" type="button"> Purchase </button>
-          <button style="background-color: #83db77;border: none; border-radius: 0.5rem;"   *ngIf="pay.payed">
-                <div id="content" #content> 
+        <button style="background-color: #83db77;border: none; border-radius: 0.5rem;" *ngIf="pay.payed">
+                <div id="content" #content>   
                         <input class="btn" id ="sign" style="padding: 0rem 0rem;" type="button" value="Download" *ngIf="pay.payed" (click)="generatePDF()"/> 
                     </div>
           </button>
@@ -329,8 +329,9 @@
             <small class="text-muted" style="padding-left: 20px;"><input type="checkbox" aria-label="Checkbox for following text input" checked></small>
             <small class="text-muted" style="padding-left: 5px"><font size="2">Include taxes in preview </font></small>
             <i class="fa fa-question-circle"></i>
-          </p> 
-
+          </p>
+          <small *ngIf="pay.payed" class="text-muted" style="padding-left: 20px;"><input class="myCheckBox" type="checkbox" aria-label="Checkbox for following text input" value="true"></small>
+            <small *ngIf="pay.payed" class="text-muted" style="padding-left: 5px"><font size="2">Customize your proposal and <span style="margin-left: 38px">Check to Download</span>  </font></small>
 </div>
   
 </body>

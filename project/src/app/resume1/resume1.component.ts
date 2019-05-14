@@ -49,7 +49,7 @@ public generatePDF() {
     
         pdf.save("Resume1.pdf");       
            });
-           //this.router.navigate(['/template'])
+           this.router.navigate(['/Thanks'])
 }
 
     name=localStorage.getItem('rname');
@@ -85,7 +85,7 @@ public generatePDF() {
     lang=localStorage.getItem('lang');
     hobb=localStorage.getItem('hobb');
 
-  constructor(public pay:PaymentService) { }
+  constructor(public pay:PaymentService,private router:Router) { }
   param1= 1;
   ngOnInit() {
     this.loadScript('../assets/JS/proposal3.js');

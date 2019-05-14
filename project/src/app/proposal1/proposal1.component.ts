@@ -49,7 +49,7 @@ public generatePDF() {
     
         pdf.save("ProposalACCOUNT.pdf");
            });
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/Thanks']);
 }
   
 

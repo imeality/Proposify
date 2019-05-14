@@ -26,3 +26,9 @@ $(function() {
           saveParams: {id: 'froala-editor '}
         })  
   });
+
+  var boxes = $('.myCheckBox');
+
+boxes.on('change', function () {
+    $('#sign').prop('disabled', !boxes.filter(':checked').length);
+}).trigger('change');

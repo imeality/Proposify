@@ -37,6 +37,7 @@ import { Resume3Component } from './resume3/resume3.component';
 import { Resume4Component } from './resume4/resume4.component';
 import { PaymentService } from './payment.service';
 import { Payment2Component } from './payment2/payment2.component';
+import { ThanksComponent } from './thanks/thanks.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { Payment2Component } from './payment2/payment2.component';
     Resume3Component,
     Resume4Component,
     Payment2Component,
+    ThanksComponent,
     
   ],
   imports: [

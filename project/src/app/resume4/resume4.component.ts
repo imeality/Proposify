@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 import * as jspdf from 'jspdf'; 
 import html2canvas from 'html2canvas';
 import { PaymentService } from '../payment.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resume4',
@@ -48,6 +49,7 @@ public generatePDF() {
     
         pdf.save("Resume3.pdf");
            });
+           this.router.navigate(['/Thanks'])
 }
 
     name=localStorage.getItem('rname');
@@ -83,7 +85,7 @@ public generatePDF() {
     lang=localStorage.getItem('lang');
     hobb=localStorage.getItem('hobb');
 
-  constructor(public pay:PaymentService) { }
+  constructor(public pay:PaymentService,private router:Router) { }
   param1= 4;
   ngOnInit() {
     this.loadScript('../assets/JS/proposal3.js');
