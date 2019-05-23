@@ -3,7 +3,7 @@ body{
     font-family: "Lato", sans-serif
   }
   .padding{
-    padding-top: 50px;
+    padding-top: 30px;
   }
   .container{
     width:600px;
@@ -24,4 +24,12 @@ body{
   }
   .fa-file-pdf-o:before {
     margin-right: 10px;
+}
+.alert-success {
+  background-color: #c1efbb;
+  border-color: #54ab49;
+  color: #54ab49;
+  text-align: center;
+  font-family: 'proxima-nova',sans-serif;
+  padding: 15px;
 }

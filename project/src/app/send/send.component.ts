@@ -16,9 +16,9 @@ export class SendComponent implements OnInit {
     this.param1 = this.route.snapshot.paramMap.get("id")    
   }
 
-  onClick(email,subject,message,file) {
-    this.send.sendMessage(email,subject,message,file);
-    console.log(email,subject,message,file);
+  onClick(from,email,subject,message,file) {
+    this.send.sendMessage(from,email,subject,message,file);
+    console.log(from,email,subject,message,file);
     this.router.navigate(['/Thanks']);
   }
 

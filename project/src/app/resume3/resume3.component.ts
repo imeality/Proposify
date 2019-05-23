@@ -49,7 +49,7 @@ public generatePDF() {
     
         pdf.save("Resume3.pdf");
            });
-           this.router.navigate(['/Thanks'])
+           this.router.navigate(['/send/3'])
 }
 
     name=localStorage.getItem('rname');

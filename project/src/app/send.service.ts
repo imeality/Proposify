@@ -7,8 +7,9 @@ import { HttpClient } from '@angular/common/http';
 export class SendService {
 
   constructor(private http: HttpClient) { }
-  sendMessage (email, subject,message,file) { 
+  sendMessage (from,email, subject,message,file) { 
     const obj = {
+      from:from,
       email: email,
       subject: subject,
       message:message,

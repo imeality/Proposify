@@ -16,8 +16,13 @@
 <div class="container">
     <div class="card" id="maindiv" style="width: 37rem;">
         <div class="card-body">
+            <div class="alert alert-success" role="alert" style="font-family: 'proxima-nova',sans-serif;font-size: 16px"><i class="fa fa-check-circle" style="display:inline;"> </i> Send your proposal OR Click <a routerLink="/Thanks">here</a></div>
+            <br>
+            <hr>
+            
               <h1 style="color: #004053">Send Proposal</h1><br>
-              <h3 style="color: #004053">Check your details </h3><br>
+
+              <input type="email" class="form-control" value="vaibhavpatel@imeality.com" hidden required #from>
 
               <div class="form-group">
                     <small class="form-text text-muted" ><label>Email</label></small> 
@@ -40,7 +45,7 @@
                     </div>
 
                     <br>
-                      <button type="submit" class="btn btn-block btn1" (click)="onClick(email.value,subject.value,message.value,file.value)">Send</button>
+                      <button type="submit" class="btn btn-block btn1" (click)="onClick(from.value,email.value,subject.value,message.value,file.value)">Send</button>
         </div>
     </div>
     <br>
