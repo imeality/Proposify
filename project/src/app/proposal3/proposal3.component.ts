@@ -101,7 +101,7 @@ public generatePDF() {
     });
     $("#a10").click(function(){
       $(".tr10").toggle();
-    });
+    });   
   }
   public loadScript(url: string) {
     const body = <HTMLDivElement> document.body;

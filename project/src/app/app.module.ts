@@ -38,6 +38,12 @@ import { Resume4Component } from './resume4/resume4.component';
 import { PaymentService } from './payment.service';
 import { Payment2Component } from './payment2/payment2.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { SendComponent } from './send/send.component';
+import { SendService } from './send.service';
+import { Send1Component } from './send1/send1.component';
+import { Send2Component } from './send2/send2.component';
+import { Send3Component } from './send3/send3.component';
+import { Send4Component } from './send4/send4.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +78,11 @@ import { ThanksComponent } from './thanks/thanks.component';
     Resume4Component,
     Payment2Component,
     ThanksComponent,
+    SendComponent,
+    Send1Component,
+    Send2Component,
+    Send3Component,
+    Send4Component,
     
   ],
   imports: [
@@ -81,7 +92,7 @@ import { ThanksComponent } from './thanks/thanks.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [LoginService,ResumeService,ProposalService,PaymentService],
+  providers: [LoginService,ResumeService,ProposalService,PaymentService,SendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

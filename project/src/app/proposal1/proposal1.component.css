@@ -59,6 +59,13 @@ nav {
     height: 35px;
  }
 
+ #sign1{
+  color: #ffffff;
+  background-color: #83db77;
+  width:100px;
+  height: 35px;
+}
+
  .sidenav-r {
     height: 100%;
     width: 230px;

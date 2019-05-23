@@ -31,4 +31,5 @@ $(function() {
 
 boxes.on('change', function () {
     $('#sign').prop('disabled', !boxes.filter(':checked').length);
+    $('#sign1').prop('disabled', !boxes.filter(':checked').length);
 }).trigger('change');

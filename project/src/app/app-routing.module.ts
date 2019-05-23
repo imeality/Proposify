@@ -30,6 +30,11 @@ import { Resume3Component } from './resume3/resume3.component';
 import { Resume4Component } from './resume4/resume4.component';
 import { Payment2Component } from './payment2/payment2.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { SendComponent } from './send/send.component';
+import { Send1Component } from './send1/send1.component';
+import { Send2Component } from './send2/send2.component';
+import { Send3Component } from './send3/send3.component';
+import { Send4Component } from './send4/send4.component';
 
 
 const routes: Routes = [
@@ -42,6 +47,11 @@ const routes: Routes = [
     { path:'payment/:id',component:PaymentComponent},
     { path:'Payment/:id',component:Payment2Component},
     { path:'Thanks',component:ThanksComponent},
+    { path:'Send/1',component:SendComponent},
+    { path:'Send/3',component:Send1Component},
+    { path:'send/1',component:Send2Component},
+    { path:'send/2',component:Send3Component},
+    { path:'send/3',component:Send4Component},
 
     { path:'dashboard',component:DashboardComponent},
     { path:'profile',component:ProfileComponent},

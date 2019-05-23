@@ -1,0 +1,50 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sign up</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-top navbar-light bg-light" >
+            <div class="">
+              <div style="padding-left:250px;"><img src="./assets/proposifylogo.png" height="80px" width="110px"></div>
+          </div>
+          </nav> 
+
+<div class="container padding">
+</div>
+<div class="container">
+    <div class="card" id="maindiv" style="width: 37rem;">
+        <div class="card-body">
+              <h1 style="color: #004053">Send Proposal</h1><br>
+              <h3 style="color: #004053">Check your details </h3><br>
+
+              <div class="form-group">
+                    <small class="form-text text-muted" ><label>Email</label></small> 
+                    <input type="email" class="form-control" value="{{emal}}" required #email>
+                   </div>
+
+              <div class="form-group">
+                    <small class="form-text text-muted" ><label> Subject</label></small>
+                    <input type="text" class="form-control" required #subject>
+                  </div>
+
+              <div class = "form-group"> 
+                    <small class="form-text text-muted" ><label> Message</label></small>
+                    <textarea class = "form-control" cols = "30" rows = "4" name = "message" #message> </textarea> 
+                </div>
+
+               <div class="form-group">
+                    <small class="form-text text-muted" ><label>Your Attachment <i class="fa fa-paperclip fa-1x" aria-hidden="true"></i></label></small>
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i><input type="text" style="border: none;background-color: #EDEDED;" value="Resume1.pdf" disabled #file>
+                    </div>
+
+                    <br>
+                      <button type="submit" class="btn btn-block btn1" (click)="onClick(email.value,subject.value,message.value,file.value)">Send</button>
+        </div>
+    </div>
+    <br>
+</div>
+
+  </body> 
+</html>

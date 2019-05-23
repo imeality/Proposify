@@ -23,7 +23,7 @@ addUser(Fname, Lname, Email ,Mobile_no ,Password) {
     Lname: Lname,
     Email: Email,
     Mobile_no:Mobile_no,
-    Password:Password
+    Password:Password 
     };
  return this.http.post(this.url, obj)
       .subscribe(res => console.log('Done'));

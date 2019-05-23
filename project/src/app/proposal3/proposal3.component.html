@@ -11,11 +11,11 @@
     <div class="container-fluid">
         <button routerLink="/dashboard" type="button" class="btn btn-sm text-muted" style="background-color:white;width: 70px" >&#9666; Back</button>
         <button class="btn btn-arrow-right" id="sign" *ngIf="!pay.payed" [routerLink]="['/payment',this.param1]" type="button"> Purchase </button>
-        <button style="background-color: #83db77;border: none; border-radius: 0.5rem;"   *ngIf="pay.payed">
-            <div id="content" #content> 
-                    <input class="btn" id ="sign" style="padding: 0rem 0rem;" type="button" value="Download" *ngIf="pay.payed" (click)="generatePDF()"/> 
-                </div>
-      </button>
+        <div style="background-color: #83db77;border: none; border-radius: 0.5rem;" *ngIf="pay.payed">
+          <div id="content" #content>   
+                  <input [routerLink]="['/Send',this.param1]" class="btn" id ="sign" style="padding: 0rem 0rem;border-radius: 10px;" type="button" value="Send" *ngIf="pay.payed" />
+              </div>
+        </div>
     </div>
 </nav>
 
@@ -629,6 +629,10 @@
               <hr>
           <small *ngIf="pay.payed" class="text-muted" style="padding-left: 20px;"><input class="myCheckBox" type="checkbox" aria-label="Checkbox for following text input" value="true"></small>
             <small *ngIf="pay.payed" class="text-muted" style="padding-left: 5px"><font size="2">Customize your proposal and <span style="margin-left: 38px">Check to Download</span>  </font></small>
-    </div>
+            <br>
+            <div style="padding-left:20px;padding-top: 10px;">
+                <input class="btn" id ="sign1" style="padding: 0rem 0rem;border-radius: 10px;" type="button" value="Download" *ngIf="pay.payed" (click)="generatePDF()"/>
+            </div>
+        </div>
 </body>
 </html>

@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 var cors = require('cors');
 app.use(cors());
 
@@ -500,8 +501,37 @@ app.put('/webinar' , function (req, res) {
 });
 
 
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'vaibhav686patel@gmail.com',
+    pass: 'vaibhav1997'
+  }
+});
+app.post('/Thanks', function (req, res) {
+var attachment = (typeof req.body.file !="undefined") ? req.body.file : '';
+var mailOptions = {
+  "from": 'no reply',
+  "to" :  req.body.email,
+  "subject" :  req.body.subject,
+  "text" :  req.body.message,
+  "attachments":[{path: '/home/freedom/Downloads/'+ attachment}]
+}
+console.log(mailOptions);
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    alert('Mail Sent');
+    console.log('Email sent: ' + info.response);
+  }
+});
+});
+
 // all other requests redirect to 404
 app.all("*", function (req, res, next) {
   return res.send('page not found');
   next();
 });
+
+
